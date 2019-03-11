@@ -1,15 +1,24 @@
 #pragma once
 
 #include "Model.h"
+#include "IScreen.h"
 
 #include <SFML\Graphics.hpp>
 
 #include <map>
+#include <memory>
+#include <string>
+
+/*
+Architecture level class that is responsible for maintaining the window and display.
+*/
 
 namespace fleet {
 	class View {
 	public:
 		explicit View(const Model& model);
+
+		bool isOpen() { return window.isOpen(); }
 
 		void input();
 		void update();
@@ -21,5 +30,6 @@ namespace fleet {
 		sf::Sprite backgroundSprite{ background };
 		sf::Font font;
 
+		std::map<std::string, std::unique_ptr<IScreen>> screens;
 	};
 }

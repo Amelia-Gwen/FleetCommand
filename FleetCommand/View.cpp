@@ -9,4 +9,14 @@ namespace fleet {
 		/*background.loadFromFile("Assets/background.png");
 		font.loadFromFile("Assets/a-song-for-jennifer/a-song-for-jennifer.ttf");*/
 	}
+
+	void View::input()
+	{
+	}
+	void View::update()
+	{
+	}
+	void View::display()
+	{
+	}
 }
