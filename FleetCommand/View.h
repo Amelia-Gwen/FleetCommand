@@ -2,6 +2,7 @@
 
 #include "Model.h"
 #include "IScreen.h"
+#include "GameEvent.h"
 
 #include <SFML\Graphics.hpp>
 
@@ -20,7 +21,7 @@ namespace fleet {
 
 		bool isOpen() { return window.isOpen(); }
 
-		void input();
+		GameEvent input() { return currentScreen->input(); }
 		void update();
 		void display();
 	private:
@@ -31,5 +32,6 @@ namespace fleet {
 		sf::Font font;
 
 		std::map<std::string, std::unique_ptr<IScreen>> screens;
+		IScreen* currentScreen;
 	};
 }

@@ -23,6 +23,12 @@
     <Filter Include="Screens\Source">
       <UniqueIdentifier>{d7416606-2689-4cb5-9e19-0cc98f7315a4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GameServices">
+      <UniqueIdentifier>{7d87690a-6382-479c-b17e-8869cfefe5ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameServices\Header">
+      <UniqueIdentifier>{fb844e2f-6d7f-4a32-a197-5e33a9784ec8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -59,6 +65,12 @@
     </ClInclude>
     <ClInclude Include="Screens\IScreen.h">
       <Filter>Screens\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="GameServices\GameEvent.h">
+      <Filter>GameServices\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="GameServices\Expressions.h">
+      <Filter>GameServices\Header</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

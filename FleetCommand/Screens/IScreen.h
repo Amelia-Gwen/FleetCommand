@@ -1,5 +1,7 @@
 #pragma once
 
+#include "GameEvent.h"
+
 #include <SFML\Graphics.hpp>
 
 namespace fleet {
@@ -8,7 +10,7 @@ namespace fleet {
 		explicit IScreen(sf::RenderWindow& window, sf::Font& font);
 		virtual ~IScreen() = default;
 
-		virtual void input() = 0;
+		virtual GameEvent input() = 0;
 		virtual void update() = 0;
 		virtual void draw() = 0;
 	private:

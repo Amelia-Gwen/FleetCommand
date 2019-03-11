@@ -10,9 +10,6 @@ namespace fleet {
 		font.loadFromFile("Assets/a-song-for-jennifer/a-song-for-jennifer.ttf");*/
 	}
 
-	void View::input()
-	{
-	}
 	void View::update()
 	{
 	}
