@@ -14,6 +14,15 @@
     <Filter Include="Architecture\Source">
       <UniqueIdentifier>{ba3c4da7-5d4d-4934-ad8e-a14b6640f05e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Screens">
+      <UniqueIdentifier>{d956688d-7059-4bde-b80d-634e0fad57b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Screens\Header">
+      <UniqueIdentifier>{ce0ae239-8a4c-4036-bbe6-a65f161e536e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Screens\Source">
+      <UniqueIdentifier>{d7416606-2689-4cb5-9e19-0cc98f7315a4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -31,6 +40,9 @@
     <ClCompile Include="Controller.cpp">
       <Filter>Architecture\Source</Filter>
     </ClCompile>
+    <ClCompile Include="Screens\IScreen.cpp">
+      <Filter>Screens\Source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FleetCommand.h">
@@ -44,6 +56,9 @@
     </ClInclude>
     <ClInclude Include="Controller.h">
       <Filter>Architecture\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Screens\IScreen.h">
+      <Filter>Screens\Header</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

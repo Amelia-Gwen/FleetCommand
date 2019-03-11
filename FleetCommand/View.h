@@ -4,17 +4,20 @@
 
 #include <SFML\Graphics.hpp>
 
-namespace fleet {
+#include <map>
 
+namespace fleet {
 	class View {
 	public:
 		explicit View(const Model& model);
 
+		void input();
 		void update();
 		void display();
 	private:
 		const Model& Model;
 		sf::RenderWindow Window;
-	};
 
+
+	};
 }

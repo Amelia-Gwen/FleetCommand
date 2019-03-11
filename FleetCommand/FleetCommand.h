@@ -5,7 +5,6 @@
 #include "View.h"
 
 namespace fleet {
-
 	class FleetCommand {
 	public:
 		void run();
@@ -14,5 +13,4 @@ namespace fleet {
 		View View{ Model };
 		Controller Controller{ Model, View };
 	};
-
 }

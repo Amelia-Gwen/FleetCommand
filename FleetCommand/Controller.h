@@ -4,7 +4,6 @@
 #include "View.h"
 
 namespace fleet {
-
 	class Controller {
 	public:
 		explicit Controller(const Model& model, const View& view);
@@ -14,5 +13,4 @@ namespace fleet {
 		const Model& Model;
 		const View& View;
 	};
-
 }
