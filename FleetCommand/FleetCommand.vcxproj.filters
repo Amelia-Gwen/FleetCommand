@@ -1,17 +1,49 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
     <Filter Include="Resource Files">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Architecture">
+      <UniqueIdentifier>{6a1e7e43-8cd6-46f5-b7dc-03bf1669acd6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Architecture\Header">
+      <UniqueIdentifier>{3ed1d2d5-1f03-4331-9684-833e6594e440}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Architecture\Source">
+      <UniqueIdentifier>{ba3c4da7-5d4d-4934-ad8e-a14b6640f05e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp">
+      <Filter>Architecture\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="FleetCommand.cpp">
+      <Filter>Architecture\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Model.cpp">
+      <Filter>Architecture\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="View.cpp">
+      <Filter>Architecture\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Controller.cpp">
+      <Filter>Architecture\Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="FleetCommand.h">
+      <Filter>Architecture\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Model.h">
+      <Filter>Architecture\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="View.h">
+      <Filter>Architecture\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Controller.h">
+      <Filter>Architecture\Header</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
