@@ -4,15 +4,17 @@
 #include "Model.h"
 #include "View.h"
 
-namespace fleet {
+/*
+Application level class that runs the game loop over Architectural level components.
+*/
 
+namespace fleet {
 	class FleetCommand {
 	public:
 		void run();
 	private:
-		Model Model;
-		View View{ Model };
-		Controller Controller{ Model, View };
+		Model model;
+		View view{ model };
+		Controller controller{ model, view };
 	};
-
 }

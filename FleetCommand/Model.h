@@ -1,7 +1,6 @@
 #pragma once
 
 namespace fleet {
-
 	class Model {
 	public:
 		Model();
@@ -10,5 +9,4 @@ namespace fleet {
 	private:
 
 	};
-
 }
