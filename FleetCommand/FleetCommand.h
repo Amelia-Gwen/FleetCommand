@@ -9,8 +9,8 @@ namespace fleet {
 	public:
 		void run();
 	private:
-		Model Model;
-		View View{ Model };
-		Controller Controller{ Model, View };
+		Model model;
+		View view{ model };
+		Controller controller{ model, view };
 	};
 }

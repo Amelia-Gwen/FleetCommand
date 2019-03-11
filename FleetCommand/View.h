@@ -15,9 +15,11 @@ namespace fleet {
 		void update();
 		void display();
 	private:
-		const Model& Model;
-		sf::RenderWindow Window;
-
+		const Model& model;
+		sf::RenderWindow window;
+		sf::Texture background;
+		sf::Sprite backgroundSprite{ background };
+		sf::Font font;
 
 	};
 }

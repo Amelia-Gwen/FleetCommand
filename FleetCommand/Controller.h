@@ -10,7 +10,7 @@ namespace fleet {
 
 		void input();
 	private:
-		const Model& Model;
-		const View& View;
+		const Model& model;
+		const View& view;
 	};
 }
