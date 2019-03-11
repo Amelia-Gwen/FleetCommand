@@ -5,9 +5,17 @@
 #include <SFML\Graphics.hpp>
 
 namespace fleet {
+	/*
+	Interface class for all screens.
+	Constructor takes a reference to the window that will draw the screen as well as contain mouse coordinates
+	and a reference to the font that will be used for all text.
+	input() returns a GameEvent based on user interaction with the screen. default return will be GameEvent::None.
+	update() will simply progress the screen one frame.
+	draw() will have the window render the appropriate elements.
+	*/
 	class IScreen {
 	public:
-		explicit IScreen(sf::RenderWindow& window, sf::Font& font);
+		explicit IScreen(sf::RenderWindow& window, const sf::Font& font);
 		virtual ~IScreen() = default;
 
 		virtual GameEvent input() = 0;
@@ -15,6 +23,6 @@ namespace fleet {
 		virtual void draw() = 0;
 	private:
 		sf::RenderWindow& window;
-		sf::Font& font;
+		const sf::Font& font;
 	};
 }

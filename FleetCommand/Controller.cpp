@@ -7,12 +7,19 @@ namespace fleet {
 	{
 	}
 
+	/*
+	Game loop level function to generate and process all user input.
+	*/
 	void Controller::input()
 	{
 		GameEvent gameEvent = view.input();
 		processEvent(gameEvent);
 	}
 
+	/*
+	The processing function represents the main funtion of the entire class. It swallows a GameEvent enum and
+	processes accordingly, including making changes to both the View and the Model.
+	*/
 	void Controller::processEvent(const GameEvent& gameEvent)
 	{
 		switch (gameEvent)

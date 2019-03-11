@@ -10,11 +10,10 @@
 #include <memory>
 #include <string>
 
-/*
-Architecture level class that is responsible for maintaining the window and display.
-*/
-
 namespace fleet {
+	/*
+	Architecture level class that is responsible for maintaining the window and display.
+	*/
 	class View {
 	public:
 		explicit View(const Model& model);
@@ -22,7 +21,7 @@ namespace fleet {
 		bool isOpen() { return window.isOpen(); }
 
 		GameEvent input() { return currentScreen->input(); }
-		void update();
+		void update() { currentScreen->update(); }
 		void display();
 	private:
 		const Model& model;

@@ -5,6 +5,9 @@
 #include "GameEvent.h"
 
 namespace fleet {
+	/*
+	Architecture level class that is responsible for handling input from the user.
+	*/
 	class Controller {
 	public:
 		explicit Controller(const Model& model, View& view);
