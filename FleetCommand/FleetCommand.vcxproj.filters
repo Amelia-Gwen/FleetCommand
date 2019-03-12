@@ -55,6 +55,9 @@
     <ClCompile Include="Screens\MainMenuScreen.cpp">
       <Filter>Screens\Source</Filter>
     </ClCompile>
+    <ClCompile Include="Screens\LoadGameScreen.cpp">
+      <Filter>Screens\Source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FleetCommand.h">
@@ -86,6 +89,12 @@
     </ClInclude>
     <ClInclude Include="Screens\Screens.h">
       <Filter>Screens\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Screens\LoadGameScreen.h">
+      <Filter>Screens\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="GameServices\LoadFile.h">
+      <Filter>GameServices\Header</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

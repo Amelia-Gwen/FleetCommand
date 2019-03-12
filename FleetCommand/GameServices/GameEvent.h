@@ -15,10 +15,7 @@ namespace fleet {
 		ReturnToMainMenu,
 		StartCampaign,
 		OpenCustomGame,
-
-
-
-		//LoadGame,
+		LoadGame,
 
 		//GoToDashboard,
 		//GoToResearch,

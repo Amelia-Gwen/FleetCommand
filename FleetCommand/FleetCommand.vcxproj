@@ -23,8 +23,10 @@
     <ClInclude Include="FleetCommand.h" />
     <ClInclude Include="GameServices\Expressions.h" />
     <ClInclude Include="GameServices\GameEvent.h" />
+    <ClInclude Include="GameServices\LoadFile.h" />
     <ClInclude Include="Model.h" />
     <ClInclude Include="Screens\IScreen.h" />
+    <ClInclude Include="Screens\LoadGameScreen.h" />
     <ClInclude Include="Screens\MainMenuScreen.h" />
     <ClInclude Include="Screens\NewGameMenuScreen.h" />
     <ClInclude Include="Screens\Screens.h" />
@@ -36,6 +38,7 @@
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Model.cpp" />
     <ClCompile Include="Screens\IScreen.cpp" />
+    <ClCompile Include="Screens\LoadGameScreen.cpp" />
     <ClCompile Include="Screens\MainMenuScreen.cpp" />
     <ClCompile Include="Screens\NewGameMenuScreen.cpp" />
     <ClCompile Include="View.cpp" />
