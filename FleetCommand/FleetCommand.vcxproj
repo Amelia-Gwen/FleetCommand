@@ -25,6 +25,7 @@
     <ClInclude Include="GameServices\GameEvent.h" />
     <ClInclude Include="Model.h" />
     <ClInclude Include="Screens\IScreen.h" />
+    <ClInclude Include="Screens\MainMenu.h" />
     <ClInclude Include="View.h" />
   </ItemGroup>
   <ItemGroup>
@@ -33,6 +34,7 @@
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Model.cpp" />
     <ClCompile Include="Screens\IScreen.cpp" />
+    <ClCompile Include="Screens\MainMenu.cpp" />
     <ClCompile Include="View.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

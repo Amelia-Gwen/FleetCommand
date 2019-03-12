@@ -49,6 +49,9 @@
     <ClCompile Include="Screens\IScreen.cpp">
       <Filter>Screens\Source</Filter>
     </ClCompile>
+    <ClCompile Include="Screens\MainMenu.cpp">
+      <Filter>Screens\Source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FleetCommand.h">
@@ -71,6 +74,9 @@
     </ClInclude>
     <ClInclude Include="GameServices\Expressions.h">
       <Filter>GameServices\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Screens\MainMenu.h">
+      <Filter>Screens\Header</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -11,6 +11,12 @@
 #include <string>
 
 namespace fleet {
+
+	constexpr unsigned screen_width = 1200U;
+	constexpr unsigned screen_height = 800U;
+	constexpr float screen_width_float = static_cast<float>(screen_width);
+	constexpr float screen_height_float = static_cast<float>(screen_height);
+
 	/*
 	Architecture level class that is responsible for maintaining the window and display.
 	*/
@@ -25,7 +31,7 @@ namespace fleet {
 		void display();
 	private:
 		const Model& model;
-		sf::RenderWindow window;
+		sf::RenderWindow window{ sf::VideoMode(screen_width, screen_height), "Fleet Command" };
 		sf::Texture background;
 		sf::Sprite backgroundSprite{ background };
 		sf::Font font;

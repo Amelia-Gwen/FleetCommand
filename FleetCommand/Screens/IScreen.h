@@ -1,6 +1,7 @@
 #pragma once
 
 #include "GameEvent.h"
+#include "Expressions.h"
 
 #include <SFML\Graphics.hpp>
 
@@ -21,8 +22,10 @@ namespace fleet {
 		virtual GameEvent input() = 0;
 		virtual void update() = 0;
 		virtual void draw() = 0;
-	private:
+	protected:
 		sf::RenderWindow& window;
 		const sf::Font& font;
+
+		void checkMouseOver(sf::RectangleShape& button);
 	};
 }

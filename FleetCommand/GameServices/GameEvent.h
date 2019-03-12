@@ -10,11 +10,10 @@ namespace fleet {
 	{
 		None,
 		ActionComplete,
+		OpenNewGame,
+		OpenLoadGame,
 
 
-
-		//OpenNewGame,
-		//OpenLoadGame,
 		//OpenCustomGame,
 		//StartCampaign,
 
