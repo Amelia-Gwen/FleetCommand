@@ -25,9 +25,9 @@ namespace fleet {
 	constexpr float load_text_y = load_button_y + main_menu_text_y_offset;
 	constexpr unsigned logo_text_character_size = 60;
 
-	class MainMenu : public IScreen {
+	class MainMenuScreen : public IScreen {
 	public:
-		explicit MainMenu(sf::RenderWindow& window, const sf::Font& font);
+		explicit MainMenuScreen(sf::RenderWindow& window, const sf::Font& font);
 
 		GameEvent input() override;
 		void update() override;

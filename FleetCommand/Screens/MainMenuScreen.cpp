@@ -1,9 +1,7 @@
-#include "MainMenu.h"
-
-
+#include "MainMenuScreen.h"
 
 namespace fleet {
-	MainMenu::MainMenu(sf::RenderWindow & window, const sf::Font & font) :
+	MainMenuScreen::MainMenuScreen(sf::RenderWindow & window, const sf::Font & font) :
 		IScreen{ window, font }
 	{
 		logo.setPosition(logo_x, logo_y);
@@ -25,7 +23,7 @@ namespace fleet {
 		loadGame.setFillColor(sf::Color::Black);
 	}
 
-	GameEvent MainMenu::input()
+	GameEvent MainMenuScreen::input()
 	{
 		sf::Vector2f mousePos{ static_cast<float>(sf::Mouse::getPosition(window).x), static_cast<float>(sf::Mouse::getPosition(window).y) };
 
@@ -49,14 +47,14 @@ namespace fleet {
 		return GameEvent::None;
 	}
 
-	void MainMenu::update()
+	void MainMenuScreen::update()
 	{
 		checkMouseOver(playButton);
 		checkMouseOver(newGameButton);
 		checkMouseOver(loadGameButton);
 	}
 
-	void MainMenu::draw()
+	void MainMenuScreen::draw()
 	{
 		window.draw(logo);
 		window.draw(logoText);
