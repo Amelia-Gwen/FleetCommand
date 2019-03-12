@@ -1,6 +1,11 @@
 #include "NewGameMenuScreen.h"
 
 namespace fleet {
+	/*
+	///param: reference to RenderWindow
+	///param: constant reference to Font
+	The constructor takes these references and forwards them to the base class.
+	*/
 	NewGameMenuScreen::NewGameMenuScreen(sf::RenderWindow& window, const sf::Font& font) :
 		IScreen{ window, font }
 	{
@@ -15,6 +20,10 @@ namespace fleet {
 		custom.setCharacterSize(new_text_size);
 	}
 
+	/*
+	Specific choices for user include: return to the main menu, start a campaign (begins gameplay,) open custom game screen
+	///return: GameEvent - custum enum to handle game level events.
+	*/
 	GameEvent NewGameMenuScreen::input()
 	{
 		sf::Vector2f mousePos{ static_cast<float>(sf::Mouse::getPosition(window).x), static_cast<float>(sf::Mouse::getPosition(window).y) };
@@ -34,12 +43,18 @@ namespace fleet {
 
 		return GameEvent::None;
 	}
+	/*
+    Method to update screen components
+    */
 	void NewGameMenuScreen::update()
 	{
 		checkMouseOver(backButton);
 		checkMouseOver(campaignButton);
 		checkMouseOver(customButton);
 	}
+	/*
+    Render logic. This is the main need for the window reference.
+    */
 	void NewGameMenuScreen::draw()
 	{
 		window.draw(backButton);

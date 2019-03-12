@@ -15,6 +15,11 @@ namespace fleet {
 	constexpr float new_game_text_y = new_button_y + 100.F;
 	constexpr unsigned new_text_size = 60U;
 
+	/*
+	Class that implements the IScreen interface. The user can return to the main menu, open the custom
+	game management screen, or begin a new game (starts gameplay)
+	*/
+
 	class NewGameMenuScreen : public IScreen {
 	public:
 		explicit NewGameMenuScreen(sf::RenderWindow& window, const sf::Font& font);

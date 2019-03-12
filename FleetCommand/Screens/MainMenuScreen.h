@@ -25,6 +25,11 @@ namespace fleet {
 	constexpr float load_text_y = load_button_y + main_menu_text_y_offset;
 	constexpr unsigned logo_text_character_size = 60;
 
+	/*
+	Class that implements the IScreen interface and acts as the splash page for the program.
+	The user choses between loading a save game or beginning a new game.
+	*/
+
 	class MainMenuScreen : public IScreen {
 	public:
 		explicit MainMenuScreen(sf::RenderWindow& window, const sf::Font& font);

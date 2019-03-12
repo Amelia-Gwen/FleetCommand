@@ -13,6 +13,11 @@ namespace fleet {
 	constexpr float slot3_x = 850.F;
 	constexpr float slot_y = 300.F;
 
+	/*
+	Class that implements the IScreen interface. The user can return to the main menu or chose a file from which to load
+	save data. (Begins gameplay)
+	*/
+
 	class LoadGameScreen : public IScreen {
 	public:
 		explicit LoadGameScreen(sf::RenderWindow& window, const sf::Font& font);

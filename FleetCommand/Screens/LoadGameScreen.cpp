@@ -1,7 +1,12 @@
 #include "LoadGameScreen.h"
 
 namespace fleet {
-	LoadGameScreen::LoadGameScreen(sf::RenderWindow & window, const sf::Font & font) :
+	/*
+	///param: reference to RenderWindow
+	///param: constant reference to Font
+	The constructor takes these references and forwards them to the base class.
+	*/
+	LoadGameScreen::LoadGameScreen(sf::RenderWindow& window, const sf::Font& font) :
 		IScreen{ window, font }
 	{
 		backButton.setPosition(menu_back_x, menu_back_y);
@@ -10,6 +15,10 @@ namespace fleet {
 		slot3.setPosition(slot3_x, slot_y);
 	}
 
+	/*
+	Specific choices for user include: return to main menu, load from one of three data files (if they exist)
+	///return: GameEvent - custum enum to handle game level events.
+	*/
 	GameEvent LoadGameScreen::input()
 	{
 		sf::Vector2f mousePos{ static_cast<float>(sf::Mouse::getPosition(window).x), static_cast<float>(sf::Mouse::getPosition(window).y) };
@@ -36,6 +45,9 @@ namespace fleet {
 
 		return GameEvent::None;
 	}
+	/*
+    Method to update screen components
+    */
 	void LoadGameScreen::update()
 	{
 		checkMouseOver(backButton);
@@ -43,6 +55,9 @@ namespace fleet {
 		checkMouseOver(slot2);
 		checkMouseOver(slot3);
 	}
+	/*
+    Render logic. This is the main need for the window reference.
+    */
 	void LoadGameScreen::draw()
 	{
 		window.draw(backButton);

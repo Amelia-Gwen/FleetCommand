@@ -1,7 +1,12 @@
 #include "MainMenuScreen.h"
 
 namespace fleet {
-	MainMenuScreen::MainMenuScreen(sf::RenderWindow & window, const sf::Font & font) :
+	/*
+	///param: reference to RenderWindow
+	///param: constant reference to Font
+	The constructor takes these references and forwards them to the base class.
+	*/
+	MainMenuScreen::MainMenuScreen(sf::RenderWindow& window, const sf::Font& font) :
 		IScreen{ window, font }
 	{
 		logo.setPosition(logo_x, logo_y);
@@ -23,6 +28,10 @@ namespace fleet {
 		loadGame.setFillColor(sf::Color::Black);
 	}
 
+	/*
+	Specific choices for user include: expand the play button, navigate to the new game screen, and navigate to the load game screen.
+	///return: GameEvent - custum enum to handle game level events.
+	*/
 	GameEvent MainMenuScreen::input()
 	{
 		sf::Vector2f mousePos{ static_cast<float>(sf::Mouse::getPosition(window).x), static_cast<float>(sf::Mouse::getPosition(window).y) };
@@ -46,14 +55,18 @@ namespace fleet {
 
 		return GameEvent::None;
 	}
-
+	/*
+	Method to update screen components
+	*/
 	void MainMenuScreen::update()
 	{
 		checkMouseOver(playButton);
 		checkMouseOver(newGameButton);
 		checkMouseOver(loadGameButton);
 	}
-
+	/*
+	Render logic. This is the main need for the window reference.
+	*/
 	void MainMenuScreen::draw()
 	{
 		window.draw(logo);
