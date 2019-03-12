@@ -17,9 +17,9 @@ namespace fleet {
 	constexpr float play_button_y = 600.F;
 	constexpr float play_text_x = main_menu_button_x + 100.F;
 	constexpr float play_text_y = play_button_y + main_menu_text_y_offset;
-	constexpr float new_button_y = 500.F;
+	constexpr float new_game_button_y = 500.F;
 	constexpr float new_text_x = main_menu_button_x + 40.F;
-	constexpr float new_text_y = new_button_y + main_menu_text_y_offset;
+	constexpr float new_text_y = new_game_button_y + main_menu_text_y_offset;
 	constexpr float load_button_y = 650.F;
 	constexpr float load_text_x = main_menu_button_x + 40.F;
 	constexpr float load_text_y = load_button_y + main_menu_text_y_offset;

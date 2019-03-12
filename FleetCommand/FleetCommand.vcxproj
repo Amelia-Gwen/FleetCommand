@@ -27,6 +27,7 @@
     <ClInclude Include="Screens\IScreen.h" />
     <ClInclude Include="Screens\MainMenuScreen.h" />
     <ClInclude Include="Screens\NewGameMenuScreen.h" />
+    <ClInclude Include="Screens\Screens.h" />
     <ClInclude Include="View.h" />
   </ItemGroup>
   <ItemGroup>

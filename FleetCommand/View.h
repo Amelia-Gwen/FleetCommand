@@ -25,8 +25,10 @@ namespace fleet {
 		explicit View(const Model& model);
 
 		bool isOpen() { return window.isOpen(); }
+		bool pollEvent(sf::Event& event) { return window.pollEvent(event); }
+		void close() { window.close(); }
 
-		GameEvent input() { return currentScreen->input(); }
+		GameEvent input();
 		void update() { currentScreen->update(); }
 		void display();
 	private:
@@ -38,5 +40,7 @@ namespace fleet {
 
 		std::map<std::string, std::unique_ptr<IScreen>> screens;
 		IScreen* currentScreen;
+
+		void checkEvent(GameEvent& gameEvent);
 	};
 }

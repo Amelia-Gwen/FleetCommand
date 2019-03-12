@@ -5,7 +5,7 @@ namespace fleet {
 		IScreen{ window, font }
 	{
 		logo.setPosition(logo_x, logo_y);
-		//logo.setFillColor(sf::Color::Yellow);
+		logo.setFillColor(sf::Color::Cyan);
 		logoText.setPosition(logo_text_x, logo_text_y);
 		logoText.setCharacterSize(logo_text_character_size);
 		logoText.setFillColor(sf::Color::Black);
@@ -13,7 +13,7 @@ namespace fleet {
 		play.setPosition(play_text_x, play_text_y);
 		play.setCharacterSize(text_character_size);
 		play.setFillColor(sf::Color::Black);
-		newGameButton.setPosition(main_menu_button_x, new_button_y);
+		newGameButton.setPosition(main_menu_button_x, new_game_button_y);
 		newGame.setPosition(new_text_x, new_text_y);
 		newGame.setCharacterSize(text_character_size);
 		newGame.setFillColor(sf::Color::Black);

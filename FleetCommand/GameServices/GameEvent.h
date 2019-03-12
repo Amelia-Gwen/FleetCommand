@@ -12,14 +12,13 @@ namespace fleet {
 		ActionComplete,
 		OpenNewGame,
 		OpenLoadGame,
+		ReturnToMainMenu,
+		StartCampaign,
+		OpenCustomGame,
 
 
-		//OpenCustomGame,
-		//StartCampaign,
 
-		//ReturnToMainMenu,
 		//LoadGame,
-		//GoBack,
 
 		//GoToDashboard,
 		//GoToResearch,

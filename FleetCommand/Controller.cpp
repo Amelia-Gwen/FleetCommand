@@ -12,7 +12,30 @@ namespace fleet {
 	*/
 	void Controller::input()
 	{
-		GameEvent gameEvent = view.input();
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
+		{
+			view.close();
+		}
+
+		sf::Event event;
+		GameEvent gameEvent = GameEvent::None;
+		while (view.pollEvent(event))
+		{
+			if (event.type == sf::Event::Closed)
+			{
+				view.close();
+			}
+
+			if (event.type == sf::Event::MouseButtonPressed)
+			{
+				gameEvent = view.input();
+			}
+
+			if (event.type == sf::Event::MouseButtonReleased)
+			{
+				// release grip on map
+			}
+		}
 		processEvent(gameEvent);
 	}
 

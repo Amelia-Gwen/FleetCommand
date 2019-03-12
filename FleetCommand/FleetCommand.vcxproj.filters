@@ -84,5 +84,8 @@
     <ClInclude Include="Screens\MainMenuScreen.h">
       <Filter>Screens\Header</Filter>
     </ClInclude>
+    <ClInclude Include="Screens\Screens.h">
+      <Filter>Screens\Header</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

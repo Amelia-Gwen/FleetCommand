@@ -4,4 +4,7 @@ namespace fleet {
 	Model::Model()
 	{
 	}
+	void Model::update()
+	{
+	}
 }
