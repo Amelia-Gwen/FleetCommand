@@ -24,7 +24,10 @@
     <ClInclude Include="GameServices\Expressions.h" />
     <ClInclude Include="GameServices\GameEvent.h" />
     <ClInclude Include="GameServices\LoadFile.h" />
+    <ClInclude Include="GUIComponents\DropBox.h" />
+    <ClInclude Include="GUIComponents\TextField.h" />
     <ClInclude Include="Model.h" />
+    <ClInclude Include="Screens\CustomMenuScreen.h" />
     <ClInclude Include="Screens\IScreen.h" />
     <ClInclude Include="Screens\LoadGameScreen.h" />
     <ClInclude Include="Screens\MainMenuScreen.h" />
@@ -35,8 +38,11 @@
   <ItemGroup>
     <ClCompile Include="Controller.cpp" />
     <ClCompile Include="FleetCommand.cpp" />
+    <ClCompile Include="GUIComponents\DropBox.cpp" />
+    <ClCompile Include="GUIComponents\TextField.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Model.cpp" />
+    <ClCompile Include="Screens\CustomMenuScreen.cpp" />
     <ClCompile Include="Screens\IScreen.cpp" />
     <ClCompile Include="Screens\LoadGameScreen.cpp" />
     <ClCompile Include="Screens\MainMenuScreen.cpp" />

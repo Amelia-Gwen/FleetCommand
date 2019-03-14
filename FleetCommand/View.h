@@ -24,7 +24,7 @@ namespace fleet {
 	public:
 		explicit View(const Model& model);
 
-		bool isOpen() { return window.isOpen(); }
+		bool isOpen() const { return window.isOpen(); }
 		bool pollEvent(sf::Event& event) { return window.pollEvent(event); }
 		void close() { window.close(); }
 

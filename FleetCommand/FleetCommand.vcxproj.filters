@@ -29,6 +29,15 @@
     <Filter Include="GameServices\Header">
       <UniqueIdentifier>{fb844e2f-6d7f-4a32-a197-5e33a9784ec8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GUIComponents">
+      <UniqueIdentifier>{8fd35784-b2fb-4c9f-8113-2af871641b82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUIComponents\Header">
+      <UniqueIdentifier>{3d236665-905f-478e-96bb-2aaaca2b3456}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUIComponents\Source">
+      <UniqueIdentifier>{1a2b3f49-8a91-4dfd-a783-97055aacfa5e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -57,6 +66,15 @@
     </ClCompile>
     <ClCompile Include="Screens\LoadGameScreen.cpp">
       <Filter>Screens\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Screens\CustomMenuScreen.cpp">
+      <Filter>Screens\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="GUIComponents\TextField.cpp">
+      <Filter>GUIComponents\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="GUIComponents\DropBox.cpp">
+      <Filter>GUIComponents\Source</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -95,6 +113,15 @@
     </ClInclude>
     <ClInclude Include="GameServices\LoadFile.h">
       <Filter>GameServices\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Screens\CustomMenuScreen.h">
+      <Filter>Screens\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="GUIComponents\TextField.h">
+      <Filter>GUIComponents\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="GUIComponents\DropBox.h">
+      <Filter>GUIComponents\Header</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
