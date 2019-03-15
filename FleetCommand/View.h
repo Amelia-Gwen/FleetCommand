@@ -6,7 +6,7 @@
 
 #include <SFML\Graphics.hpp>
 
-#include <map>
+#include <unordered_map>
 #include <memory>
 #include <string>
 
@@ -38,7 +38,7 @@ namespace fleet {
 		sf::Sprite backgroundSprite{ background };
 		sf::Font font;
 
-		std::map<std::string, std::unique_ptr<IScreen>> screens;
+		std::unordered_map<std::string, std::unique_ptr<IScreen>> screens;
 		IScreen* currentScreen;
 
 		void checkEvent(GameEvent& gameEvent);
