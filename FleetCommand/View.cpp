@@ -74,9 +74,9 @@ namespace fleet {
 			currentScreen = screens["Custom Game Screen"].get();
 			gameEvent = GameEvent::ActionComplete;
 			break;
-			//case GameEvent::StartCampaign:
-			//	screenState.push(ScreenState::WorldMap);
-			//	break;
+	    //case GameEvent::StartCampaign:
+		//	screenState.push(ScreenState::WorldMap);
+		//	break;
 		//case GameEvent::GoToDashboard:
 		//	screenState.push(ScreenState::Dashboard);
 		//	gameEvent = GameEvent::ActionComplete;

@@ -11,6 +11,10 @@ namespace fleet {
 	{
 		backButton.setPosition(menu_back_x, menu_back_y);
 		initializeBoxes();
+		startButton.setPosition(start_button_x, start_button_y);
+		start.setPosition(start_x, start_y);
+		start.setFillColor(sf::Color::Black);
+		start.setCharacterSize(text_character_size);
 	}
 
 	/*
@@ -22,9 +26,12 @@ namespace fleet {
 	{
 		sf::Vector2f mousePos{ static_cast<float>(sf::Mouse::getPosition(window).x), static_cast<float>(sf::Mouse::getPosition(window).y) };
 
-		if (backButton.getGlobalBounds().contains(mousePos))
-		{
+		if (backButton.getGlobalBounds().contains(mousePos)) {
 			return GameEvent::OpenNewGame;
+		}
+		else if (startButton.getGlobalBounds().contains(mousePos)) {
+			// save values to be used in game
+			return GameEvent::StartGame;
 		}
 
 		playersBox.input(mousePos);
@@ -50,6 +57,7 @@ namespace fleet {
 		oilBox.update(mousePos);
 		cashBox.update(mousePos);
 		researchBox.update(mousePos);
+		checkMouseOver(startButton);
 	}
 	/*
 	Render logic. This is the main need for the window reference.
@@ -63,22 +71,24 @@ namespace fleet {
 		window.draw(oilBox);
 		window.draw(cashBox);
 		window.draw(researchBox);
+		window.draw(startButton);
+		window.draw(start);
 	}
 
 	void CustomMenuScreen::initializeBoxes()
 	{
-		playersBox.setFont(font);
 		playersBox.setPosition(collumn_one_x, row_one_y);
-		computersBox.setFont(font);
+		playersBox.setFont(font);
 		computersBox.setPosition(collumn_two_x, row_one_y);
-		difficultyBox.setFont(font);
+		computersBox.setFont(font);
 		difficultyBox.setPosition(collumn_one_x, row_two_y);
-		oilBox.setFont(font);
+		difficultyBox.setFont(font);
 		oilBox.setPosition(collumn_two_x, row_two_y);
-		cashBox.setFont(font);
+		oilBox.setFont(font);
 		cashBox.setPosition(collumn_one_x, row_three_y);
-		researchBox.setFont(font);
+		cashBox.setFont(font);
 		researchBox.setPosition(collumn_two_x, row_three_y);
+		researchBox.setFont(font);
 
 		for (unsigned i = 1; i <= max_players; ++i) {
 			playersBox.addElement(std::to_string(i), font);
