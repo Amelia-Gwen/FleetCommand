@@ -24,27 +24,37 @@
     <ClInclude Include="GameServices\Expressions.h" />
     <ClInclude Include="GameServices\GameEvent.h" />
     <ClInclude Include="GameServices\LoadFile.h" />
+    <ClInclude Include="GUIComponents\CityMap.h" />
+    <ClInclude Include="GUIComponents\DisplayPanel.h" />
     <ClInclude Include="GUIComponents\DropBox.h" />
+    <ClInclude Include="GUIComponents\WorldMap.h" />
     <ClInclude Include="Model.h" />
+    <ClInclude Include="Screens\CityMapScreen.h" />
     <ClInclude Include="Screens\CustomMenuScreen.h" />
     <ClInclude Include="Screens\IScreen.h" />
     <ClInclude Include="Screens\LoadGameScreen.h" />
     <ClInclude Include="Screens\MainMenuScreen.h" />
     <ClInclude Include="Screens\NewGameMenuScreen.h" />
     <ClInclude Include="Screens\Screens.h" />
+    <ClInclude Include="Screens\WorldMapScreen.h" />
     <ClInclude Include="View.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Controller.cpp" />
     <ClCompile Include="FleetCommand.cpp" />
+    <ClCompile Include="GUIComponents\CityMap.cpp" />
+    <ClCompile Include="GUIComponents\DisplayPanel.cpp" />
     <ClCompile Include="GUIComponents\DropBox.cpp" />
+    <ClCompile Include="GUIComponents\WorldMap.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Model.cpp" />
+    <ClCompile Include="Screens\CityMapScreen.cpp" />
     <ClCompile Include="Screens\CustomMenuScreen.cpp" />
     <ClCompile Include="Screens\IScreen.cpp" />
     <ClCompile Include="Screens\LoadGameScreen.cpp" />
     <ClCompile Include="Screens\MainMenuScreen.cpp" />
     <ClCompile Include="Screens\NewGameMenuScreen.cpp" />
+    <ClCompile Include="Screens\WorldMapScreen.cpp" />
     <ClCompile Include="View.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

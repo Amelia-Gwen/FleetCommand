@@ -73,6 +73,21 @@
     <ClCompile Include="GUIComponents\DropBox.cpp">
       <Filter>GUIComponents\Source</Filter>
     </ClCompile>
+    <ClCompile Include="Screens\WorldMapScreen.cpp">
+      <Filter>Screens\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Screens\CityMapScreen.cpp">
+      <Filter>Screens\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="GUIComponents\DisplayPanel.cpp">
+      <Filter>GUIComponents\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="GUIComponents\WorldMap.cpp">
+      <Filter>GUIComponents\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="GUIComponents\CityMap.cpp">
+      <Filter>GUIComponents\Source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FleetCommand.h">
@@ -115,6 +130,21 @@
       <Filter>Screens\Header</Filter>
     </ClInclude>
     <ClInclude Include="GUIComponents\DropBox.h">
+      <Filter>GUIComponents\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Screens\WorldMapScreen.h">
+      <Filter>Screens\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Screens\CityMapScreen.h">
+      <Filter>Screens\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="GUIComponents\DisplayPanel.h">
+      <Filter>GUIComponents\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="GUIComponents\WorldMap.h">
+      <Filter>GUIComponents\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="GUIComponents\CityMap.h">
       <Filter>GUIComponents\Header</Filter>
     </ClInclude>
   </ItemGroup>
