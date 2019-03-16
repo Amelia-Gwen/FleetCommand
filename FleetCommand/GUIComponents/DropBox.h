@@ -2,36 +2,56 @@
 
 #include <SFML\Graphics.hpp>
 
-#include <unordered_map>
+#include <utility>
+#include <vector>
 #include <string>
 
 namespace fleet {
+
+	constexpr float dropbox_default_x_offset = 60.F;
+	constexpr float box_text_offset = 2.F;
+	constexpr float box_default_width = 30.F;
+	constexpr float box_default_height = 34.F;
+	constexpr float box_default_thickness = 1.F;
+
 	/*
 	Class to provide label and drop down options.
 	*/
-	class DropBox {
+	class DropBox : public sf::Drawable {
 	public:
-		DropBox(const std::string& newLabel, const sf::Font& font);
+		DropBox(const std::string& newLabel);
 
-		void setPosition(const sf::Vector2f& position);
+		/*
+		Position will define the x,y coordinate of the upper left corner of the label.
+		The dropdown will then be positioned by the default distance from the label unless otherwise specified.
+		There is no y_offset. It cannot be altered at this time.
+		*/
 		void setPosition(float x, float y);
+		void setPosition(const sf::Vector2f& position);
+		void setDefaultDistance(float x_offset);
 
-		void setSize(const sf::Vector2f& position);
 		void setFillColor(const sf::Color& color);
 		void setOutlineColor(const sf::Color& color);
 		void setOutlineThickness(float thickness);
 
 		void setFont(const sf::Font& font);
-		void setString(const sf::String &string);
-		void setCharacterSize(unsigned int size);
+		void setLabelString(const std::string &string);
+		void setCharacterSize(unsigned size);
 		void setTextFillColor(const sf::Color& color);
 		void setTextOutlineColor(const sf::Color& color);
 		void setTextOutlineThickness(float thickness);
 
-		void setElement();
-		void addElement();
+		void addElement(const std::string& string);
+		void setElement(const std::string& string, unsigned index);
+		void setDefaultElement(unsigned index);
 	private:
 		sf::Text label;
-		std::unordered_map<sf::Text, sf::RectangleShape> elements;
+		std::vector<std::pair<sf::Text, sf::RectangleShape>> elements;
+		float xOffset{ dropbox_default_x_offset };
+		bool open{ false };
+		int selectedIndex{ 0 };
+		int size{ 0 };
+
+		void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
 	};
  }
