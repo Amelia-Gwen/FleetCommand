@@ -73,9 +73,6 @@
     <ClCompile Include="GUIComponents\DropBox.cpp">
       <Filter>GUIComponents\Source</Filter>
     </ClCompile>
-    <ClCompile Include="GUIComponents\TextField.cpp">
-      <Filter>GUIComponents\Source</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FleetCommand.h">
@@ -118,9 +115,6 @@
       <Filter>Screens\Header</Filter>
     </ClInclude>
     <ClInclude Include="GUIComponents\DropBox.h">
-      <Filter>GUIComponents\Header</Filter>
-    </ClInclude>
-    <ClInclude Include="GUIComponents\TextField.h">
       <Filter>GUIComponents\Header</Filter>
     </ClInclude>
   </ItemGroup>

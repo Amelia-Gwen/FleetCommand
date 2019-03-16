@@ -14,10 +14,12 @@ namespace fleet {
 	void DropBox::setPosition(float x, float y)
 	{
 		label.setPosition(x, y);
-		/*for (auto& element : elements) {
-			element.second.setPosition(x + xOffset, y);
-			element.first.setPosition(x + xOffset + box_text_offset, x + box_text_offset);
-		}*/
+		for (int i = 0; i < elements.size(); ++i) {
+			int position = i - selectedIndex;
+			float yOffset = box_default_height * position;
+			elements[i].second.setPosition(x + xOffset, y + yOffset);
+			elements[i].first.setPosition(x + xOffset + box_text_offset, y + yOffset + box_text_offset);
+		}
 	}
 	void DropBox::setPosition(const sf::Vector2f& position)
 	{
@@ -104,6 +106,36 @@ namespace fleet {
 	void DropBox::setDefaultElement(unsigned index)
 	{
 		selectedIndex = index;
+		setPosition(label.getPosition());
+	}
+
+	void DropBox::input(const sf::Vector2f & mousePos)
+	{
+		if (open) {
+			for (int i = 0; i < elements.size(); ++i) {
+				if (elements[i].second.getGlobalBounds().contains(mousePos)) {
+					selectedIndex = i;
+				}
+			}
+			open = false;
+		}
+		else {
+			if (elements[selectedIndex].second.getGlobalBounds().contains(mousePos)) {
+				open = true;
+			}
+		}
+	}
+
+	void DropBox::update(const sf::Vector2f& mousePos)
+	{
+		for (auto& elem : elements) {
+			if (elem.second.getGlobalBounds().contains(mousePos)) {
+				elem.second.setFillColor(sf::Color::Cyan);
+			}
+			else {
+				elem.second.setFillColor(sf::Color::White);
+			}
+		}
 	}
 
 	void DropBox::draw(sf::RenderTarget& target, sf::RenderStates states) const

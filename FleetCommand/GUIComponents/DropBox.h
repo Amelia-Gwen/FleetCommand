@@ -44,6 +44,9 @@ namespace fleet {
 		void addElement(const std::string& string);
 		void setElement(const std::string& string, unsigned index);
 		void setDefaultElement(unsigned index);
+
+		void input(const sf::Vector2f& mousePos);
+		void update(const sf::Vector2f& mousePos);
 	private:
 		sf::Text label;
 		std::vector<std::pair<sf::Text, sf::RectangleShape>> elements;
