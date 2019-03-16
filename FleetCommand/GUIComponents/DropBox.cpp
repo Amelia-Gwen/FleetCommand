@@ -1,5 +1,7 @@
 #include "DropBox.h"
 
+#include <cstddef>
+
 namespace fleet {
 	/*
 	Default initialization includes. 0, 0 as origin point. White as default background color.
@@ -14,7 +16,7 @@ namespace fleet {
 	void DropBox::setPosition(float x, float y)
 	{
 		label.setPosition(x, y);
-		for (int i = 0; i < elements.size(); ++i) {
+		for (std::size_t i = 0; i < elements.size(); ++i) {
 			int position = i - selectedIndex;
 			float yOffset = box_default_height * position;
 			elements[i].second.setPosition(x + xOffset, y + yOffset);
@@ -60,11 +62,11 @@ namespace fleet {
 	{
 		label.setString(string);
 	}
-	void DropBox::setCharacterSize(unsigned size)
+	void DropBox::setCharacterSize(unsigned newSize)
 	{
-		label.setCharacterSize(size);
+		label.setCharacterSize(newSize);
 		for (auto& element : elements) {
-			element.first.setCharacterSize(size);
+			element.first.setCharacterSize(newSize);
 		}
 	}
 	void DropBox::setTextFillColor(const sf::Color& color)
@@ -87,17 +89,18 @@ namespace fleet {
 		}
 	}
 
-	void DropBox::addElement(const std::string& string)
+	void DropBox::addElement(const std::string& string, const sf::Font& font)
 	{
 		elements.emplace_back(std::make_pair<sf::Text, sf::RectangleShape>(
-			sf::Text(), sf::RectangleShape(sf::Vector2f(box_default_width, box_default_height))
+			sf::Text(string, font), sf::RectangleShape(sf::Vector2f(box_default_width, box_default_height))
 			));
 		int distance = size - selectedIndex;
 		float x = label.getPosition().x + xOffset;
 		float y = label.getPosition().y + (distance * box_default_height);
 		elements[size].second.setPosition(x, y);
 		elements[size].first.setPosition(x + box_text_offset, y + box_text_offset);
-		elements[size].first.setString(string);
+		elements[size].first.setFillColor(sf::Color::Black);
+		++size;
 	}
 	void DropBox::setElement(const std::string& string, unsigned index)
 	{
@@ -109,12 +112,15 @@ namespace fleet {
 		setPosition(label.getPosition());
 	}
 
-	void DropBox::input(const sf::Vector2f & mousePos)
+	void DropBox::input(const sf::Vector2f& mousePos)
 	{
 		if (open) {
-			for (int i = 0; i < elements.size(); ++i) {
+			for (std::size_t i = 0; i < elements.size(); ++i) {
 				if (elements[i].second.getGlobalBounds().contains(mousePos)) {
+					sf::Vector2f position = label.getPosition();
 					selectedIndex = i;
+					setPosition(position);
+					break;
 				}
 			}
 			open = false;

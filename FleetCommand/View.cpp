@@ -21,6 +21,7 @@ namespace fleet {
 		screens.emplace(std::make_pair("Main Menu Screen", std::make_unique<MainMenuScreen>(window, font)));
 		screens.emplace(std::make_pair("New Game Screen", std::make_unique<NewGameMenuScreen>(window, font)));
 		screens.emplace(std::make_pair("Load Game Screen", std::make_unique<LoadGameScreen>(window, font)));
+		screens.emplace(std::make_pair("Custom Game Screen", std::make_unique<CustomMenuScreen>(window, font)));
 
 		currentScreen = screens["Main Menu Screen"].get();
 	}
@@ -69,10 +70,10 @@ namespace fleet {
 			currentScreen = screens["Main Menu Screen"].get();
 			gameEvent = GameEvent::ActionComplete;
 			break;
-			//case GameEvent::OpenCustomGame:
-			//	screenState.push(ScreenState::CustomScreen);
-			//	gameEvent = GameEvent::ActionComplete;
-			//	break;
+		case GameEvent::OpenCustomGame:
+			currentScreen = screens["Custom Game Screen"].get();
+			gameEvent = GameEvent::ActionComplete;
+			break;
 			//case GameEvent::StartCampaign:
 			//	screenState.push(ScreenState::WorldMap);
 			//	break;
