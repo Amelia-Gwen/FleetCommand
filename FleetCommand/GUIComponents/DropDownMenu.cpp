@@ -42,18 +42,6 @@ namespace fleet {
 	{
 		mouseOverButtons(mousePos);
 	}
-	void DropDownMenu::draw(sf::RenderWindow& window)
-	{
-		window.draw(menuButton);
-		window.draw(menu);
-		if (menuOpen)
-		{
-			window.draw(saveButton);
-			window.draw(save);
-			window.draw(exitButton);
-			window.draw(exit);
-		}
-	}
 
 	void DropDownMenu::mouseOverButtons(const sf::Vector2f& mousePos)
 	{
@@ -76,6 +64,19 @@ namespace fleet {
 		}
 		else {
 			exitButton.setFillColor(sf::Color::Cyan);
+		}
+	}
+
+	void DropDownMenu::draw(sf::RenderTarget & target, sf::RenderStates states) const
+	{
+		target.draw(menuButton, states);
+		target.draw(menu, states);
+		if (menuOpen)
+		{
+			target.draw(saveButton, states);
+			target.draw(save, states);
+			target.draw(exitButton, states);
+			target.draw(exit, states);
 		}
 	}
 }

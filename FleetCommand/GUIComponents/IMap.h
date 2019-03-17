@@ -8,7 +8,7 @@
 
 namespace fleet {
 
-	constexpr float map_width = screen_width_float - (side_panel_width * 2.F);
+	constexpr float map_width = screen_width_float;
 	constexpr float map_height = screen_height_float - (drop_button_height + game_button_height);
 	constexpr float map_button_side = 30.F;
 	constexpr float map_button_y = 650.F;

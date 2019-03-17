@@ -18,7 +18,8 @@ namespace fleet {
 	constexpr float save_text_y = save_y + drop_menu_text_y_offset;
 	constexpr float exit_text_y = exit_y + drop_menu_text_y_offset;
 
-	class DropDownMenu {
+	class DropDownMenu : public sf::Drawable {
+	public:
 		explicit DropDownMenu(const sf::Font& font);
 
 		GameEvent input(const sf::Vector2f& mousePos);
@@ -35,5 +36,6 @@ namespace fleet {
 		bool menuOpen{ false };
 
 		void mouseOverButtons(const sf::Vector2f& mousePos);
+		void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
 	};
 }
