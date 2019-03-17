@@ -25,7 +25,7 @@ namespace fleet {
 	constexpr float research_x = panel_4_x + panel_text_x_offset;
 	constexpr float panel_text_y = panel_y + panel_text_y_offset;
 
-	class DisplayPanel {
+	class DisplayPanel : public sf::Drawable {
 	public:
 		explicit DisplayPanel(const Model& model, const sf::Font& font);
 
@@ -45,5 +45,7 @@ namespace fleet {
 		sf::Text oil{ "un-initialized", font };
 		sf::RectangleShape researchBox{ sf::Vector2f{panel_box_width, panel_box_height} };
 		sf::Text research{ "un-initialized", font };
+
+		virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
 	};
 }

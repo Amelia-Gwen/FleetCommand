@@ -13,5 +13,6 @@ namespace fleet {
 		void draw() override;
 	private:
 		const Model& model;
+		const DisplayPanel& displayPanel;
 	};
 }

@@ -38,6 +38,15 @@
     <Filter Include="GUIComponents\Source">
       <UniqueIdentifier>{892b8f85-5e3f-4459-90e9-c3c51db15e57}</UniqueIdentifier>
     </Filter>
+    <Filter Include="DataComponents">
+      <UniqueIdentifier>{7a1b4db4-d476-4003-8f69-c6c733fbec74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataComponents\Header">
+      <UniqueIdentifier>{cf7e6a2a-ba5b-41d4-be56-659498585037}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataComponents\Source">
+      <UniqueIdentifier>{698d8255-e4e0-4d41-b308-8015d9a7b5f0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -93,6 +102,9 @@
     </ClCompile>
     <ClCompile Include="GUIComponents\IMap.cpp">
       <Filter>GUIComponents\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="DataComponents\City.cpp">
+      <Filter>DataComponents\Source</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -158,6 +170,12 @@
     </ClInclude>
     <ClInclude Include="GUIComponents\IMap.h">
       <Filter>GUIComponents\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="GameServices\Coordinate.h">
+      <Filter>GameServices\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="DataComponents\City.h">
+      <Filter>DataComponents\Header</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

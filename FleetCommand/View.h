@@ -38,7 +38,7 @@ namespace fleet {
 		sf::RenderWindow window{ sf::VideoMode(view_width, view_height), "Fleet Command" };
 		sf::Texture background;
 		sf::Sprite backgroundSprite{ background };
-		DisplayPanel displayPanel;
+		DisplayPanel displayPanel{ model, font };
 		sf::Font font;
 
 		std::unordered_map<std::string, std::unique_ptr<IScreen>> screens;

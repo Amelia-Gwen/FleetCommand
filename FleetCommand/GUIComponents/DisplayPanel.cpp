@@ -42,16 +42,16 @@ namespace fleet {
 		//oil.setString(std::to_string(model.player().currentOil()));
 		//research.setString(std::to_string(model.player().currentResearch()));
 	}
-	void DisplayPanel::draw(sf::RenderWindow& window)
+	void DisplayPanel::draw(sf::RenderTarget& target, sf::RenderStates states) const
 	{
-		window.draw(dropDownMenu);
-		window.draw(nameBox);
-		window.draw(name);
-		window.draw(cashBox);
-		window.draw(cash);
-		window.draw(oilBox);
-		window.draw(oil);
-		window.draw(researchBox);
-		window.draw(research);
+		target.draw(dropDownMenu, states);
+		target.draw(nameBox, states);
+		target.draw(name, states);
+		target.draw(cashBox, states);
+		target.draw(cash, states);
+		target.draw(oilBox, states);
+		target.draw(oil, states);
+		target.draw(researchBox, states);
+		target.draw(research, states);
 	}
 }

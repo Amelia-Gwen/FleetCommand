@@ -23,7 +23,7 @@ namespace fleet {
 	constexpr float city_text_offset_x = -15.F;
 	constexpr float city_text_offset_y = 12.F;
 
-	class IMap {
+	class IMap : public sf::Drawable {
 	public:
 		IMap();
 		virtual ~IMap() = default;
@@ -33,7 +33,6 @@ namespace fleet {
 
 		virtual GameEvent input(const sf::Vector2f& mousePos) = 0;
 		virtual void update(const sf::Vector2f& mousePos) = 0;
-		virtual void draw(sf::RenderWindow& window) = 0;
 	protected:
 		sf::Texture worldMap;
 		sf::RectangleShape map{ sf::Vector2f(map_width, map_height) };
@@ -51,5 +50,7 @@ namespace fleet {
 		void moveMap(const sf::Vector2f& newPos);
 		void constrainMapCoordinates(float& x, float& y);
 		void mouseOverButtons(const sf::Vector2f& mousePos);
+
+		virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const = 0;
 	};
 }
