@@ -17,12 +17,11 @@ namespace fleet {
 		OpenCustomGame,
 		StartGame,
 		LoadGame,
-
-		//GoToDashboard,
-		//GoToResearch,
-		//GoToFleet,
-		//EndTurn,
-		//OpenCity,
-		//SaveGame
+		GoToDashboard,
+		GoToResearch,
+		GoToFleet,
+		EndTurn,
+		OpenCity,
+		SaveGame
 	};
 }

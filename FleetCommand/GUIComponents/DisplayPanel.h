@@ -8,10 +8,10 @@
 namespace fleet {
 	class DisplayPanel {
 	public:
-		DisplayPanel(const Model& model, const sf::Font& font);
+		explicit DisplayPanel(const Model& model, const sf::Font& font);
 	private:
 		const Model& model;
 		const sf::Font& font;
-		DropDownMenu dropDownMenu;
+		DropDownMenu dropDownMenu{ font };
 	};
 }

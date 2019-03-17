@@ -6,7 +6,7 @@
 
 namespace fleet {
 
-	constexpr unsigned text_character_size = 45;
+	constexpr unsigned text_character_size = 45U;
 	constexpr float menu_back_button_width = 100.F;
 	constexpr float menu_back_button_height = 50.F;
 	constexpr float menu_back_x = 0.F;
