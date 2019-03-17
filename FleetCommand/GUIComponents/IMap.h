@@ -15,7 +15,7 @@ namespace fleet {
 		void setPosition(float x, float y);
 
 		virtual GameEvent input(const sf::Vector2f& mousePos) = 0;
-		virtual void update(const sf::Vector2f& mousePos) = 0;
+		void update(const sf::Vector2f& mousePos);
 	protected:
 		sf::Texture worldMap;
 		sf::RectangleShape map{ sf::Vector2f(map_width, map_height) };

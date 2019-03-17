@@ -9,7 +9,6 @@ namespace fleet {
 		explicit WorldMap(const Model& model, const sf::Font& font);
 
 		GameEvent input(const sf::Vector2f& mousePos) override;
-		void update(const sf::Vector2f& mousePos) override;
 	private:
 		const Model& model;
 		const sf::Font& font;

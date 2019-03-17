@@ -54,11 +54,7 @@ namespace fleet {
 
 		return GameEvent::None;
 	}
-	void WorldMap::update(const sf::Vector2f& mousePos)
-	{
-		mouseOverButtons(mousePos);
-		moveMap(mousePos);
-	}
+
 	void WorldMap::draw(sf::RenderTarget& target, sf::RenderStates states) const
 	{
 		target.draw(map, states);

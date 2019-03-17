@@ -16,6 +16,13 @@ namespace fleet {
 		mapY = y;
 		map.setPosition(x, y);
 	}
+
+	void IMap::update(const sf::Vector2f & mousePos)
+	{
+		mouseOverButtons(mousePos);
+		moveMap(mousePos);
+	}
+
 	void IMap::grab(const sf::Vector2f& mousePos)
 	{
 		grabbed = true;
