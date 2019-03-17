@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Expressions.h"
+
 #include <SFML\Graphics.hpp>
 
 #include <utility>
@@ -7,13 +9,6 @@
 #include <string>
 
 namespace fleet {
-
-	constexpr float dropbox_default_x_offset = 130.F;
-	constexpr float box_text_offset = 2.F;
-	constexpr float box_default_width = 100.F;
-	constexpr float box_default_height = 34.F;
-	constexpr float box_default_thickness = 1.F;
-
 	/*
 	Class to provide label and drop down options.
 	*/

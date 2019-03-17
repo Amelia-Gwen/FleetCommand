@@ -1,28 +1,11 @@
 #pragma once
 
 #include "GameEvent.h"
-#include "View.h"
 #include "Expressions.h"
 
 #include <SFML\Graphics.hpp>
 
 namespace fleet {
-
-	constexpr float map_width = screen_width_float;
-	constexpr float map_height = screen_height_float - (drop_button_height + game_button_height);
-	constexpr float map_button_side = 30.F;
-	constexpr float map_button_y = 650.F;
-	constexpr float zoom_in_x = 60.F;
-	constexpr float center_x = 100.F;
-	constexpr float zoom_out_x = 140.F;
-	constexpr unsigned minimum_scale = 1;
-	constexpr unsigned maximum_scale = 10;
-	constexpr float city_position_multiplier_x = map_width / 25.F;
-	constexpr float city_position_multiplier_y = map_height / 25.F;
-	constexpr unsigned city_name_text_size = 10U;
-	constexpr float city_text_offset_x = -15.F;
-	constexpr float city_text_offset_y = 12.F;
-
 	class IMap : public sf::Drawable {
 	public:
 		IMap();

@@ -2,6 +2,8 @@
 
 #include "Coordinate.h"
 
+#include <string>
+
 namespace fleet {
 	class City {
 	public:

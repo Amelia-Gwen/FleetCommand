@@ -4,6 +4,7 @@
 #include "IScreen.h"
 #include "GameEvent.h"
 #include "DisplayPanel.h"
+#include "Expressions.h"
 
 #include <SFML\Graphics.hpp>
 
@@ -12,13 +13,6 @@
 #include <string>
 
 namespace fleet {
-
-	constexpr unsigned view_width = 1200U;
-	constexpr unsigned view_height = 800U;
-	constexpr float view_width_float = static_cast<float>(view_width);
-	constexpr float view_height_float = static_cast<float>(view_height);
-	constexpr float side_panel_width = 15.F;
-
 	/*
 	Architecture level class that is responsible for maintaining the window and display.
 	*/

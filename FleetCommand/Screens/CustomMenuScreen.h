@@ -4,20 +4,6 @@
 #include "DropBox.h"
 
 namespace fleet {
-
-	constexpr float collumn_one_x = 300.F;
-	constexpr float collumn_two_x = 700.F;
-	constexpr float row_one_y = 50.F;
-	constexpr float row_two_y = 275.f;
-	constexpr float row_three_y = 500.F;
-	constexpr float start_button_width = 300.F;
-	constexpr float start_button_height = 75.F;
-	constexpr float start_button_x = 400.F;
-	constexpr float start_button_y = 700.F;
-	constexpr float start_x = start_button_x + 40.F;
-	constexpr float start_y = start_button_y + 10.F;
-	constexpr unsigned max_players = 4U;
-
 	class CustomMenuScreen : public IScreen {
 	public:
 		explicit CustomMenuScreen(sf::RenderWindow& window, const sf::Font& font);

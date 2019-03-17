@@ -5,14 +5,6 @@
 #include "LoadFile.h"
 
 namespace fleet {
-
-	constexpr float slot_width = 300.F;
-	constexpr float slot_height = 300.F;
-	constexpr float slot1_x = 50.F;
-	constexpr float slot2_x = 450.F;
-	constexpr float slot3_x = 850.F;
-	constexpr float slot_y = 300.F;
-
 	/*
 	Class that implements the IScreen interface. The user can return to the main menu or chose a file from which to load
 	save data. (Begins gameplay)

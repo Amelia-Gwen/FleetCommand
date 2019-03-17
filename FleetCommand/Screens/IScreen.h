@@ -1,17 +1,11 @@
 #pragma once
 
 #include "GameEvent.h"
+#include "Expressions.h"
 
 #include <SFML\Graphics.hpp>
 
 namespace fleet {
-
-	constexpr unsigned text_character_size = 45U;
-	constexpr float menu_back_button_width = 100.F;
-	constexpr float menu_back_button_height = 50.F;
-	constexpr float menu_back_x = 0.F;
-	constexpr float menu_back_y = 0.F;
-
 	/*
 	Interface class for all screens.
 	Constructor takes a reference to the window that will draw the screen as well as contain mouse coordinates
