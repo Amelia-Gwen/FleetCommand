@@ -97,8 +97,8 @@ namespace fleet {
 	constexpr float slot_y = 300.F;
 
 	// Custom Menu Screen
-	constexpr float collumn_one_x = 300.F;
-	constexpr float collumn_two_x = 700.F;
+	constexpr float column_one_x = 300.F;
+	constexpr float column_two_x = 700.F;
 	constexpr float row_one_y = 50.F;
 	constexpr float row_two_y = 275.f;
 	constexpr float row_three_y = 500.F;
@@ -132,8 +132,8 @@ namespace fleet {
 	constexpr float zoom_out_x = 140.F;
 	constexpr unsigned minimum_scale = 1;
 	constexpr unsigned maximum_scale = 10;
-	constexpr float city_position_multiplier_x = map_width / 25.F;
-	constexpr float city_position_multiplier_y = map_height / 25.F;
+	constexpr float city_position_multiplier_x = 5.F;
+	constexpr float city_position_multiplier_y = 5.F;
 	constexpr unsigned city_name_text_size = 10U;
 	constexpr float city_text_offset_x = -15.F;
 	constexpr float city_text_offset_y = 12.F;
@@ -146,4 +146,6 @@ namespace fleet {
 	constexpr float world_endturn_x = game_button_4_x + world_x_offset;
 	constexpr float world_map_city_width = 10.F;
 	constexpr float world_map_city_height = 10.F;
+
+	// City Map
 }

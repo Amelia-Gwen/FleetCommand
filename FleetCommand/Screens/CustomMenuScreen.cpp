@@ -77,17 +77,17 @@ namespace fleet {
 
 	void CustomMenuScreen::initializeBoxes()
 	{
-		playersBox.setPosition(collumn_one_x, row_one_y);
+		playersBox.setPosition(column_one_x, row_one_y);
 		playersBox.setFont(font);
-		computersBox.setPosition(collumn_two_x, row_one_y);
+		computersBox.setPosition(column_two_x, row_one_y);
 		computersBox.setFont(font);
-		difficultyBox.setPosition(collumn_one_x, row_two_y);
+		difficultyBox.setPosition(column_one_x, row_two_y);
 		difficultyBox.setFont(font);
-		oilBox.setPosition(collumn_two_x, row_two_y);
+		oilBox.setPosition(column_two_x, row_two_y);
 		oilBox.setFont(font);
-		cashBox.setPosition(collumn_one_x, row_three_y);
+		cashBox.setPosition(column_one_x, row_three_y);
 		cashBox.setFont(font);
-		researchBox.setPosition(collumn_two_x, row_three_y);
+		researchBox.setPosition(column_two_x, row_three_y);
 		researchBox.setFont(font);
 
 		for (unsigned i = 1; i <= max_players; ++i) {

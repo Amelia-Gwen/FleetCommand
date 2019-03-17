@@ -11,14 +11,19 @@ namespace fleet {
 
 	void CityMapScreen::setCity(unsigned index)
 	{
-		// set city tiles
+		cityName = model.cityList()[index].cityName();
+
+		// set city layout
 	}
 
 	GameEvent CityMapScreen::input()
 	{
 		sf::Vector2f mousePos{ static_cast<float>(sf::Mouse::getPosition(window).x), static_cast<float>(sf::Mouse::getPosition(window).y) };
 
-		GameEvent gameEvent = cityMap.input(mousePos);
+		GameEvent gameEvent = displayPanel.input(mousePos);
+		if (gameEvent != GameEvent::None) { return gameEvent; }
+
+        gameEvent = cityMap.input(mousePos);
 
 		return gameEvent;
 	}
@@ -27,9 +32,11 @@ namespace fleet {
 		sf::Vector2f mousePos{ static_cast<float>(sf::Mouse::getPosition(window).x), static_cast<float>(sf::Mouse::getPosition(window).y) };
 
 		cityMap.update(mousePos);
+		displayPanel.update(mousePos);
 	}
 	void CityMapScreen::draw()
 	{
 		window.draw(cityMap);
+		window.draw(displayPanel);
 	}
 }

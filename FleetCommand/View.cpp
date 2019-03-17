@@ -68,6 +68,7 @@ namespace fleet {
 	*/
 	void View::checkEvent(GameEvent& gameEvent)
 	{
+		unsigned index;
 		switch (gameEvent)
 		{
 		case GameEvent::OpenNewGame:
@@ -109,7 +110,7 @@ namespace fleet {
 		//	gameEvent = GameEvent::ActionComplete;
 		//	break;
 		case GameEvent::OpenCity:
-			unsigned index = dynamic_cast<WorldMapScreen*>(currentScreen)->activeCity();
+			index = dynamic_cast<WorldMapScreen*>(currentScreen)->activeCity();
 			currentScreen = screens["City Map Screen"].get();
 			dynamic_cast<CityMapScreen*>(currentScreen)->setCity(index);
 			gameEvent = GameEvent::ActionComplete;

@@ -61,11 +61,12 @@ namespace fleet {
 
 	void WorldMap::repositionCities()
 	{
+		// TODO: only perform when alterations are made.
 		std::size_t index = 0;
 		sf::Vector2f scale = map.getScale();
 		for (const auto& city : model.cityList()) {
-			float position_x = mapX + (city_position_multiplier_x * city.location().x);
-			float position_y = mapY + (city_position_multiplier_y * city.location().y);
+			float position_x = city_position_multiplier_x * city.location().x;
+			float position_y = city_position_multiplier_y * city.location().y;
 			position_x *= scale.x;
 			position_y *= scale.y;
 			position_x += map.getPosition().x;

@@ -17,7 +17,8 @@ namespace fleet {
 		void draw() override;
 	private:
 		const Model& model;
-		const DisplayPanel& displayPanel;
+		DisplayPanel& displayPanel;
 		CityMap cityMap;
+		std::string cityName;
 	};
 }

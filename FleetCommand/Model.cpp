@@ -8,11 +8,6 @@ namespace fleet {
 		}
 	}
 
-	void Model::setCity(unsigned index)
-	{
-		activeCity = &cities[index];
-	}
-
 	void Model::update()
 	{
 	}

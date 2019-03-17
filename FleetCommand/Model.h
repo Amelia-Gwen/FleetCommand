@@ -12,7 +12,7 @@ namespace fleet {
 		{"Blitzil", Coordinate{1, 6}},
 		{"Clint", Coordinate{2, 8}},
 		{"Coinenrock", Coordinate{8, 2}},
-		{"Dragonopolis", Coordinate{3, 6}},
+		{"Dragonopolis", Coordinate{32, 8}}, // Done
 		{"Everen", Coordinate{8, 1}},
 		{"Flagynn", Coordinate{1, 7}},
 		{"Galdor", Coordinate{5, 1}},
@@ -46,12 +46,9 @@ namespace fleet {
 		Model();
 
 		const std::vector<City>& cityList() const { return cities; }
-		const City* currentCity() const { return activeCity; }
 
-		void setCity(unsigned index);
 		void update();
 	private:
 		std::vector<City> cities;
-		City* activeCity{ nullptr };
 	};
 }
