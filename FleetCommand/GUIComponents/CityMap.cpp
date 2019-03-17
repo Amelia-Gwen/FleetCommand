@@ -38,6 +38,11 @@ namespace fleet {
 		// when unit is selected then only non-actionable tiles are grabbable. actionable tiles will be highlighted
 		return GameEvent::None;
 	}
+	void CityMap::update(const sf::Vector2f & mousePos)
+	{
+		mouseOverButtons(mousePos);
+		moveMap(mousePos);
+	}
 
 	void CityMap::draw(sf::RenderTarget& target, sf::RenderStates states) const
 	{

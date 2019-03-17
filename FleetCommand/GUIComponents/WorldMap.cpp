@@ -12,14 +12,12 @@ namespace fleet {
 			cities.emplace_back(std::make_pair(
 				sf::RectangleShape(sf::Vector2f(world_map_city_width, world_map_city_height)), sf::Text(city.cityName(), font)
 			));
-			float position_x = city_position_multiplier_x * city.location().x;
-			float position_y = city_position_multiplier_y * city.location().y;
+			float position_x = mapX + (city_position_multiplier_x * city.location().x);
+			float position_y = mapY + (city_position_multiplier_y * city.location().y);
 			cities[counter].first.setPosition(position_x, position_y);
-			position_x += city_text_offset_x;
-			position_y += city_text_offset_y;
 			cities[counter].second.setCharacterSize(city_name_text_size);
 			cities[counter].second.setFillColor(sf::Color::Black);
-			cities[counter].second.setPosition(position_x, position_y);
+			cities[counter].second.setPosition(position_x + city_text_offset_x, position_y + city_text_offset_y);
 			++counter;
 		}
 		// set cities
@@ -54,7 +52,29 @@ namespace fleet {
 
 		return GameEvent::None;
 	}
+	void WorldMap::update(const sf::Vector2f & mousePos)
+	{
+		mouseOverButtons(mousePos);
+		moveMap(mousePos);
+		repositionCities();
+	}
 
+	void WorldMap::repositionCities()
+	{
+		std::size_t index = 0;
+		sf::Vector2f scale = map.getScale();
+		for (const auto& city : model.cityList()) {
+			float position_x = mapX + (city_position_multiplier_x * city.location().x);
+			float position_y = mapY + (city_position_multiplier_y * city.location().y);
+			position_x *= scale.x;
+			position_y *= scale.y;
+			position_x += map.getPosition().x;
+			position_y += map.getPosition().y;
+			cities[index].first.setPosition(position_x, position_y);
+			cities[index].second.setPosition(position_x + city_text_offset_x, position_y + city_text_offset_y);
+			++index;
+		}
+	}
 	void WorldMap::draw(sf::RenderTarget& target, sf::RenderStates states) const
 	{
 		target.draw(map, states);
