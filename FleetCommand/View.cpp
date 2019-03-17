@@ -22,6 +22,8 @@ namespace fleet {
 		screens.emplace(std::make_pair("New Game Screen", std::make_unique<NewGameMenuScreen>(window, font)));
 		screens.emplace(std::make_pair("Load Game Screen", std::make_unique<LoadGameScreen>(window, font)));
 		screens.emplace(std::make_pair("Custom Game Screen", std::make_unique<CustomMenuScreen>(window, font)));
+		screens.emplace(std::make_pair("World Map Screen", std::make_unique<WorldMapScreen>(window, font, displayPanel)));
+		screens.emplace(std::make_pair("City Map Screen", std::make_unique<CityMapScreen>(window, font, displayPanel)));
 
 		currentScreen = screens["Main Menu Screen"].get();
 	}

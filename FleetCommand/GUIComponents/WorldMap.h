@@ -1,8 +1,11 @@
 #pragma once
 
+#include "IMap.h"
+
 namespace fleet {
-	class WorldMap {
+	class WorldMap : public IMap {
 	public:
+		WorldMap();
 	private:
 	};
 }

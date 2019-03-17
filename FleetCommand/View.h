@@ -3,6 +3,7 @@
 #include "Model.h"
 #include "IScreen.h"
 #include "GameEvent.h"
+#include "DisplayPanel.h"
 
 #include <SFML\Graphics.hpp>
 
@@ -16,6 +17,7 @@ namespace fleet {
 	constexpr unsigned view_height = 800U;
 	constexpr float view_width_float = static_cast<float>(view_width);
 	constexpr float view_height_float = static_cast<float>(view_height);
+	constexpr float side_panel_width = 15.F;
 
 	/*
 	Architecture level class that is responsible for maintaining the window and display.
@@ -36,6 +38,7 @@ namespace fleet {
 		sf::RenderWindow window{ sf::VideoMode(view_width, view_height), "Fleet Command" };
 		sf::Texture background;
 		sf::Sprite backgroundSprite{ background };
+		DisplayPanel displayPanel;
 		sf::Font font;
 
 		std::unordered_map<std::string, std::unique_ptr<IScreen>> screens;

@@ -6,8 +6,7 @@ Entry point for Application
 
 using namespace fleet;
 
-int main()
-{
+int main() {
 	FleetCommand FleetCommand;
 	FleetCommand.run();
 }

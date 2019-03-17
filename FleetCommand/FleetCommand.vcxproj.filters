@@ -88,6 +88,12 @@
     <ClCompile Include="GUIComponents\CityMap.cpp">
       <Filter>GUIComponents\Source</Filter>
     </ClCompile>
+    <ClCompile Include="GUIComponents\DropDownMenu.cpp">
+      <Filter>GUIComponents\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="GUIComponents\IMap.cpp">
+      <Filter>GUIComponents\Source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FleetCommand.h">
@@ -145,6 +151,12 @@
       <Filter>GUIComponents\Header</Filter>
     </ClInclude>
     <ClInclude Include="GUIComponents\CityMap.h">
+      <Filter>GUIComponents\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="GUIComponents\DropDownMenu.h">
+      <Filter>GUIComponents\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="GUIComponents\IMap.h">
       <Filter>GUIComponents\Header</Filter>
     </ClInclude>
   </ItemGroup>

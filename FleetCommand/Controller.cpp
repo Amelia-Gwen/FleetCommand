@@ -12,27 +12,22 @@ namespace fleet {
 	*/
 	void Controller::input()
 	{
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
-		{
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
 			view.close();
 		}
 
 		sf::Event event;
 		GameEvent gameEvent = GameEvent::None;
-		while (view.pollEvent(event))
-		{
-			if (event.type == sf::Event::Closed)
-			{
+		while (view.pollEvent(event)) {
+			if (event.type == sf::Event::Closed) {
 				view.close();
 			}
 
-			if (event.type == sf::Event::MouseButtonPressed)
-			{
+			if (event.type == sf::Event::MouseButtonPressed) {
 				gameEvent = view.input();
 			}
 
-			if (event.type == sf::Event::MouseButtonReleased)
-			{
+			if (event.type == sf::Event::MouseButtonReleased) {
 				// release grip on map
 			}
 		}
@@ -46,8 +41,7 @@ namespace fleet {
 	*/
 	void Controller::processEvent(const GameEvent& gameEvent)
 	{
-		switch (gameEvent)
-		{
+		switch (gameEvent) {
 		//case GameEvent::StartCampaign:
 		//	model.startGame(campaign_enemy_count);
 		//	// start game

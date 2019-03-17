@@ -8,3 +8,5 @@ Header to list all other Screen headers for easy inclusion
 #include "NewGameMenuScreen.h"
 #include "LoadGameScreen.h"
 #include "CustomMenuScreen.h"
+#include "WorldMapScreen.h"
+#include "CityMapScreen.h"
