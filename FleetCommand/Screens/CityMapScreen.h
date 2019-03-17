@@ -2,6 +2,7 @@
 
 #include "IScreen.h"
 #include "DisplayPanel.h"
+#include "CityMap.h"
 
 namespace fleet {
 	class CityMapScreen : public IScreen {
@@ -14,5 +15,6 @@ namespace fleet {
 	private:
 		const Model& model;
 		const DisplayPanel& displayPanel;
+		CityMap cityMap;
 	};
 }

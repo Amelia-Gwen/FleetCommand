@@ -11,9 +11,9 @@ namespace fleet {
 
 		GameEvent input(const sf::Vector2f& mousePos) override;
 	private:
-		sf::Texture spriteSheet{};
-		std::vector<std::vector<sf::Sprite>> cityMap{};
-		std::string cityName{ "Andwar" };
+		sf::Texture spriteSheet;
+		std::vector<std::vector<sf::Sprite>> cityMap;
+		std::string cityName{ "un-initialized" };
 		bool draggable{ true };
 
 		void draw(sf::RenderTarget& target, sf::RenderStates states) const override;

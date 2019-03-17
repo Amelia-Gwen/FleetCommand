@@ -7,14 +7,23 @@ namespace fleet {
 		displayPanel{ displayPanel }
 	{
 	}
+
 	GameEvent CityMapScreen::input()
 	{
-		return GameEvent();
+		sf::Vector2f mousePos{ static_cast<float>(sf::Mouse::getPosition(window).x), static_cast<float>(sf::Mouse::getPosition(window).y) };
+
+		GameEvent gameEvent = cityMap.input(mousePos);
+
+		return gameEvent;
 	}
 	void CityMapScreen::update()
 	{
+		sf::Vector2f mousePos{ static_cast<float>(sf::Mouse::getPosition(window).x), static_cast<float>(sf::Mouse::getPosition(window).y) };
+
+		cityMap.update(mousePos);
 	}
 	void CityMapScreen::draw()
 	{
+		window.draw(cityMap);
 	}
 }
