@@ -28,7 +28,7 @@ namespace fleet {
 			}
 
 			if (event.type == sf::Event::MouseButtonReleased) {
-				// release grip on map
+				view.releaseGrip();
 			}
 		}
 		processEvent(gameEvent);

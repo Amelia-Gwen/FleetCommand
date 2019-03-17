@@ -23,6 +23,7 @@ namespace fleet {
 		bool isOpen() const { return window.isOpen(); }
 		bool pollEvent(sf::Event& event) { return window.pollEvent(event); }
 		void close() { window.close(); }
+		void releaseGrip();
 
 		GameEvent input();
 		void update() { currentScreen->update(); }

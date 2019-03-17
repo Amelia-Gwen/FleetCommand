@@ -5,7 +5,8 @@ namespace fleet {
 		IScreen{ window, font },
 		model{ model },
 		displayPanel{ displayPanel }
-	{		
+	{
+		worldMap.setPosition(0.F, panel_box_height);
 		dashButton.setPosition(game_button_1_x, game_button_y);
 		dashboard.setPosition(world_dash_x, game_button_text_y);
 		dashboard.setCharacterSize(text_character_size);

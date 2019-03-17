@@ -9,7 +9,7 @@ namespace fleet {
 	public:
 		explicit WorldMapScreen(sf::RenderWindow& window, sf::Font& font, const Model& model, DisplayPanel& displayPanel);
 
-		void releaseGrip() { worldMap.releaseGrip(); }
+		void releaseGrip() override { worldMap.releaseGrip(); }
 
 		GameEvent input() override;
 		void update() override;

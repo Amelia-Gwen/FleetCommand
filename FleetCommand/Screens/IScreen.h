@@ -19,6 +19,8 @@ namespace fleet {
 		explicit IScreen(sf::RenderWindow& window, const sf::Font& font);
 		virtual ~IScreen() = default;
 
+		virtual void releaseGrip() {}
+
 		virtual GameEvent input() = 0;
 		virtual void update() = 0;
 		virtual void draw() = 0;

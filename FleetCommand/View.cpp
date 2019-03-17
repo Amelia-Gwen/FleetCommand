@@ -28,6 +28,13 @@ namespace fleet {
 		currentScreen = screens["Main Menu Screen"].get();
 	}
 
+	void View::releaseGrip()
+	{
+		if (currentScreen == screens["World Map Screen"].get() || currentScreen == screens["City Map Screen"].get()) {
+			currentScreen->releaseGrip();
+		}
+	}
+
 	/*
 	Recieve input from the user, process it internally before passing it on to the Controller.
 	Any events that can be handled before passing on the event are handled then a GameEvent::ActionComplete is returned

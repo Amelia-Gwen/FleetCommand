@@ -6,6 +6,7 @@ namespace fleet {
 		model{ model },
 		displayPanel{ displayPanel }
 	{
+		cityMap.setPosition(0.F, panel_box_height);
 	}
 
 	GameEvent CityMapScreen::input()
