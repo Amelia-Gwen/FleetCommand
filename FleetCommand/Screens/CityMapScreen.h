@@ -9,7 +9,8 @@ namespace fleet {
 	public:
 		explicit CityMapScreen(sf::RenderWindow& window, const sf::Font& font, const Model& model, DisplayPanel& displayPanel);
 
-		void releaseGrip() override { cityMap.releaseGrip(); }
+		void releaseGrip() { cityMap.releaseGrip(); }
+		void setCity(unsigned index);
 
 		GameEvent input() override;
 		void update() override;

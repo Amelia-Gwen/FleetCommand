@@ -30,8 +30,11 @@ namespace fleet {
 
 	void View::releaseGrip()
 	{
-		if (currentScreen == screens["World Map Screen"].get() || currentScreen == screens["City Map Screen"].get()) {
-			currentScreen->releaseGrip();
+		if (currentScreen == screens["World Map Screen"].get()) {
+			dynamic_cast<WorldMapScreen*>(currentScreen)->releaseGrip();
+		}
+		else if (currentScreen == screens["City Map Screen"].get()) {
+			dynamic_cast<CityMapScreen*>(currentScreen)->releaseGrip();
 		}
 	}
 
@@ -86,10 +89,12 @@ namespace fleet {
 	    case GameEvent::StartCampaign:
 			// set default value for game
 			currentScreen = screens["World Map Screen"].get();
+			gameEvent = GameEvent::ActionComplete;
 			break;
 		case GameEvent::StartGame:
 			// scrape values
 			currentScreen = screens["World Map Screen"].get();
+			gameEvent = GameEvent::ActionComplete;
 			break;
 		//case GameEvent::GoToDashboard:
 		//	screenState.push(ScreenState::Dashboard);
@@ -103,6 +108,12 @@ namespace fleet {
 		//	screenState.push(ScreenState::FleetScreen);
 		//	gameEvent = GameEvent::ActionComplete;
 		//	break;
+		case GameEvent::OpenCity:
+			unsigned index = dynamic_cast<WorldMapScreen*>(currentScreen)->activeCity();
+			currentScreen = screens["City Map Screen"].get();
+			dynamic_cast<CityMapScreen*>(currentScreen)->setCity(index);
+			gameEvent = GameEvent::ActionComplete;
+			break;
 		case GameEvent::None:
 		case GameEvent::ActionComplete:
 		default:

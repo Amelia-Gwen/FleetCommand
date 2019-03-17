@@ -8,6 +8,8 @@ namespace fleet {
 	public:
 		explicit WorldMap(const Model& model, const sf::Font& font);
 
+		unsigned activeCity() const { return cityIndex; }
+
 		GameEvent input(const sf::Vector2f& mousePos) override;
 		void update(const sf::Vector2f& mousePos) override;
 	private:

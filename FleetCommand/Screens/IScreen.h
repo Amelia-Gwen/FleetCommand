@@ -5,6 +5,8 @@
 
 #include <SFML\Graphics.hpp>
 
+#include <string>
+
 namespace fleet {
 	/*
 	Interface class for all screens.
@@ -18,8 +20,6 @@ namespace fleet {
 	public:
 		explicit IScreen(sf::RenderWindow& window, const sf::Font& font);
 		virtual ~IScreen() = default;
-
-		virtual void releaseGrip() {}
 
 		virtual GameEvent input() = 0;
 		virtual void update() = 0;

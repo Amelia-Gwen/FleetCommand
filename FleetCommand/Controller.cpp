@@ -1,7 +1,7 @@
 #include "Controller.h"
 
 namespace fleet {
-	Controller::Controller(const Model& model, View& view) :
+	Controller::Controller(Model& model, View& view) :
 		model{ model },
 		view{ view }
 	{
@@ -57,8 +57,8 @@ namespace fleet {
 		//	//view.returnControl();
 		//	break;
 		//case GameEvent::OpenCity:
-		//	//model.setCity(&model.cityList()[view.city()]);
-		//	//view.checkCity();
+		//	// model.setCity(); <- pass index from world map
+		//	// 
 		//	break;
 		case GameEvent::None:
 		case GameEvent::ActionComplete:

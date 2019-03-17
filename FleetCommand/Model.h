@@ -46,10 +46,12 @@ namespace fleet {
 		Model();
 
 		const std::vector<City>& cityList() const { return cities; }
+		const City* currentCity() const { return activeCity; }
 
+		void setCity(unsigned index);
 		void update();
 	private:
 		std::vector<City> cities;
-
+		City* activeCity{ nullptr };
 	};
 }

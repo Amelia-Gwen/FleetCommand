@@ -9,6 +9,11 @@ namespace fleet {
 		cityMap.setPosition(0.F, panel_box_height);
 	}
 
+	void CityMapScreen::setCity(unsigned index)
+	{
+		// set city tiles
+	}
+
 	GameEvent CityMapScreen::input()
 	{
 		sf::Vector2f mousePos{ static_cast<float>(sf::Mouse::getPosition(window).x), static_cast<float>(sf::Mouse::getPosition(window).y) };
