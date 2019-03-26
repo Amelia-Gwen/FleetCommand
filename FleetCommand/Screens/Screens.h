@@ -10,3 +10,5 @@ Header to list all other Screen headers for easy inclusion
 #include "CustomMenuScreen.h"
 #include "WorldMapScreen.h"
 #include "CityMapScreen.h"
+#include "Dashboard.h"
+#include "CityDashboard.h"

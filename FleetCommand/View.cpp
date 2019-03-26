@@ -23,6 +23,8 @@ namespace fleet {
 		screens.emplace(std::make_pair("Load Game Screen", std::make_unique<LoadGameScreen>(window, font)));
 		screens.emplace(std::make_pair("Custom Game Screen", std::make_unique<CustomMenuScreen>(window, font)));
 		screens.emplace(std::make_pair("World Map Screen", std::make_unique<WorldMapScreen>(window, font, model, displayPanel)));
+		screens.emplace(std::make_pair("Dashboard", std::make_unique<Dashboard>(window, font, displayPanel)));
+		screens.emplace(std::make_pair("City Dashboard", std::make_unique<CityDashboard>(window, font, displayPanel)));
 		screens.emplace(std::make_pair("City Map Screen", std::make_unique<CityMapScreen>(window, font, model, displayPanel)));
 
 		currentScreen = screens["Main Menu Screen"].get();
@@ -111,8 +113,8 @@ namespace fleet {
 		//	break;
 		case GameEvent::OpenCity:
 			index = dynamic_cast<WorldMapScreen*>(currentScreen)->activeCity();
-			currentScreen = screens["City Map Screen"].get();
-			dynamic_cast<CityMapScreen*>(currentScreen)->setCity(index);
+			currentScreen = screens["City Dashboard"].get();
+			dynamic_cast<CityDashboard*>(currentScreen)->setCity(index);
 			gameEvent = GameEvent::ActionComplete;
 			break;
 		case GameEvent::None:

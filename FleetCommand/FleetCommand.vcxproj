@@ -33,8 +33,10 @@
     <ClInclude Include="GUIComponents\IMap.h" />
     <ClInclude Include="GUIComponents\WorldMap.h" />
     <ClInclude Include="Model.h" />
+    <ClInclude Include="Screens\CityDashboard.h" />
     <ClInclude Include="Screens\CityMapScreen.h" />
     <ClInclude Include="Screens\CustomMenuScreen.h" />
+    <ClInclude Include="Screens\Dashboard.h" />
     <ClInclude Include="Screens\IScreen.h" />
     <ClInclude Include="Screens\LoadGameScreen.h" />
     <ClInclude Include="Screens\MainMenuScreen.h" />
@@ -55,8 +57,10 @@
     <ClCompile Include="GUIComponents\WorldMap.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Model.cpp" />
+    <ClCompile Include="Screens\CityDashboard.cpp" />
     <ClCompile Include="Screens\CityMapScreen.cpp" />
     <ClCompile Include="Screens\CustomMenuScreen.cpp" />
+    <ClCompile Include="Screens\Dashboard.cpp" />
     <ClCompile Include="Screens\IScreen.cpp" />
     <ClCompile Include="Screens\LoadGameScreen.cpp" />
     <ClCompile Include="Screens\MainMenuScreen.cpp" />

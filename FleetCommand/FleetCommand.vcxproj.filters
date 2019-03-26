@@ -106,6 +106,12 @@
     <ClCompile Include="DataComponents\City.cpp">
       <Filter>DataComponents\Source</Filter>
     </ClCompile>
+    <ClCompile Include="Screens\Dashboard.cpp">
+      <Filter>Screens\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Screens\CityDashboard.cpp">
+      <Filter>Screens\Source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FleetCommand.h">
@@ -176,6 +182,12 @@
     </ClInclude>
     <ClInclude Include="DataComponents\City.h">
       <Filter>DataComponents\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Screens\Dashboard.h">
+      <Filter>Screens\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Screens\CityDashboard.h">
+      <Filter>Screens\Header</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
