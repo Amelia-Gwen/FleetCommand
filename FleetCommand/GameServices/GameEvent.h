@@ -20,8 +20,11 @@ namespace fleet {
 		GoToDashboard,
 		GoToResearch,
 		GoToFleet,
-		EndTurn,
+		GoToCityMap,
+		GoToWorldMap,
+		GoToUpgrade,
 		OpenCity,
+		EndTurn,
 		SaveGame
 	};
 }
