@@ -43,7 +43,7 @@ namespace fleet {
 			return GameEvent::GoToCityMap;
 		}
 		else if (cityUpgradeButton.getGlobalBounds().contains(mousePos)) {
-			return GameEvent::GoToUpgrade;
+			return GameEvent::GoToCityUpgrade;
 		}
 		else if (worldMapButton.getGlobalBounds().contains(mousePos)) {
 			return GameEvent::GoToWorldMap;

@@ -99,10 +99,22 @@ namespace fleet {
 			currentScreen = screens["World Map Screen"].get();
 			gameEvent = GameEvent::ActionComplete;
 			break;
-		//case GameEvent::GoToDashboard:
-		//	screenState.push(ScreenState::Dashboard);
-		//	gameEvent = GameEvent::ActionComplete;
-		//	break;
+		case GameEvent::GoToDashboard:
+			currentScreen = screens["Dashboard"].get();
+			gameEvent = GameEvent::ActionComplete;
+			break;
+		case GameEvent::GoToCityMap:
+			currentScreen = screens["City Map Screen"].get();
+			gameEvent = GameEvent::ActionComplete;
+			break;
+		case GameEvent::GoToCityUpgrade:
+			currentScreen = screens["City Upgrade Screen"].get();
+			gameEvent = GameEvent::ActionComplete;
+			break;
+		case GameEvent::GoToWorldMap:
+			currentScreen = screens["World Map Screen"].get();
+			gameEvent = GameEvent::ActionComplete;
+			break;
 		//case GameEvent::GoToResearch:
 		//	screenState.push(ScreenState::ResearchScreen);
 		//	gameEvent = GameEvent::ActionComplete;
