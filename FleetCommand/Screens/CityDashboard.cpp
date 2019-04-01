@@ -5,21 +5,20 @@ namespace fleet {
 		IScreen{ window, font },
 		displayPanel{ displayPanel }
 	{
-		// TODO: move lettering x's
 		dashboardButton.setPosition(game_button_1_x, game_button_y);
-		dashboard.setPosition(world_dash_x, game_button_text_y);
+		dashboard.setPosition(game_button_1_x + dashboard_x_offset, game_button_text_y);
 		dashboard.setCharacterSize(text_character_size);
 		dashboard.setFillColor(sf::Color::Black);
 		cityMapButton.setPosition(game_button_2_x, game_button_y);
-		cityMap.setPosition(world_research_x, game_button_text_y);
+		cityMap.setPosition(game_button_2_x + citymap_x_offset, game_button_text_y);
 		cityMap.setCharacterSize(text_character_size);
 		cityMap.setFillColor(sf::Color::Black);
 		cityUpgradeButton.setPosition(game_button_3_x, game_button_y);
-		cityUpgrade.setPosition(world_fleet_x, game_button_text_y);
+		cityUpgrade.setPosition(game_button_3_x + cityupgrade_x_offset, game_button_text_y);
 		cityUpgrade.setCharacterSize(text_character_size);
 		cityUpgrade.setFillColor(sf::Color::Black);
 		worldMapButton.setPosition(game_button_4_x, game_button_y);
-		worldMap.setPosition(world_endturn_x, game_button_text_y);
+		worldMap.setPosition(game_button_4_x + worldmap_x_offset, game_button_text_y);
 		worldMap.setCharacterSize(text_character_size);
 		worldMap.setFillColor(sf::Color::Black);
 	}

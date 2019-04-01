@@ -140,12 +140,17 @@ namespace fleet {
 
 	// World Map
 	constexpr float world_x_offset = 60.F;
-	constexpr float world_dash_x = game_button_1_x + world_x_offset;
-	constexpr float world_research_x = game_button_2_x + world_x_offset;
-	constexpr float world_fleet_x = game_button_3_x + world_x_offset + 40.F;
-	constexpr float world_endturn_x = game_button_4_x + world_x_offset;
 	constexpr float world_map_city_width = 10.F;
 	constexpr float world_map_city_height = 10.F;
 
 	// City Map
+
+	// Button Offsets
+	constexpr float dashboard_x_offset = 60.F;
+	constexpr float research_x_offset = 60.F;
+	constexpr float fleet_x_offset = 100.F;
+	constexpr float endturn_x_offset = 60.F;
+	constexpr float citymap_x_offset = 100.F;
+	constexpr float cityupgrade_x_offset = 60.F;
+	constexpr float worldmap_x_offset = 100.F;
 }

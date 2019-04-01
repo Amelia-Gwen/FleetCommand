@@ -8,19 +8,19 @@ namespace fleet {
 	{
 		worldMap.setPosition(0.F, panel_box_height);
 		dashButton.setPosition(game_button_1_x, game_button_y);
-		dashboard.setPosition(world_dash_x, game_button_text_y);
+		dashboard.setPosition(game_button_1_x + dashboard_x_offset, game_button_text_y);
 		dashboard.setCharacterSize(text_character_size);
 		dashboard.setFillColor(sf::Color::Black);
 		researchButton.setPosition(game_button_2_x, game_button_y);
-		research.setPosition(world_research_x, game_button_text_y);
+		research.setPosition(game_button_2_x + research_x_offset, game_button_text_y);
 		research.setCharacterSize(text_character_size);
 		research.setFillColor(sf::Color::Black);
 		fleetButton.setPosition(game_button_3_x, game_button_y);
-		fleet.setPosition(world_fleet_x, game_button_text_y);
+		fleet.setPosition(game_button_3_x + fleet_x_offset, game_button_text_y);
 		fleet.setCharacterSize(text_character_size);
 		fleet.setFillColor(sf::Color::Black);
 		endTurnButton.setPosition(game_button_4_x, game_button_y);
-		endTurn.setPosition(world_endturn_x, game_button_text_y);
+		endTurn.setPosition(game_button_4_x + endturn_x_offset, game_button_text_y);
 		endTurn.setCharacterSize(text_character_size);
 	    endTurn.setFillColor(sf::Color::Black);
 	}
