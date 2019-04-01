@@ -26,6 +26,10 @@ namespace fleet {
 		screens.emplace(std::make_pair("Dashboard", std::make_unique<Dashboard>(window, font, displayPanel)));
 		screens.emplace(std::make_pair("City Dashboard", std::make_unique<CityDashboard>(window, font, displayPanel)));
 		screens.emplace(std::make_pair("City Map Screen", std::make_unique<CityMapScreen>(window, font, model, displayPanel)));
+		screens.emplace(std::make_pair("City Upgrade Screen", std::make_unique<CityUpgradeScreen>(window, font, displayPanel)));
+		screens.emplace(std::make_pair("Unit Screen", std::make_unique<UnitScreen>(window, font, displayPanel)));
+		screens.emplace(std::make_pair("Fleet Screen", std::make_unique<FleetScreen>(window, font, displayPanel)));
+		screens.emplace(std::make_pair("Research Screen", std::make_unique<ResearchScreen>(window, font, displayPanel)));
 
 		currentScreen = screens["Main Menu Screen"].get();
 	}
@@ -115,14 +119,17 @@ namespace fleet {
 			currentScreen = screens["World Map Screen"].get();
 			gameEvent = GameEvent::ActionComplete;
 			break;
-		//case GameEvent::GoToResearch:
-		//	screenState.push(ScreenState::ResearchScreen);
-		//	gameEvent = GameEvent::ActionComplete;
-		//	break;
-		//case GameEvent::GoToFleet:
-		//	screenState.push(ScreenState::FleetScreen);
-		//	gameEvent = GameEvent::ActionComplete;
-		//	break;
+		case GameEvent::GoToResearch:
+			currentScreen = screens["Research Screen"].get();
+			gameEvent = GameEvent::ActionComplete;
+			break;
+		case GameEvent::GoToFleet:
+			currentScreen = screens["Fleet Screen"].get();
+			gameEvent = GameEvent::ActionComplete;
+			break;
+		case GameEvent::GoToUnits:
+			currentScreen = screens["Unit Screen"].get();
+			break;
 		case GameEvent::OpenCity:
 			index = dynamic_cast<WorldMapScreen*>(currentScreen)->activeCity();
 			currentScreen = screens["City Dashboard"].get();

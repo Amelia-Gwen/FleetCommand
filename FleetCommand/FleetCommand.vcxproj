@@ -35,13 +35,17 @@
     <ClInclude Include="Model.h" />
     <ClInclude Include="Screens\CityDashboard.h" />
     <ClInclude Include="Screens\CityMapScreen.h" />
+    <ClInclude Include="Screens\CityUpgradeScreen.h" />
     <ClInclude Include="Screens\CustomMenuScreen.h" />
     <ClInclude Include="Screens\Dashboard.h" />
+    <ClInclude Include="Screens\FleetScreen.h" />
     <ClInclude Include="Screens\IScreen.h" />
     <ClInclude Include="Screens\LoadGameScreen.h" />
     <ClInclude Include="Screens\MainMenuScreen.h" />
     <ClInclude Include="Screens\NewGameMenuScreen.h" />
+    <ClInclude Include="Screens\ResearchScreen.h" />
     <ClInclude Include="Screens\Screens.h" />
+    <ClInclude Include="Screens\UnitScreen.h" />
     <ClInclude Include="Screens\WorldMapScreen.h" />
     <ClInclude Include="View.h" />
   </ItemGroup>
@@ -59,12 +63,16 @@
     <ClCompile Include="Model.cpp" />
     <ClCompile Include="Screens\CityDashboard.cpp" />
     <ClCompile Include="Screens\CityMapScreen.cpp" />
+    <ClCompile Include="Screens\CityUpgradeScreen.cpp" />
     <ClCompile Include="Screens\CustomMenuScreen.cpp" />
     <ClCompile Include="Screens\Dashboard.cpp" />
+    <ClCompile Include="Screens\FleetScreen.cpp" />
     <ClCompile Include="Screens\IScreen.cpp" />
     <ClCompile Include="Screens\LoadGameScreen.cpp" />
     <ClCompile Include="Screens\MainMenuScreen.cpp" />
     <ClCompile Include="Screens\NewGameMenuScreen.cpp" />
+    <ClCompile Include="Screens\ResearchScreen.cpp" />
+    <ClCompile Include="Screens\UnitScreen.cpp" />
     <ClCompile Include="Screens\WorldMapScreen.cpp" />
     <ClCompile Include="View.cpp" />
   </ItemGroup>

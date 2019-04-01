@@ -23,6 +23,7 @@ namespace fleet {
 		GoToCityMap,
 		GoToWorldMap,
 		GoToCityUpgrade,
+		GoToUnits,
 		OpenCity,
 		EndTurn,
 		SaveGame

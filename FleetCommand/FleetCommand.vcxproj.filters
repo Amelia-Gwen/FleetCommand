@@ -112,6 +112,18 @@
     <ClCompile Include="Screens\CityDashboard.cpp">
       <Filter>Screens\Source</Filter>
     </ClCompile>
+    <ClCompile Include="Screens\CityUpgradeScreen.cpp">
+      <Filter>Screens\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Screens\UnitScreen.cpp">
+      <Filter>Screens\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Screens\FleetScreen.cpp">
+      <Filter>Screens\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Screens\ResearchScreen.cpp">
+      <Filter>Screens\Source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FleetCommand.h">
@@ -187,6 +199,18 @@
       <Filter>Screens\Header</Filter>
     </ClInclude>
     <ClInclude Include="Screens\CityDashboard.h">
+      <Filter>Screens\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Screens\CityUpgradeScreen.h">
+      <Filter>Screens\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Screens\UnitScreen.h">
+      <Filter>Screens\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Screens\FleetScreen.h">
+      <Filter>Screens\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Screens\ResearchScreen.h">
       <Filter>Screens\Header</Filter>
     </ClInclude>
   </ItemGroup>
