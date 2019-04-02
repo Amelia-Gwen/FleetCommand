@@ -153,4 +153,5 @@ namespace fleet {
 	constexpr float citymap_x_offset = 100.F;
 	constexpr float cityupgrade_x_offset = 60.F;
 	constexpr float worldmap_x_offset = 100.F;
+	constexpr float unit_x_offset = 100.F;
 }
