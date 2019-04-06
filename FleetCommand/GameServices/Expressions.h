@@ -150,9 +150,9 @@ namespace fleet {
 	constexpr float research_x_offset = 60.F;
 	constexpr float fleet_x_offset = 100.F;
 	constexpr float endturn_x_offset = 60.F;
-	constexpr float citymap_x_offset = 100.F;
+	constexpr float citymap_x_offset = 60.F;
 	constexpr float cityname_x_offset = 80.F;
-	constexpr float cityupgrade_x_offset = 60.F;
-	constexpr float worldmap_x_offset = 100.F;
+	constexpr float cityupgrade_x_offset = 20.F;
+	constexpr float worldmap_x_offset = 50.F;
 	constexpr float unit_x_offset = 100.F;
 }

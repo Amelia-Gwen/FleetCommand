@@ -47,6 +47,9 @@ namespace fleet {
 	}
 	void UnitScreen::update()
 	{
+		sf::Vector2f mousePos{ static_cast<float>(sf::Mouse::getPosition(window).x), static_cast<float>(sf::Mouse::getPosition(window).y) };
+
+		displayPanel.update(mousePos);
 		checkMouseOver(dashboardButton);
 		checkMouseOver(researchButton);
 		checkMouseOver(fleetButton);
