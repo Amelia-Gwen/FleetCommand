@@ -12,7 +12,7 @@ namespace fleet {
 		dashboard.setCharacterSize(text_character_size);
 		dashboard.setFillColor(sf::Color::Black);
 		cityDashboardButton.setPosition(game_button_2_x, game_button_y);
-		cityDashboard.setPosition(game_button_2_x + citymap_x_offset, game_button_text_y);
+		cityDashboard.setPosition(game_button_2_x + cityname_x_offset, game_button_text_y);
 		cityDashboard.setCharacterSize(text_character_size);
 		cityDashboard.setFillColor(sf::Color::Black);
 		cityUpgradeButton.setPosition(game_button_3_x, game_button_y);
