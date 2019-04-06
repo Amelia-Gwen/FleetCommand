@@ -54,6 +54,7 @@ namespace fleet {
 	}
 	void CityUpgradeScreen::draw()
 	{
+		window.draw(displayPanel);
 		window.draw(dashboardButton);
 		window.draw(dashboard);
 		window.draw(cityDashboardButton);

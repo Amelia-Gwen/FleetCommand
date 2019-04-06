@@ -53,6 +53,7 @@ namespace fleet {
 	}
 	void Dashboard::draw()
 	{
+		window.draw(displayPanel);
 		window.draw(unitsButton);
 		window.draw(units);
 		window.draw(researchButton);
