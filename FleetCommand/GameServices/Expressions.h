@@ -128,7 +128,6 @@ namespace fleet {
 	constexpr float map_button_side = 30.F;
 	constexpr float map_button_y = 650.F;
 	constexpr float zoom_in_x = 60.F;
-	constexpr float center_x = 100.F;
 	constexpr float zoom_out_x = 140.F;
 	constexpr unsigned minimum_scale = 1;
 	constexpr unsigned maximum_scale = 10;

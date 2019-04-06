@@ -20,7 +20,6 @@ namespace fleet {
 		sf::Texture worldMap;
 		sf::RectangleShape map{ sf::Vector2f(map_width, map_height) };
 		sf::RectangleShape zoomIn{ sf::Vector2f(map_button_side, map_button_side) };
-		sf::RectangleShape center{ sf::Vector2f(map_button_side, map_button_side) };
 		sf::RectangleShape zoomOut{ sf::Vector2f(map_button_side, map_button_side) };
 		float mapX{ 0.F };
 		float mapY{ 0.F };

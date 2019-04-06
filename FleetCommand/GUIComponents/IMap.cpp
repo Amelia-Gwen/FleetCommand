@@ -6,7 +6,6 @@ namespace fleet {
 		worldMap.loadFromFile("Assets/WorldMap.png");
 		map.setTexture(&worldMap);
 		zoomIn.setPosition(zoom_in_x, map_button_y);
-		center.setPosition(center_x, map_button_y);
 		zoomOut.setPosition(zoom_out_x, map_button_y);
 	}
 
@@ -76,13 +75,6 @@ namespace fleet {
 		}
 		else {
 			zoomIn.setFillColor(sf::Color::White);
-		}
-
-		if (center.getGlobalBounds().contains(mousePos)) {
-			center.setFillColor(sf::Color::Green);
-		}
-		else {
-			center.setFillColor(sf::Color::White);
 		}
 
 		if (zoomOut.getGlobalBounds().contains(mousePos)) {
