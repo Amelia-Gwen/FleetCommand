@@ -16,12 +16,6 @@ namespace fleet {
 			resizeMap();
 			return GameEvent::ActionComplete;
 		}
-		else if (center.getGlobalBounds().contains(mousePos)) {
-			// focus on selected tile
-			// if no city selected focus on 0,0 center point.
-			// do not exceed constraints. map edges must never exist within the bounds of the frame.
-			return GameEvent::ActionComplete;
-		}
 		else if (zoomOut.getGlobalBounds().contains(mousePos) && mapScale > minimum_scale) {
 			--mapScale;
 			resizeMap();
@@ -57,7 +51,6 @@ namespace fleet {
 			}
 		}
 		target.draw(zoomIn, states);
-		target.draw(center, states);
 		target.draw(zoomOut, states);
 	}
 }

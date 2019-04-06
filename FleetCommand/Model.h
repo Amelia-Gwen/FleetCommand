@@ -24,7 +24,7 @@ namespace fleet {
 		{"Luna", Coordinate{1, 3}},
 		{"Markapp", Coordinate{7, 2}},
 		{"Morn", Coordinate{2, 1}},
-		{"Northrent", Coordinate{1, 1}},
+		{"Northrent", Coordinate{66, 8}},
 		{"Orion", Coordinate{7, 9}},
 		{"Orphan", Coordinate{9, 1}},
 		{"Popadieu", Coordinate{9, 2}},
