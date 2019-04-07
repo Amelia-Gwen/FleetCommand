@@ -94,14 +94,11 @@ namespace fleet {
 			gameEvent = GameEvent::ActionComplete;
 			break;
 	    case GameEvent::StartCampaign:
-			// set default value for game
 			currentScreen = screens["World Map Screen"].get();
-			gameEvent = GameEvent::ActionComplete;
 			break;
 		case GameEvent::StartGame:
-			// scrape values
+			gameValues = dynamic_cast<CustomMenuScreen*>(currentScreen)->startValues();
 			currentScreen = screens["World Map Screen"].get();
-			gameEvent = GameEvent::ActionComplete;
 			break;
 		case GameEvent::GoToDashboard:
 			currentScreen = screens["Dashboard"].get();

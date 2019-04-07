@@ -31,6 +31,7 @@
     <ClInclude Include="GameServices\Difficulty.h" />
     <ClInclude Include="GameServices\Expressions.h" />
     <ClInclude Include="GameServices\GameEvent.h" />
+    <ClInclude Include="GameServices\GameValues.h" />
     <ClInclude Include="GameServices\LoadFile.h" />
     <ClInclude Include="GUIComponents\CityMap.h" />
     <ClInclude Include="GUIComponents\DisplayPanel.h" />

@@ -40,6 +40,8 @@ namespace fleet {
 		void setElement(const std::string& string, unsigned index);
 		void setDefaultElement(unsigned index);
 
+		std::string getValue() const;
+
 		void input(const sf::Vector2f& mousePos);
 		void update(const sf::Vector2f& mousePos);
 	private:

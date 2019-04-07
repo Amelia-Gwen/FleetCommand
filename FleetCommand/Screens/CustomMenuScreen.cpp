@@ -1,6 +1,14 @@
 #include "CustomMenuScreen.h"
 
+#include <map>
+
 namespace fleet {
+	std::map<std::string, Difficulty> string_to_difficulty_enum{
+		std::make_pair<std::string, Difficulty>("Easy", Difficulty::Easy),
+		std::make_pair<std::string, Difficulty>("Medium", Difficulty::Medium),
+		std::make_pair<std::string, Difficulty>("Hard", Difficulty::Hard)
+	};
+
 	/*
 	///param: reference to RenderWindow
 	///param: constant reference to Font
@@ -30,7 +38,7 @@ namespace fleet {
 			return GameEvent::OpenNewGame;
 		}
 		else if (startButton.getGlobalBounds().contains(mousePos)) {
-			// save values to be used in game
+			setValues();
 			return GameEvent::StartGame;
 		}
 
@@ -115,5 +123,16 @@ namespace fleet {
 		researchBox.addElement("40", font);
 		researchBox.addElement("50", font);
 		researchBox.addElement("100", font);
+	}
+	void CustomMenuScreen::setValues()
+	{
+		gameValues = {
+		    std::stoi(playersBox.getValue()),
+			std::stoi(computersBox.getValue()),
+			string_to_difficulty_enum[difficultyBox.getValue()],
+			std::stoi(oilBox.getValue()),
+			std::stoi(cashBox.getValue()),
+			std::stoi(researchBox.getValue())
+		}
 	}
 }

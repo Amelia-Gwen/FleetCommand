@@ -112,6 +112,11 @@ namespace fleet {
 		setPosition(label.getPosition());
 	}
 
+	std::string DropBox::getValue() const
+	{
+		return elements[selectedIndex].first.getString();
+	}
+
 	void DropBox::input(const sf::Vector2f& mousePos)
 	{
 		if (open) {

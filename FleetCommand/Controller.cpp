@@ -42,10 +42,12 @@ namespace fleet {
 	void Controller::processEvent(const GameEvent& gameEvent)
 	{
 		switch (gameEvent) {
-		//case GameEvent::StartCampaign:
-		//	model.startGame(campaign_enemy_count);
-		//	// start game
-		//	break;
+		case GameEvent::StartCampaign:
+			model.startGame();
+			break;
+		case GameEvent::StartGame:
+			model.startGame(view.startValues());
+			break;
 		//case GameEvent::LoadGame:
 		//	// TODO: load game based on load file (with check for empty file) then change gamestate
 		//	break;
@@ -55,10 +57,6 @@ namespace fleet {
 		//case GameEvent::EndTurn:
 		//	model.endTurn();
 		//	//view.returnControl();
-		//	break;
-		//case GameEvent::OpenCity:
-		//	// model.setCity(); <- pass index from world map
-		//	// 
 		//	break;
 		case GameEvent::None:
 		case GameEvent::ActionComplete:

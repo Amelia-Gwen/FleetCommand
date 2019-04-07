@@ -2,6 +2,7 @@
 
 #include "Coordinate.h"
 #include "City.h"
+#include "GameValues.h"
 #include "Player.h"
 
 #include <unordered_map>
@@ -48,6 +49,7 @@ namespace fleet {
 
 		const std::vector<City>& cityList() const { return cities; }
 
+		void startGame(const GameValues& gameValues = defaultValues);
 		void update();
 	private:
 		std::vector<City> cities;

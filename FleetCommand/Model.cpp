@@ -8,6 +8,10 @@ namespace fleet {
 		}
 	}
 
+	void Model::startGame(const GameValues& gameValues)
+	{
+	}
+
 	void Model::update()
 	{
 	}

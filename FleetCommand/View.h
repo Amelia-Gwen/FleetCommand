@@ -1,10 +1,11 @@
 #pragma once
 
-#include "Model.h"
-#include "IScreen.h"
-#include "GameEvent.h"
 #include "DisplayPanel.h"
 #include "Expressions.h"
+#include "GameEvent.h"
+#include "GameValues.h"
+#include "IScreen.h"
+#include "Model.h"
 
 #include <SFML\Graphics.hpp>
 
@@ -21,6 +22,7 @@ namespace fleet {
 		explicit View(const Model& model);
 
 		bool isOpen() const { return window.isOpen(); }
+		const GameValues& startValues() const { return gameValues; }
 		bool pollEvent(sf::Event& event) { return window.pollEvent(event); }
 		void close() { window.close(); }
 		void releaseGrip();
@@ -38,6 +40,8 @@ namespace fleet {
 
 		std::unordered_map<std::string, std::unique_ptr<IScreen>> screens;
 		IScreen* currentScreen;
+		GameValues gameValues;
+
 
 		void checkEvent(GameEvent& gameEvent);
 	};
