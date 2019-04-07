@@ -21,8 +21,14 @@
   <ItemGroup>
     <ClInclude Include="Controller.h" />
     <ClInclude Include="DataComponents\City.h" />
+    <ClInclude Include="DataComponents\EasyAI.h" />
+    <ClInclude Include="DataComponents\HardAI.h" />
+    <ClInclude Include="DataComponents\IAI.h" />
+    <ClInclude Include="DataComponents\MediumAI.h" />
+    <ClInclude Include="DataComponents\Player.h" />
     <ClInclude Include="FleetCommand.h" />
     <ClInclude Include="GameServices\Coordinate.h" />
+    <ClInclude Include="GameServices\Difficulty.h" />
     <ClInclude Include="GameServices\Expressions.h" />
     <ClInclude Include="GameServices\GameEvent.h" />
     <ClInclude Include="GameServices\LoadFile.h" />
@@ -52,6 +58,10 @@
   <ItemGroup>
     <ClCompile Include="Controller.cpp" />
     <ClCompile Include="DataComponents\City.cpp" />
+    <ClCompile Include="DataComponents\EasyAI.cpp" />
+    <ClCompile Include="DataComponents\HardAI.cpp" />
+    <ClCompile Include="DataComponents\MediumAI.cpp" />
+    <ClCompile Include="DataComponents\Player.cpp" />
     <ClCompile Include="FleetCommand.cpp" />
     <ClCompile Include="GUIComponents\IMap.cpp" />
     <ClCompile Include="GUIComponents\CityMap.cpp" />

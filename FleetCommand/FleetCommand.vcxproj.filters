@@ -124,6 +124,18 @@
     <ClCompile Include="Screens\ResearchScreen.cpp">
       <Filter>Screens\Source</Filter>
     </ClCompile>
+    <ClCompile Include="DataComponents\Player.cpp">
+      <Filter>DataComponents\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="DataComponents\MediumAI.cpp">
+      <Filter>DataComponents\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="DataComponents\EasyAI.cpp">
+      <Filter>DataComponents\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="DataComponents\HardAI.cpp">
+      <Filter>DataComponents\Source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FleetCommand.h">
@@ -212,6 +224,24 @@
     </ClInclude>
     <ClInclude Include="Screens\ResearchScreen.h">
       <Filter>Screens\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="DataComponents\Player.h">
+      <Filter>DataComponents\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="GameServices\Difficulty.h">
+      <Filter>GameServices\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="DataComponents\IAI.h">
+      <Filter>DataComponents\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="DataComponents\EasyAI.h">
+      <Filter>DataComponents\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="DataComponents\MediumAI.h">
+      <Filter>DataComponents\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="DataComponents\HardAI.h">
+      <Filter>DataComponents\Header</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

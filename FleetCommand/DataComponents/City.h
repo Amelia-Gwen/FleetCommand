@@ -11,9 +11,13 @@ namespace fleet {
 
 		Coordinate location() const { return coordinate; }
 		const std::string& cityName() const { return name; }
+		bool isCapital() const { return capital; }
+
+		void setAsCapital() { capital = true; }
 	private:
 		const std::string name;
 		Coordinate coordinate;
+		bool capital{ false };
 
 		int oil;
 		int cash;

@@ -2,6 +2,7 @@
 
 #include "Coordinate.h"
 #include "City.h"
+#include "Player.h"
 
 #include <unordered_map>
 
@@ -20,21 +21,21 @@ namespace fleet {
 		{"Iln", Coordinate{2, 7}},
 		{"Jelna", Coordinate{3, 9}},
 		{"Kali", Coordinate{1, 3}},
-		{"Lumin", Coordinate{6, 1}},
+		{"Lumin", Coordinate{24, 28}}, // Done
 		{"Luna", Coordinate{1, 3}},
 		{"Markapp", Coordinate{7, 2}},
 		{"Morn", Coordinate{2, 1}},
-		{"Northrent", Coordinate{66, 8}},
+		{"Northrent", Coordinate{86, 6}}, // Done, Capital
 		{"Orion", Coordinate{7, 9}},
 		{"Orphan", Coordinate{9, 1}},
-		{"Popadieu", Coordinate{9, 2}},
+		{"Popadieu", Coordinate{225, 7}}, // Done, Capital
 		{"Princess", Coordinate{1, 3}},
 		{"Redwind", Coordinate{2, 4}},
 		{"Slinder", Coordinate{4, 3}},
 		{"Soldier", Coordinate{2, 1}},
 		{"Trill", Coordinate{1, 5}},
 		{"Ulsar", Coordinate{9, 6}},
-		{"Victory", Coordinate{1, 2}},
+		{"Victory", Coordinate{12, 83}}, // Done, Capital
 		{"Wildenstock", Coordinate{8, 5}},
 		{"Zwill", Coordinate{1, 1}}
 	};
@@ -50,5 +51,6 @@ namespace fleet {
 		void update();
 	private:
 		std::vector<City> cities;
+		std::vector<Player> players;
 	};
 }
