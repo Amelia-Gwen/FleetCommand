@@ -126,13 +126,13 @@ namespace fleet {
 	}
 	void CustomMenuScreen::setValues()
 	{
-		gameValues = {
-		    std::stoi(playersBox.getValue()),
+		gameValues ={
+			std::stoi(playersBox.getValue()),
 			std::stoi(computersBox.getValue()),
 			string_to_difficulty_enum[difficultyBox.getValue()],
 			std::stoi(oilBox.getValue()),
 			std::stoi(cashBox.getValue()),
 			std::stoi(researchBox.getValue())
-		}
+		};
 	}
 }

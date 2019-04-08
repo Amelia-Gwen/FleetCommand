@@ -14,10 +14,11 @@
 namespace fleet {
 	class Player {
 	public:
-		explicit Player(const std::string& name);
+		explicit Player(const std::string& name, int startingOil, int startingCash, int startingResearch);
 
 		void setAI(Difficulty aiDifficulty);
 		void setCapital(City* newCapitalCity);
+
 		void loseCity(City* cityToRemove);
 		void takeCity(City* cityToAdd);
 	private:

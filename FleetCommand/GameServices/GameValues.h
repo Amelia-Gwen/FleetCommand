@@ -11,6 +11,4 @@ namespace fleet {
 		int cash;
 		int research;
 	};
-
-	GameValues defaultValues{ 1, 7, Difficulty::Medium, 10000, 1000, 10 };
 }

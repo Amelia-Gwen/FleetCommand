@@ -8,6 +8,8 @@
 #include <unordered_map>
 
 namespace fleet {
+	static const GameValues defaultValues{ 1, 7, Difficulty::Medium, 10000, 1000, 10 };
+
 	static const std::unordered_map<std::string, Coordinate> city_names_and_coordinates {
 		{"Andwar", Coordinate{9, 1}},
 		{"Athol", Coordinate{3, 1}},

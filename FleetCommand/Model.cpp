@@ -10,6 +10,15 @@ namespace fleet {
 
 	void Model::startGame(const GameValues& gameValues)
 	{
+		for (int i = 0; i < gameValues.players; ++i) {
+			Player newPlayer("", gameValues.oil, gameValues.cash, gameValues.research);
+			players.emplace_back(std::move(newPlayer));
+		}
+		for (int i = 0; i < gameValues.computers; ++i) {
+			Player newPlayer("", gameValues.oil, gameValues.cash, gameValues.research);
+			newPlayer.setAI(gameValues.difficulty);
+			players.emplace_back(std::move(newPlayer));
+		}
 	}
 
 	void Model::update()

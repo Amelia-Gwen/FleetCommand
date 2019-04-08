@@ -1,8 +1,11 @@
 #include "Player.h"
 
 namespace fleet {
-	Player::Player(const std::string& name) :
-		name{ name }
+	Player::Player(const std::string& name, int startingOil, int startingCash, int startingResearch) :
+		name{ name },
+		oil{ startingOil },
+		cash{ startingCash },
+		research{ startingResearch }
 	{
 	}
 
@@ -30,7 +33,7 @@ namespace fleet {
 	void Player::loseCity(City* cityToRemove)
 	{
 		for (auto it = controlledCities.begin(); it != controlledCities.end(); ++it) {
-			if (*it = cityToRemove) {
+			if (*it == cityToRemove) {
 				controlledCities.erase(it);
 				break;
 			}
