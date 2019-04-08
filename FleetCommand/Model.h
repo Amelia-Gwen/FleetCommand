@@ -56,5 +56,6 @@ namespace fleet {
 	private:
 		std::vector<City> cities;
 		std::vector<Player> players;
+		Player* currentPlayer{ nullptr };
 	};
 }
