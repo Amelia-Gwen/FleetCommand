@@ -11,17 +11,17 @@ namespace fleet {
 	static const GameValues defaultValues{ 1, 7, Difficulty::Medium, 10000, 1000, 10 };
 
 	static const std::unordered_map<std::string, Coordinate> city_names_and_coordinates {
-		{"Andwar", Coordinate{9, 1}},
+		{"Andwar", Coordinate{102, 102}}, // Done, Capital
 		{"Athol", Coordinate{3, 1}},
 		{"Blitzil", Coordinate{1, 6}},
 		{"Clint", Coordinate{2, 8}},
 		{"Coinenrock", Coordinate{8, 2}},
 		{"Dragonopolis", Coordinate{32, 8}}, // Done
 		{"Everen", Coordinate{8, 1}},
-		{"Flagynn", Coordinate{1, 7}},
+		{"Flagynn", Coordinate{166, 90}}, // Done, Capital
 		{"Galdor", Coordinate{5, 1}},
 		{"Hearth", Coordinate{1, 9}},
-		{"Iln", Coordinate{2, 7}},
+		{"Iln", Coordinate{215, 44}}, // Done, Capital
 		{"Jelna", Coordinate{3, 9}},
 		{"Kali", Coordinate{1, 3}},
 		{"Lumin", Coordinate{24, 28}}, // Done
@@ -33,13 +33,13 @@ namespace fleet {
 		{"Orphan", Coordinate{9, 1}},
 		{"Popadieu", Coordinate{225, 7}}, // Done, Capital
 		{"Princess", Coordinate{1, 3}},
-		{"Redwind", Coordinate{2, 4}},
+		{"Redwind", Coordinate{57, 114}}, // Done, Capital
 		{"Slinder", Coordinate{4, 3}},
 		{"Soldier", Coordinate{2, 1}},
 		{"Trill", Coordinate{1, 5}},
 		{"Ulsar", Coordinate{9, 6}},
 		{"Victory", Coordinate{12, 83}}, // Done, Capital
-		{"Wildenstock", Coordinate{8, 5}},
+		{"Wildenstock", Coordinate{14, 4}}, // Done, Capital
 		{"Zwill", Coordinate{1, 1}}
 	};
 	/*
