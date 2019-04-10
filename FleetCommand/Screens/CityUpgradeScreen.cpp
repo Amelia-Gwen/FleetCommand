@@ -1,8 +1,9 @@
 #include "CityUpgradeScreen.h"
 
 namespace fleet {
-	CityUpgradeScreen::CityUpgradeScreen(sf::RenderWindow& window, sf::Font& font, DisplayPanel& displayPanel) :
+	CityUpgradeScreen::CityUpgradeScreen(sf::RenderWindow& window, sf::Font& font, const Model& model, DisplayPanel& displayPanel) :
 		IScreen{ window, font },
+		model{ model },
 		displayPanel{ displayPanel }
 	{
 		dashboardButton.setPosition(game_button_1_x, game_button_y);
@@ -21,6 +22,13 @@ namespace fleet {
 		worldMap.setPosition(game_button_4_x + worldmap_x_offset, game_button_text_y);
 		worldMap.setCharacterSize(text_character_size);
 		worldMap.setFillColor(sf::Color::Black);
+	}
+
+	void CityUpgradeScreen::setCity(unsigned index)
+	{
+		cityName = model.cityList()[index].cityName();
+		cityDashboard.setString(cityName);
+		// set appropriate upgrade levels
 	}
 
 	GameEvent CityUpgradeScreen::input()

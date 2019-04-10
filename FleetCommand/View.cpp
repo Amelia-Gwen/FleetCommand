@@ -111,7 +111,9 @@ namespace fleet {
 			gameEvent = GameEvent::ActionComplete;
 			break;
 		case GameEvent::GoToCityUpgrade:
+			index = dynamic_cast<WorldMapScreen*>(screens["World Map Screen"].get())->activeCity();
 			currentScreen = screens["City Upgrade Screen"].get();
+			dynamic_cast<CityUpgradeScreen*>(currentScreen)->setCity(index);
 			gameEvent = GameEvent::ActionComplete;
 			break;
 		case GameEvent::GoToWorldMap:
