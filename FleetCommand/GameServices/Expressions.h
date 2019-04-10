@@ -42,8 +42,8 @@ namespace fleet {
 	constexpr float panel_text_x_offset = 80.F;
 	constexpr float panel_text_y_offset = 15.F;
 	constexpr float name_x = panel_1_x + name_x_offset;
-	constexpr float cash_x = panel_2_x + panel_text_x_offset;
-	constexpr float oil_x = panel_3_x + panel_text_x_offset;
+	constexpr float oil_x = panel_2_x + panel_text_x_offset;
+	constexpr float cash_x = panel_3_x + panel_text_x_offset;
 	constexpr float research_x = panel_4_x + panel_text_x_offset;
 	constexpr float panel_text_y = panel_y + panel_text_y_offset;
 

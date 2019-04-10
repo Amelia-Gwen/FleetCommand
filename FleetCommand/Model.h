@@ -50,6 +50,7 @@ namespace fleet {
 		Model();
 
 		const std::vector<City>& cityList() const { return cities; }
+		Player* player() const { return currentPlayer; }
 
 		void startGame(const GameValues& gameValues = defaultValues);
 		void update();
