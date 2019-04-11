@@ -20,7 +20,6 @@ namespace fleet {
 			cities[counter].second.setPosition(position_x + city_text_offset_x, position_y + city_text_offset_y);
 			++counter;
 		}
-		// set cities
 	}
 	GameEvent WorldMap::input(const sf::Vector2f& mousePos)
 	{
@@ -47,11 +46,26 @@ namespace fleet {
 
 		return GameEvent::None;
 	}
-	void WorldMap::update(const sf::Vector2f & mousePos)
+	void WorldMap::update(const sf::Vector2f& mousePos)
 	{
 		mouseOverButtons(mousePos);
+		for (auto& city : cities) {
+			checkMouseOver(city.first, mousePos);
+		}
 		moveMap(mousePos);
 		repositionCities();
+	}
+
+	void WorldMap::checkMouseOver(sf::RectangleShape& button, sf::Vector2f mousePos)
+	{
+		if (button.getGlobalBounds().contains(mousePos))
+		{
+			button.setFillColor(sf::Color::Green);
+		}
+		else
+		{
+			button.setFillColor(sf::Color::Cyan);
+		}
 	}
 
 	void WorldMap::repositionCities()
@@ -67,6 +81,7 @@ namespace fleet {
 			position_x += map.getPosition().x;
 			position_y += map.getPosition().y;
 			cities[index].first.setPosition(position_x, position_y);
+			cities[index].first.setScale(scale);
 			cities[index].second.setPosition(position_x + city_text_offset_x, position_y + city_text_offset_y);
 			++index;
 		}

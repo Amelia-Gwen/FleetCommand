@@ -55,6 +55,7 @@ namespace fleet {
 
 		worldMap.update(mousePos);
 		displayPanel.update(mousePos);
+
 		checkMouseOver(dashButton);
 		checkMouseOver(researchButton);
 		checkMouseOver(fleetButton);
