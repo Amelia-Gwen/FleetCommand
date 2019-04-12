@@ -21,8 +21,8 @@ namespace fleet {
 		void setTextOutlineColor(const sf::Color& color);
 		void setTextOutlineThickness(float thickness);
 
-		void input(const sf::Vector2f& mousePos);
-		void update(const sf::Vector2f& mousePos);
+		bool input(const sf::Vector2f& mousePos, unsigned currentLevel, bool canAfford);
+		void update(const sf::Vector2f& mousePos, unsigned currentLevel, bool canAfford);
 	private:
 		sf::Text label;
 		sf::RectangleShape button{ sf::Vector2f(default_upgrade_width, default_upgrade_height) };

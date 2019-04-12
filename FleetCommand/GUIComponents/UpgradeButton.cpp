@@ -58,20 +58,27 @@ namespace fleet {
 		label.setOutlineThickness(thickness);
 	}
 
-	void UpgradeButton::input(const sf::Vector2f& mousePos)
+	bool UpgradeButton::input(const sf::Vector2f& mousePos, unsigned currentLevel, bool canAfford)
 	{
-		if (button.getGlobalBounds().contains(mousePos)) {
-			// increment value by one.
+		if (canAfford && button.getGlobalBounds().contains(mousePos)) {
+			indicators[currentLevel].setFillColor(sf::Color::Green);
+			return true;
 		}
+
+		return false;
 	}
-	void UpgradeButton::update(const sf::Vector2f& mousePos)
+	void UpgradeButton::update(const sf::Vector2f& mousePos, unsigned currentLevel, bool canAfford)
 	{
-		// add check that upgrade requirements are met.
 		if (button.getGlobalBounds().contains(mousePos)) {
-			button.setFillColor(sf::Color::Green);
+			if (canAfford) {
+				indicators[currentLevel].setFillColor(sf::Color::Green);
+			}
+			else {
+				indicators[currentLevel].setFillColor(sf::Color::Red);
+			}
 		}
 		else {
-			button.setFillColor(sf::Color::Cyan);
+			indicators[currentLevel].setFillColor(sf::Color::Cyan);
 		}
 	}
 
