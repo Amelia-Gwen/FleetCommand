@@ -136,6 +136,9 @@
     <ClCompile Include="DataComponents\HardAI.cpp">
       <Filter>DataComponents\Source</Filter>
     </ClCompile>
+    <ClCompile Include="GUIComponents\UpgradeButton.cpp">
+      <Filter>GUIComponents\Source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FleetCommand.h">
@@ -245,6 +248,9 @@
     </ClInclude>
     <ClInclude Include="GameServices\GameValues.h">
       <Filter>GameServices\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="GUIComponents\UpgradeButton.h">
+      <Filter>GUIComponents\Header</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

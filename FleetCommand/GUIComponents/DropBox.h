@@ -30,7 +30,7 @@ namespace fleet {
 		void setOutlineThickness(float thickness);
 
 		void setFont(const sf::Font& font);
-		void setLabelString(const std::string &string);
+		void setLabelString(const std::string& string);
 		void setCharacterSize(unsigned newSize);
 		void setTextFillColor(const sf::Color& color);
 		void setTextOutlineColor(const sf::Color& color);

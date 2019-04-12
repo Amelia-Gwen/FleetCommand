@@ -154,4 +154,11 @@ namespace fleet {
 	constexpr float cityupgrade_x_offset = 20.F;
 	constexpr float worldmap_x_offset = 50.F;
 	constexpr float unit_x_offset = 100.F;
+
+	// UpgradeButtons
+	constexpr float default_upgrade_width = 80.F;
+	constexpr float default_upgrade_height = 120.F;
+	constexpr float default_indicator_height = 20.F;
+	constexpr float upgrade_label_y_offset = 10.F;
+	constexpr float upgrade_button_outline = 2.F;
 }

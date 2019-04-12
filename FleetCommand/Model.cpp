@@ -12,8 +12,7 @@ namespace fleet {
 	{
 		// TODO: add capital cities from list
 		for (int i = 0; i < gameValues.players; ++i) {
-			Player newPlayer("", gameValues.oil, gameValues.cash, gameValues.research);
-			players.emplace_back(std::move(newPlayer));
+			players.emplace_back(Player("", gameValues.oil, gameValues.cash, gameValues.research));
 		}
 		for (int i = 0; i < gameValues.computers; ++i) {
 			Player newPlayer("", gameValues.oil, gameValues.cash, gameValues.research);
