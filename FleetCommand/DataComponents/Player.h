@@ -2,6 +2,8 @@
 
 #include "City.h"
 #include "Difficulty.h"
+#include "ResearchData.h"
+
 #include "IAI.h"
 #include "EasyAI.h"
 #include "MediumAI.h"
@@ -31,6 +33,7 @@ namespace fleet {
 		std::string name;
 		City* capitalCity;
 		std::vector<City*> controlledCities;
+		PlayerResearch researchLevels;
 		int oil;
 		int cash;
 		int research;

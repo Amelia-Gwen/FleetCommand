@@ -4,6 +4,7 @@
 #include "City.h"
 #include "GameValues.h"
 #include "Player.h"
+#include "ResearchData.h"
 
 #include <unordered_map>
 
@@ -58,5 +59,6 @@ namespace fleet {
 		std::vector<City> cities;
 		std::vector<Player> players;
 		Player* currentPlayer{ nullptr };
+		ResearchMaximums researchLimits;
 	};
 }

@@ -1,7 +1,8 @@
 #pragma once
 
-#include "IScreen.h"
 #include "DisplayPanel.h"
+#include "IScreen.h"
+#include "UpgradeButton.h"
 
 namespace fleet {
 	class ResearchScreen : public IScreen {

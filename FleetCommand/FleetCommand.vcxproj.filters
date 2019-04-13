@@ -252,5 +252,8 @@
     <ClInclude Include="GUIComponents\UpgradeButton.h">
       <Filter>GUIComponents\Header</Filter>
     </ClInclude>
+    <ClInclude Include="DataComponents\ResearchData.h">
+      <Filter>DataComponents\Header</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

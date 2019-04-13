@@ -18,7 +18,7 @@ namespace fleet {
 		const std::string name;
 		Coordinate coordinate;
 		bool capital{ false };
-
+		CityResearch researchLevels;
 		int oil;
 		int cash;
 		int research;
