@@ -150,7 +150,7 @@ namespace fleet {
 	constexpr float fleet_x_offset = 100.F;
 	constexpr float endturn_x_offset = 60.F;
 	constexpr float citymap_x_offset = 60.F;
-	constexpr float cityname_x_offset = 60.F;
+	constexpr float cityname_x_offset = 50.F;
 	constexpr float cityupgrade_x_offset = 20.F;
 	constexpr float worldmap_x_offset = 50.F;
 	constexpr float unit_x_offset = 100.F;
@@ -161,4 +161,13 @@ namespace fleet {
 	constexpr float default_indicator_height = 20.F;
 	constexpr float upgrade_label_y_offset = 10.F;
 	constexpr float upgrade_button_outline = 2.F;
+
+	// Research Screen Upgrade Buttons
+	constexpr float res_column_one_x = 100.F;
+	constexpr float res_column_two_x = 340.F;
+	constexpr float res_column_three_x = 580.F;
+	constexpr float res_column_four_x = 820.F;
+	constexpr float res_row_one_y = 120.F;
+	constexpr float res_row_two_y = 300.F;
+	constexpr float res_row_three_y = 480.F;
 }

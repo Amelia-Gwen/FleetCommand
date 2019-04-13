@@ -1,8 +1,9 @@
 #include "ResearchScreen.h"
 
 namespace fleet {
-	ResearchScreen::ResearchScreen(sf::RenderWindow& window, sf::Font& font, DisplayPanel& displayPanel) :
+	ResearchScreen::ResearchScreen(sf::RenderWindow& window, sf::Font& font, const Model& model, DisplayPanel& displayPanel) :
 		IScreen{ window, font },
+		model{ model },
 		displayPanel{ displayPanel }
 	{
 		dashboardButton.setPosition(game_button_1_x, game_button_y);
@@ -21,6 +22,29 @@ namespace fleet {
 		worldMap.setPosition(game_button_4_x + worldmap_x_offset, game_button_text_y);
 		worldMap.setCharacterSize(text_character_size);
 		worldMap.setFillColor(sf::Color::Black);
+
+		shipyard.setPosition(res_column_one_x, res_row_one_y);
+		shipyard.setFont(font);
+		shipTypes.setPosition(res_column_two_x, res_row_one_y);
+		shipTypes.setFont(font);
+		durability.setPosition(res_column_three_x, res_row_one_y);
+		durability.setFont(font);
+		firepower.setPosition(res_column_four_x, res_row_one_y);
+		firepower.setFont(font);
+		hull.setPosition(res_column_one_x, res_row_two_y);
+		hull.setFont(font);
+		engine.setPosition(res_column_two_x, res_row_two_y);
+		engine.setFont(font);
+		weapons.setPosition(res_column_three_x, res_row_two_y);
+		weapons.setFont(font);
+		fuelEfficieny.setPosition(res_column_four_x, res_row_two_y);
+		fuelEfficieny.setFont(font);
+		oilProduction.setPosition(res_column_one_x, res_row_three_y);
+		oilProduction.setFont(font);
+		cashProduction.setPosition(res_column_two_x, res_row_three_y);
+		cashProduction.setFont(font);
+		researchProduction.setPosition(res_column_three_x, res_row_three_y);
+		researchProduction.setFont(font);
 	}
 
 	GameEvent ResearchScreen::input()
@@ -66,5 +90,16 @@ namespace fleet {
 		window.draw(fleet);
 		window.draw(worldMapButton);
 		window.draw(worldMap);
+		window.draw(shipyard);
+		window.draw(shipTypes);
+		window.draw(durability);
+		window.draw(firepower);
+		window.draw(hull);
+		window.draw(engine);
+		window.draw(weapons);
+		window.draw(fuelEfficieny);
+		window.draw(oilProduction);
+		window.draw(cashProduction);
+		window.draw(researchProduction);
 	}
 }

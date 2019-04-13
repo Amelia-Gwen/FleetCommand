@@ -9,7 +9,7 @@
 namespace fleet {
 	class UpgradeButton : public sf::Drawable {
 	public:
-		explicit UpgradeButton(std::string& newLabel, unsigned numUpgrades);
+		explicit UpgradeButton(std::string newLabel, unsigned short numUpgrades);
 
 		void setPosition(float x, float y);
 		void setPosition(const sf::Vector2f& position);
@@ -27,7 +27,6 @@ namespace fleet {
 		sf::Text label;
 		sf::RectangleShape button{ sf::Vector2f(default_upgrade_width, default_upgrade_height) };
 		std::vector<sf::RectangleShape> indicators;
-		// add visitor here
 
 		void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
 	};

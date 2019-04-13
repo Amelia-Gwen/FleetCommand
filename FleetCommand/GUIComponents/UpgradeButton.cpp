@@ -1,7 +1,7 @@
 #include "UpgradeButton.h"
 
 namespace fleet {
-	UpgradeButton::UpgradeButton(std::string& newLabel, unsigned numUpgrades)
+	UpgradeButton::UpgradeButton(std::string newLabel, unsigned short numUpgrades)
 	{
 		label.setString(newLabel);
 		float indicatorWidth = default_upgrade_width / numUpgrades;

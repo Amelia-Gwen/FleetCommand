@@ -43,6 +43,7 @@ namespace fleet {
 		{"Wildenstock", Coordinate{14, 4}}, // Done, Capital
 		{"Zwill", Coordinate{1, 1}}
 	};
+
 	/*
 	Architexture level class responsible for managing the game logic and data.
 	*/
@@ -59,6 +60,5 @@ namespace fleet {
 		std::vector<City> cities;
 		std::vector<Player> players;
 		Player* currentPlayer{ nullptr };
-		ResearchMaximums researchLimits;
 	};
 }

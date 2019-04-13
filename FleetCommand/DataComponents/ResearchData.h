@@ -25,15 +25,15 @@ namespace fleet {
 	};
 
 	struct ResearchMaximums {
-		unsigned short shpiyardMax{ 5 };
-		unsigned short shipTypeMax{ 6 };
-		unsigned short durabilityMax{ 4 };
-		unsigned short firepowerMax{ 4 };
-		unsigned short hullMax{ 5 };
-		unsigned short engineMax{ 4 };
-		unsigned short weaponMax{ 6 };
-		unsigned short fuelEfficiencyMax{ 5 };
-		unsigned short productionMax{ 4 };
-		unsigned short DefenseMax{ 5 };
+		static const unsigned short shpiyardMax{ 5 };
+		static const unsigned short shipTypeMax{ 6 };
+		static const unsigned short durabilityMax{ 4 };
+		static const unsigned short firepowerMax{ 4 };
+		static const unsigned short hullMax{ 5 };
+		static const unsigned short engineMax{ 4 };
+		static const unsigned short weaponMax{ 6 };
+		static const unsigned short fuelEfficiencyMax{ 5 };
+		static const unsigned short productionMax{ 4 };
+		static const unsigned short defenseMax{ 5 };
 	};
 }

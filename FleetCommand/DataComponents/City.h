@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Coordinate.h"
+#include "ResearchData.h"
 
 #include <string>
 

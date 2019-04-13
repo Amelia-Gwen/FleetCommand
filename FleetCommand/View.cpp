@@ -29,7 +29,7 @@ namespace fleet {
 		screens.emplace(std::make_pair("City Upgrade Screen", std::make_unique<CityUpgradeScreen>(window, font, model, displayPanel)));
 		screens.emplace(std::make_pair("Unit Screen", std::make_unique<UnitScreen>(window, font, displayPanel)));
 		screens.emplace(std::make_pair("Fleet Screen", std::make_unique<FleetScreen>(window, font, displayPanel)));
-		screens.emplace(std::make_pair("Research Screen", std::make_unique<ResearchScreen>(window, font, displayPanel)));
+		screens.emplace(std::make_pair("Research Screen", std::make_unique<ResearchScreen>(window, font, model, displayPanel)));
 
 		currentScreen = screens["Main Menu Screen"].get();
 	}
