@@ -163,11 +163,18 @@ namespace fleet {
 	constexpr float upgrade_button_outline = 2.F;
 
 	// Research Screen Upgrade Buttons
-	constexpr float res_column_one_x = 100.F;
-	constexpr float res_column_two_x = 340.F;
-	constexpr float res_column_three_x = 580.F;
-	constexpr float res_column_four_x = 820.F;
-	constexpr float res_row_one_y = 120.F;
-	constexpr float res_row_two_y = 300.F;
-	constexpr float res_row_three_y = 480.F;
+	constexpr float research_column_one_x = 100.F;
+	constexpr float research_column_two_x = 340.F;
+	constexpr float research_column_three_x = 580.F;
+	constexpr float research_column_four_x = 820.F;
+	constexpr float research_row_one_y = 120.F;
+	constexpr float research_row_two_y = 300.F;
+	constexpr float research_row_three_y = 480.F;
+
+	// City Upgrade Screen Upgrade Buttons
+	constexpr float city_upgrade_column_one_x = 120.F;
+	constexpr float city_upgrade_column_two_x = 380.F;
+	constexpr float city_upgrade_column_three_x = 640.F;
+	constexpr float city_upgrade_row_one_y = 200.F;
+	constexpr float city_upgrade_row_two_y = 450.F;
 }

@@ -17,11 +17,11 @@ namespace fleet {
 
 	struct CityResearch {
 		unsigned short shipyard{ 0 };
+		unsigned short airDefense{ 0 };
+		unsigned short groundDefense{ 0 };
 		unsigned short oilProduction{ 0 };
 		unsigned short cashProduction{ 0 };
 		unsigned short researchProduction{ 0 };
-		unsigned short airDefense{ 0 };
-		unsigned short groundDefense{ 0 };
 	};
 
 	struct ResearchMaximums {

@@ -23,27 +23,27 @@ namespace fleet {
 		worldMap.setCharacterSize(text_character_size);
 		worldMap.setFillColor(sf::Color::Black);
 
-		shipyard.setPosition(res_column_one_x, res_row_one_y);
+		shipyard.setPosition(research_column_one_x, research_row_one_y);
 		shipyard.setFont(font);
-		shipTypes.setPosition(res_column_two_x, res_row_one_y);
+		shipTypes.setPosition(research_column_two_x, research_row_one_y);
 		shipTypes.setFont(font);
-		durability.setPosition(res_column_three_x, res_row_one_y);
+		durability.setPosition(research_column_three_x, research_row_one_y);
 		durability.setFont(font);
-		firepower.setPosition(res_column_four_x, res_row_one_y);
+		firepower.setPosition(research_column_four_x, research_row_one_y);
 		firepower.setFont(font);
-		hull.setPosition(res_column_one_x, res_row_two_y);
+		hull.setPosition(research_column_one_x, research_row_two_y);
 		hull.setFont(font);
-		engine.setPosition(res_column_two_x, res_row_two_y);
+		engine.setPosition(research_column_two_x, research_row_two_y);
 		engine.setFont(font);
-		weapons.setPosition(res_column_three_x, res_row_two_y);
+		weapons.setPosition(research_column_three_x, research_row_two_y);
 		weapons.setFont(font);
-		fuelEfficieny.setPosition(res_column_four_x, res_row_two_y);
+		fuelEfficieny.setPosition(research_column_four_x, research_row_two_y);
 		fuelEfficieny.setFont(font);
-		oilProduction.setPosition(res_column_one_x, res_row_three_y);
+		oilProduction.setPosition(research_column_one_x, research_row_three_y);
 		oilProduction.setFont(font);
-		cashProduction.setPosition(res_column_two_x, res_row_three_y);
+		cashProduction.setPosition(research_column_two_x, research_row_three_y);
 		cashProduction.setFont(font);
-		researchProduction.setPosition(res_column_three_x, res_row_three_y);
+		researchProduction.setPosition(research_column_three_x, research_row_three_y);
 		researchProduction.setFont(font);
 	}
 

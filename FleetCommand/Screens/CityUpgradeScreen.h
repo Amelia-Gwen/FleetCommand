@@ -3,6 +3,8 @@
 #include "DisplayPanel.h"
 #include "IScreen.h"
 #include "Model.h"
+#include "ResearchData.h"
+#include "UpgradeButton.h"
 
 namespace fleet {
 	class CityUpgradeScreen : public IScreen {
@@ -26,5 +28,12 @@ namespace fleet {
 		sf::Text cityMap{ "City Map", font };
 		sf::RectangleShape worldMapButton{ sf::Vector2f(game_button_width, game_button_height) };
 		sf::Text worldMap{ "World Map", font };
+
+		UpgradeButton shipyard{ "Shipyard", ResearchMaximums::shpiyardMax };
+		UpgradeButton airDefense{ "Air Defense", ResearchMaximums::defenseMax };
+		UpgradeButton groundDefense{ "Ground Defense", ResearchMaximums::defenseMax };
+		UpgradeButton oilProduction{ "Oil Production", ResearchMaximums::productionMax };
+		UpgradeButton cashProduction{ "Cash Production", ResearchMaximums::productionMax };
+		UpgradeButton researchProduction{ "Research Production", ResearchMaximums::productionMax };
 	};
 }

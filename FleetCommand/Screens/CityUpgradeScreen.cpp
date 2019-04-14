@@ -22,6 +22,19 @@ namespace fleet {
 		worldMap.setPosition(game_button_4_x + worldmap_x_offset, game_button_text_y);
 		worldMap.setCharacterSize(text_character_size);
 		worldMap.setFillColor(sf::Color::Black);
+
+		shipyard.setPosition(city_upgrade_column_one_x, city_upgrade_row_one_y);
+		shipyard.setFont(font);
+		airDefense.setPosition(city_upgrade_column_two_x, city_upgrade_row_one_y);
+		airDefense.setFont(font);
+		groundDefense.setPosition(city_upgrade_column_three_x, city_upgrade_row_one_y);
+		groundDefense.setFont(font);
+		oilProduction.setPosition(city_upgrade_column_one_x, city_upgrade_row_two_y);
+		oilProduction.setFont(font);
+		cashProduction.setPosition(city_upgrade_column_one_x, city_upgrade_row_two_y);
+		cashProduction.setFont(font);
+		researchProduction.setPosition(city_upgrade_column_one_x, city_upgrade_row_two_y);
+		researchProduction.setFont(font);
 	}
 
 	void CityUpgradeScreen::setCity(unsigned index)
@@ -74,5 +87,11 @@ namespace fleet {
 		window.draw(cityMap);
 		window.draw(worldMapButton);
 		window.draw(worldMap);
+		window.draw(shipyard);
+		window.draw(airDefense);
+		window.draw(groundDefense);
+		window.draw(oilProduction);
+		window.draw(cashProduction);
+		window.draw(researchProduction);
 	}
 }
