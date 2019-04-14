@@ -45,6 +45,13 @@ namespace fleet {
 		cashProduction.setFont(font);
 		researchProduction.setPosition(research_column_three_x, research_row_three_y);
 		researchProduction.setFont(font);
+
+		textDisplay.setPosition(research_text_box_x, research_text_box_y);
+		textDisplay.setFillColor(sf::Color::Yellow);
+		textDisplay.setOutlineThickness(text_box_outline);
+		description.setPosition(research_text_box_x + description_text_offset, research_text_box_y + description_text_offset);
+		description.setFillColor(sf::Color::Black);
+		description.setCharacterSize(description_character_size);
 	}
 
 	GameEvent ResearchScreen::input()
@@ -81,7 +88,6 @@ namespace fleet {
 	}
 	void ResearchScreen::draw()
 	{
-		window.draw(displayPanel);
 		window.draw(dashboardButton);
 		window.draw(dashboard);
 		window.draw(unitsButton);
@@ -101,5 +107,8 @@ namespace fleet {
 		window.draw(oilProduction);
 		window.draw(cashProduction);
 		window.draw(researchProduction);
+		window.draw(textDisplay);
+		window.draw(description);
+		window.draw(displayPanel);
 	}
 }

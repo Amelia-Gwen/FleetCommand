@@ -161,20 +161,31 @@ namespace fleet {
 	constexpr float default_indicator_height = 20.F;
 	constexpr float upgrade_label_y_offset = 10.F;
 	constexpr float upgrade_button_outline = 2.F;
+	constexpr float text_box_outline = 2.F;
+	constexpr float description_text_offset = 5.F;
+	constexpr unsigned description_character_size = 15U;
 
 	// Research Screen Upgrade Buttons
 	constexpr float research_column_one_x = 100.F;
-	constexpr float research_column_two_x = 340.F;
-	constexpr float research_column_three_x = 580.F;
-	constexpr float research_column_four_x = 820.F;
+	constexpr float research_column_two_x = 310.F;
+	constexpr float research_column_three_x = 525.F;
+	constexpr float research_column_four_x = 730.F;
 	constexpr float research_row_one_y = 120.F;
 	constexpr float research_row_two_y = 300.F;
 	constexpr float research_row_three_y = 480.F;
+	constexpr float research_text_box_x = 930.F;
+	constexpr float research_text_box_y = 120.F;
+	constexpr float research_text_box_width = 250.F;
+	constexpr float research_text_box_height = 520.F;
 
 	// City Upgrade Screen Upgrade Buttons
-	constexpr float city_upgrade_column_one_x = 120.F;
-	constexpr float city_upgrade_column_two_x = 380.F;
-	constexpr float city_upgrade_column_three_x = 640.F;
+	constexpr float city_upgrade_column_one_x = 100.F;
+	constexpr float city_upgrade_column_two_x = 340.F;
+	constexpr float city_upgrade_column_three_x = 580.F;
 	constexpr float city_upgrade_row_one_y = 200.F;
 	constexpr float city_upgrade_row_two_y = 450.F;
+	constexpr float city_upgrade_text_box_x = 850.F;
+	constexpr float city_upgrade_text_box_y = 200.F;
+	constexpr float city_upgrade_text_box_width = 300.F;
+	constexpr float city_upgrade_text_box_height = 410.F;
 }

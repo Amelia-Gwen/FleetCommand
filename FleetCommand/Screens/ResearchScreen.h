@@ -37,5 +37,8 @@ namespace fleet {
 		UpgradeButton oilProduction{ "Oil Production", ResearchMaximums::productionMax };
 		UpgradeButton cashProduction{ "Cash Production", ResearchMaximums::productionMax };
 		UpgradeButton researchProduction{ "Research Production", ResearchMaximums::productionMax };
+
+		sf::RectangleShape textDisplay{ sf::Vector2f(research_text_box_width, research_text_box_height) };
+		sf::Text description{ "Invalid test string", font };
 	};
 }
