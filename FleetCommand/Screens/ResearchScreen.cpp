@@ -185,28 +185,50 @@ namespace fleet {
 		checkMouseOver(fleetButton);
 		checkMouseOver(worldMapButton);
 
-		shipyard.update(mousePos, currentLevels.shipyard,
-			canAfford(ResearchCosts::playerShipyard[currentLevels.shipyard], model.player()->currentResearch()));
-		shipTypes.update(mousePos, currentLevels.shipType,
-			canAfford(ResearchCosts::shipType[currentLevels.shipType], model.player()->currentResearch()));
-		durability.update(mousePos, currentLevels.durability,
-			canAfford(ResearchCosts::durability[currentLevels.durability], model.player()->currentResearch()));
-		firepower.update(mousePos, currentLevels.firepower,
-			canAfford(ResearchCosts::firepower[currentLevels.firepower], model.player()->currentResearch()));
-		hull.update(mousePos, currentLevels.hull,
-			canAfford(ResearchCosts::hull[currentLevels.hull], model.player()->currentResearch()));
-		engine.update(mousePos, currentLevels.engine,
-			canAfford(ResearchCosts::engine[currentLevels.engine], model.player()->currentResearch()));
-		weapons.update(mousePos, currentLevels.weapons,
-			canAfford(ResearchCosts::weapons[currentLevels.weapons], model.player()->currentResearch()));
-		fuelEfficieny.update(mousePos, currentLevels.fuelEfficiency,
-			canAfford(ResearchCosts::fuelEfficiency[currentLevels.fuelEfficiency], model.player()->currentResearch()));
-		oilProduction.update(mousePos, currentLevels.oilProduction,
-			canAfford(ResearchCosts::playerProduction[currentLevels.oilProduction], model.player()->currentResearch()));
-		cashProduction.update(mousePos, currentLevels.cashProduction,
-			canAfford(ResearchCosts::playerProduction[currentLevels.cashProduction], model.player()->currentResearch()));
-		researchProduction.update(mousePos, currentLevels.researchProduction,
-			canAfford(ResearchCosts::playerProduction[currentLevels.researchProduction], model.player()->currentResearch()));
+		if (currentLevels.shipyard < ResearchCosts::cityShipyard.size()) {
+			shipyard.update(mousePos, currentLevels.shipyard,
+				canAfford(ResearchCosts::playerShipyard[currentLevels.shipyard], model.player()->currentResearch()));
+		}
+		if (currentLevels.shipType < ResearchCosts::shipType.size()) {
+			shipTypes.update(mousePos, currentLevels.shipType,
+				canAfford(ResearchCosts::shipType[currentLevels.shipType], model.player()->currentResearch()));
+		}
+		if (currentLevels.durability < ResearchCosts::durability.size()) {
+			durability.update(mousePos, currentLevels.durability,
+				canAfford(ResearchCosts::durability[currentLevels.durability], model.player()->currentResearch()));
+		}
+		if (currentLevels.firepower < ResearchCosts::firepower.size()) {
+			firepower.update(mousePos, currentLevels.firepower,
+				canAfford(ResearchCosts::firepower[currentLevels.firepower], model.player()->currentResearch()));
+		}
+		if (currentLevels.hull < ResearchCosts::hull.size()) {
+			hull.update(mousePos, currentLevels.hull,
+				canAfford(ResearchCosts::hull[currentLevels.hull], model.player()->currentResearch()));
+		}
+		if (currentLevels.engine < ResearchCosts::engine.size()) {
+			engine.update(mousePos, currentLevels.engine,
+				canAfford(ResearchCosts::engine[currentLevels.engine], model.player()->currentResearch()));
+		}
+		if (currentLevels.weapons < ResearchCosts::weapons.size()) {
+			weapons.update(mousePos, currentLevels.weapons,
+				canAfford(ResearchCosts::weapons[currentLevels.weapons], model.player()->currentResearch()));
+		}
+		if (currentLevels.fuelEfficiency < ResearchCosts::fuelEfficiency.size()) {
+			fuelEfficieny.update(mousePos, currentLevels.fuelEfficiency,
+				canAfford(ResearchCosts::fuelEfficiency[currentLevels.fuelEfficiency], model.player()->currentResearch()));
+		}
+		if (currentLevels.oilProduction < ResearchCosts::playerProduction.size()) {
+			oilProduction.update(mousePos, currentLevels.oilProduction,
+				canAfford(ResearchCosts::playerProduction[currentLevels.oilProduction], model.player()->currentResearch()));
+		}
+		if (currentLevels.cashProduction < ResearchCosts::playerProduction.size()) {
+			cashProduction.update(mousePos, currentLevels.cashProduction,
+				canAfford(ResearchCosts::playerProduction[currentLevels.cashProduction], model.player()->currentResearch()));
+		}
+		if (currentLevels.researchProduction < ResearchCosts::playerProduction.size()) {
+			researchProduction.update(mousePos, currentLevels.researchProduction,
+				canAfford(ResearchCosts::playerProduction[currentLevels.researchProduction], model.player()->currentResearch()));
+		}
 	}
 	void ResearchScreen::draw()
 	{
