@@ -139,6 +139,9 @@
     <ClCompile Include="GUIComponents\UpgradeButton.cpp">
       <Filter>GUIComponents\Source</Filter>
     </ClCompile>
+    <ClCompile Include="DataComponents\ResearchData.cpp">
+      <Filter>DataComponents\Source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FleetCommand.h">

@@ -20,6 +20,8 @@ namespace fleet {
 		const Model& model;
 		DisplayPanel& displayPanel;
 		std::string cityName;
+		CityResearch currentLevels;
+
 		sf::RectangleShape dashboardButton{ sf::Vector2f(game_button_width, game_button_height) };
 		sf::Text dashboard{ "Dashboard", font };
 		sf::RectangleShape cityDashboardButton{ sf::Vector2f(game_button_width, game_button_height) };
@@ -38,5 +40,7 @@ namespace fleet {
 
 		sf::RectangleShape textDisplay{ sf::Vector2f(city_upgrade_text_box_width, city_upgrade_text_box_height) };
 		sf::Text description{ "Invalid test string", font };
+
+		bool canAfford(unsigned cost, unsigned resource);
 	};
 }

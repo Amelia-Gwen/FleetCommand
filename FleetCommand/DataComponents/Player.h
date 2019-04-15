@@ -19,9 +19,9 @@ namespace fleet {
 		explicit Player(const std::string& name, int startingOil, int startingCash, int startingResearch);
 
 		const std::string& playerName() const { return name; }
-		const std::string currentOil() const { return std::to_string(oil); }
-		const std::string currentCash() const { return std::to_string(cash); }
-		const std::string currentResearch() const { return std::to_string(research); }
+		const unsigned currentOil() const { return oil; }
+		const unsigned currentCash() const { return cash; }
+		const unsigned currentResearch() const { return research; }
 
 		void setAI(Difficulty aiDifficulty);
 		void setCapital(City* newCapitalCity);

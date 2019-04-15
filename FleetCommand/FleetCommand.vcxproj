@@ -65,6 +65,7 @@
     <ClCompile Include="DataComponents\HardAI.cpp" />
     <ClCompile Include="DataComponents\MediumAI.cpp" />
     <ClCompile Include="DataComponents\Player.cpp" />
+    <ClCompile Include="DataComponents\ResearchData.cpp" />
     <ClCompile Include="FleetCommand.cpp" />
     <ClCompile Include="GUIComponents\IMap.cpp" />
     <ClCompile Include="GUIComponents\CityMap.cpp" />

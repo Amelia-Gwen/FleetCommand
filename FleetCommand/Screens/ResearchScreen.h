@@ -40,5 +40,7 @@ namespace fleet {
 
 		sf::RectangleShape textDisplay{ sf::Vector2f(research_text_box_width, research_text_box_height) };
 		sf::Text description{ "Invalid test string", font };
+
+		bool canAfford(unsigned cost, unsigned resource);
 	};
 }

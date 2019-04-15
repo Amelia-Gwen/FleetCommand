@@ -1,5 +1,7 @@
 #pragma once
 
+#include <vector>
+
 namespace fleet {
 	struct PlayerResearch {
 		unsigned short shipyard{ 0 };
@@ -35,5 +37,21 @@ namespace fleet {
 		static const unsigned short fuelEfficiencyMax{ 5 };
 		static const unsigned short productionMax{ 4 };
 		static const unsigned short defenseMax{ 5 };
+	};
+
+	struct ResearchCosts {
+		static const std::vector<unsigned> playerShipyard;
+		static const std::vector<unsigned> shipType;
+		static const std::vector<unsigned> durability;
+		static const std::vector<unsigned> firepower;
+		static const std::vector<unsigned> hull;
+		static const std::vector<unsigned> engine;
+		static const std::vector<unsigned> weapons;
+		static const std::vector<unsigned> fuelEfficiency;
+		static const std::vector<unsigned> playerProduction;
+		static const std::vector<unsigned> cityShipyard;
+		static const std::vector<unsigned> defense;
+		static const std::vector<unsigned> cityProduction;
+
 	};
 }

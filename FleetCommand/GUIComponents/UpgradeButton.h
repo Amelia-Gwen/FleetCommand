@@ -21,6 +21,8 @@ namespace fleet {
 		void setTextOutlineColor(const sf::Color& color);
 		void setTextOutlineThickness(float thickness);
 
+		sf::FloatRect getGlobalBounds() { return button.getGlobalBounds(); }
+
 		bool input(const sf::Vector2f& mousePos, unsigned currentLevel, bool canAfford);
 		void update(const sf::Vector2f& mousePos, unsigned currentLevel, bool canAfford);
 	private:

@@ -111,4 +111,8 @@ namespace fleet {
 		window.draw(description);
 		window.draw(displayPanel);
 	}
+	bool canAfford(unsigned cost, unsigned resource)
+	{
+		return !(resource < cost);
+	}
 }
