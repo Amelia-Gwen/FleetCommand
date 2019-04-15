@@ -50,6 +50,7 @@ namespace fleet {
 		cityName = model.cityList()[index].cityName();
 		cityDashboard.setString(cityName);
 		currentLevels = model.cityList()[index].currentLevels();
+		cityIndex = index;
 	}
 
 	GameEvent CityUpgradeScreen::input()
@@ -74,7 +75,9 @@ namespace fleet {
 		else if (shipyard.getGlobalBounds().contains(mousePos)) {
 			if (shipyard.input(mousePos, currentLevels.shipyard,
 				canAfford(ResearchCosts::cityShipyard[currentLevels.shipyard], model.player()->currentCash()))) {
-
+				price = ResearchCosts::cityShipyard[currentLevels.shipyard];
+				++currentLevels.shipyard;
+				return GameEvent::CityUpgradePurchased;
 			}
 			else {
 				return GameEvent::ActionComplete;
@@ -83,7 +86,9 @@ namespace fleet {
 		else if (airDefense.getGlobalBounds().contains(mousePos)) {
 			if (airDefense.input(mousePos, currentLevels.airDefense,
 				canAfford(ResearchCosts::defense[currentLevels.airDefense], model.player()->currentCash()))) {
-
+				price = ResearchCosts::defense[currentLevels.airDefense];
+				++currentLevels.airDefense;
+				return GameEvent::CityUpgradePurchased;
 			}
 			else {
 				return GameEvent::ActionComplete;
@@ -92,7 +97,9 @@ namespace fleet {
 		else if (groundDefense.getGlobalBounds().contains(mousePos)) {
 			if (groundDefense.input(mousePos, currentLevels.groundDefense,
 				canAfford(ResearchCosts::defense[currentLevels.groundDefense], model.player()->currentCash()))) {
-
+				price = ResearchCosts::defense[currentLevels.groundDefense];
+				++currentLevels.groundDefense;
+				return GameEvent::CityUpgradePurchased;
 			}
 			else {
 				return GameEvent::ActionComplete;
@@ -101,7 +108,9 @@ namespace fleet {
 		else if (oilProduction.getGlobalBounds().contains(mousePos)) {
 			if (oilProduction.input(mousePos, currentLevels.oilProduction,
 				canAfford(ResearchCosts::cityProduction[currentLevels.oilProduction], model.player()->currentCash()))) {
-
+				price = ResearchCosts::cityProduction[currentLevels.oilProduction];
+				++currentLevels.oilProduction;
+				return GameEvent::CityUpgradePurchased;
 			}
 			else {
 				return GameEvent::ActionComplete;
@@ -110,7 +119,9 @@ namespace fleet {
 		else if (cashProduction.getGlobalBounds().contains(mousePos)) {
 			if (cashProduction.input(mousePos, currentLevels.cashProduction,
 				canAfford(ResearchCosts::cityProduction[currentLevels.cashProduction], model.player()->currentCash()))) {
-
+				price = ResearchCosts::cityProduction[currentLevels.cashProduction];
+				++currentLevels.cashProduction;
+				return GameEvent::CityUpgradePurchased;
 			}
 			else {
 				return GameEvent::ActionComplete;
@@ -119,7 +130,9 @@ namespace fleet {
 		else if (researchProduction.getGlobalBounds().contains(mousePos)) {
 			if (researchProduction.input(mousePos, currentLevels.researchProduction,
 				canAfford(ResearchCosts::cityProduction[currentLevels.researchProduction], model.player()->currentCash()))) {
-
+				price = ResearchCosts::cityProduction[currentLevels.researchProduction];
+				++currentLevels.researchProduction;
+				return GameEvent::CityUpgradePurchased;
 			}
 			else {
 				return GameEvent::ActionComplete;

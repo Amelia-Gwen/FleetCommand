@@ -1,5 +1,7 @@
 #include "Controller.h"
 
+#include "Screens.h"
+
 namespace fleet {
 	Controller::Controller(Model& model, View& view) :
 		model{ model },
@@ -58,6 +60,15 @@ namespace fleet {
 		//	model.endTurn();
 		//	//view.returnControl();
 		//	break;
+		case GameEvent::ResearchAcquired:
+			model.player()->currentLevels() = dynamic_cast<ResearchScreen*>(view.activeScreen())->newLevels();
+			model.player()->currentResearch() -= dynamic_cast<ResearchScreen*>(view.activeScreen())->cost();
+			break;
+		case GameEvent::CityUpgradePurchased:
+			model.cityList()[dynamic_cast<CityUpgradeScreen*>(view.activeScreen())->city()].currentLevels()
+				= dynamic_cast<CityUpgradeScreen*>(view.activeScreen())->newLevels();
+			model.player()->currentCash() -= dynamic_cast<CityUpgradeScreen*>(view.activeScreen())->cost();
+			break;
 		case GameEvent::None:
 		case GameEvent::ActionComplete:
 		default:

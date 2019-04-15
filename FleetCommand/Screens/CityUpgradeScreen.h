@@ -13,6 +13,10 @@ namespace fleet {
 
 		void setCity(unsigned index);
 
+		unsigned city() const { return cityIndex; };
+		const CityResearch& newLevels() const { return currentLevels; }
+		unsigned cost() const { return price; }
+
 		GameEvent input() override;
 		void update() override;
 		void draw() override;
@@ -21,6 +25,8 @@ namespace fleet {
 		DisplayPanel& displayPanel;
 		std::string cityName;
 		CityResearch currentLevels;
+		unsigned cityIndex{ 0 };
+		unsigned price{ 0 };
 
 		sf::RectangleShape dashboardButton{ sf::Vector2f(game_button_width, game_button_height) };
 		sf::Text dashboard{ "Dashboard", font };

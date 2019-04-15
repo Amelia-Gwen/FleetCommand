@@ -51,8 +51,11 @@ namespace fleet {
 	public:
 		Model();
 
+		std::vector<City>& cityList() { return cities; }
 		const std::vector<City>& cityList() const { return cities; }
-		Player* player() const { return currentPlayer; }
+
+		Player* player() { return currentPlayer; }
+		const Player* player() const { return currentPlayer; }
 
 		void startGame(const GameValues& gameValues = defaultValues);
 		void update();

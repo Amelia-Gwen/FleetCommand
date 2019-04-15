@@ -1,7 +1,7 @@
 #include "Player.h"
 
 namespace fleet {
-	Player::Player(const std::string& name, int startingOil, int startingCash, int startingResearch) :
+	Player::Player(const std::string& name, unsigned startingOil, unsigned startingCash, unsigned startingResearch) :
 		name{ name },
 		oil{ startingOil },
 		cash{ startingCash },

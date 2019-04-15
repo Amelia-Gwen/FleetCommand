@@ -16,15 +16,20 @@
 namespace fleet {
 	class Player {
 	public:
-		explicit Player(const std::string& name, int startingOil, int startingCash, int startingResearch);
-
-		const std::string& playerName() const { return name; }
-		const unsigned currentOil() const { return oil; }
-		const unsigned currentCash() const { return cash; }
-		const unsigned currentResearch() const { return research; }
+		explicit Player(const std::string& name, unsigned startingOil, unsigned startingCash, unsigned startingResearch);
 
 		void setAI(Difficulty aiDifficulty);
 		void setCapital(City* newCapitalCity);
+
+		const std::string& playerName() const { return name; }
+		unsigned& currentOil() { return oil; }
+		unsigned currentOil() const { return oil; }
+		unsigned& currentCash() { return cash; }
+		unsigned currentCash() const { return cash; }
+		unsigned& currentResearch() { return research; }
+		unsigned currentResearch() const { return research; }
+		PlayerResearch& currentLevels() { return researchLevels; }
+		const PlayerResearch& currentLevels() const { return researchLevels; }
 
 		void loseCity(City* cityToRemove);
 		void takeCity(City* cityToAdd);
@@ -34,8 +39,8 @@ namespace fleet {
 		City* capitalCity;
 		std::vector<City*> controlledCities;
 		PlayerResearch researchLevels;
-		int oil;
-		int cash;
-		int research;
+		unsigned oil;
+		unsigned cash;
+		unsigned research;
 	};
 }

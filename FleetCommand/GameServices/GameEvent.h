@@ -25,6 +25,8 @@ namespace fleet {
 		GoToCityUpgrade,
 		GoToUnits,
 		OpenCity,
+		ResearchAcquired,
+		CityUpgradePurchased,
 		EndTurn,
 		SaveGame
 	};

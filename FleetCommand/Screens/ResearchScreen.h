@@ -11,6 +11,9 @@ namespace fleet {
 	public:
 		explicit ResearchScreen(sf::RenderWindow& window, sf::Font& font, const Model& model, DisplayPanel& displayPanel);
 
+		const PlayerResearch& newLevels() const { return currentLevels; };
+		unsigned cost() const { return price; };
+
 		GameEvent input() override;
 		void update() override;
 		void draw() override;
@@ -18,6 +21,7 @@ namespace fleet {
 		const Model& model;
 		DisplayPanel& displayPanel;
 		PlayerResearch currentLevels;
+		unsigned price{ 0 };
 
 		sf::RectangleShape dashboardButton{ sf::Vector2f(game_button_width, game_button_height) };
 		sf::Text dashboard{ "Dashboard", font };

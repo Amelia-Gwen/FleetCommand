@@ -27,6 +27,8 @@ namespace fleet {
 		void close() { window.close(); }
 		void releaseGrip();
 
+		IScreen* activeScreen() const { return currentScreen; }
+
 		GameEvent input();
 		void update() { currentScreen->update(); }
 		void display();
