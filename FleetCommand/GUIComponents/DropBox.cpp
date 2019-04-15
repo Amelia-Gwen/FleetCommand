@@ -1,7 +1,5 @@
 #include "DropBox.h"
 
-#include <cstddef>
-
 namespace fleet {
 	/*
 	Default initialization includes. 0, 0 as origin point. White as default background color.
@@ -16,8 +14,8 @@ namespace fleet {
 	void DropBox::setPosition(float x, float y)
 	{
 		label.setPosition(x, y);
-		for (std::size_t i = 0; i < elements.size(); ++i) {
-			int position = i - selectedIndex;
+		for (unsigned i = 0; i < elements.size(); ++i) {
+			unsigned position = i - selectedIndex;
 			float yOffset = box_default_height * position;
 			elements[i].second.setPosition(x + xOffset, y + yOffset);
 			elements[i].first.setPosition(x + xOffset + box_text_offset, y + yOffset + box_text_offset);
@@ -120,7 +118,7 @@ namespace fleet {
 	void DropBox::input(const sf::Vector2f& mousePos)
 	{
 		if (open) {
-			for (std::size_t i = 0; i < elements.size(); ++i) {
+			for (unsigned i = 0; i < elements.size(); ++i) {
 				if (elements[i].second.getGlobalBounds().contains(mousePos)) {
 					sf::Vector2f position = label.getPosition();
 					selectedIndex = i;

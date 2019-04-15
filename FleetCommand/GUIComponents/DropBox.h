@@ -49,7 +49,7 @@ namespace fleet {
 		std::vector<std::pair<sf::Text, sf::RectangleShape>> elements;
 		float xOffset{ dropbox_default_x_offset };
 		bool open{ false };
-		int selectedIndex{ 0 };
+		unsigned selectedIndex{ 0 };
 		int size{ 0 };
 
 		void draw(sf::RenderTarget& target, sf::RenderStates states) const override;

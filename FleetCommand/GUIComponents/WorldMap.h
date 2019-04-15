@@ -16,7 +16,7 @@ namespace fleet {
 		const Model& model;
 		const sf::Font& font;
 		std::vector<std::pair<sf::RectangleShape, sf::Text>> cities;
-		int cityIndex{ 0 };
+		unsigned cityIndex{ 0 };
 
 		void checkMouseOver(sf::RectangleShape& button, sf::Vector2f mousePos);
 		void repositionCities();

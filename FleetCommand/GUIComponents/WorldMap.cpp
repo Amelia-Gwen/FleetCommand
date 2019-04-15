@@ -1,13 +1,11 @@
 #include "WorldMap.h"
 
-#include <cstddef>
-
 namespace fleet {
 	WorldMap::WorldMap(const Model& model, const sf::Font& font) :
 		model{ model },
 		font{ font }
 	{
-		std::size_t counter = 0;
+		unsigned counter = 0;
 		for (const auto& city : model.cityList()) {
 			cities.emplace_back(std::make_pair(
 				sf::RectangleShape(sf::Vector2f(world_map_city_width, world_map_city_height)), sf::Text(city.cityName(), font)
@@ -23,7 +21,7 @@ namespace fleet {
 	}
 	GameEvent WorldMap::input(const sf::Vector2f& mousePos)
 	{
-		for (std::size_t i = 0; i < cities.size(); ++i) {
+		for (unsigned i = 0; i < cities.size(); ++i) {
 			if (cities[i].first.getGlobalBounds().contains(mousePos)) {
 				cityIndex = i;
 				return GameEvent::OpenCity;
