@@ -37,9 +37,9 @@ namespace fleet {
 	{
 		dropDownMenu.update(mousePos);
 		name.setString(model.player()->playerName());
-		oil.setString(model.player()->currentOil());
-		cash.setString(model.player()->currentCash());
-		research.setString(model.player()->currentResearch());
+		oil.setString(std::to_string(model.player()->currentOil()));
+		cash.setString(std::to_string(model.player()->currentCash()));
+		research.setString(std::to_string(model.player()->currentResearch()));
 	}
 	void DisplayPanel::draw(sf::RenderTarget& target, sf::RenderStates states) const
 	{
