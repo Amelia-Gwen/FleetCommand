@@ -73,6 +73,105 @@ namespace fleet {
 		else if (worldMapButton.getGlobalBounds().contains(mousePos)) {
 			return GameEvent::GoToWorldMap;
 		}
+		else if (shipyard.getGlobalBounds().contains(mousePos)) {
+			if (shipyard.input(mousePos, currentLevels.shipyard,
+				canAfford(ResearchCosts::playerShipyard[currentLevels.shipyard], model.player()->currentResearch()))) {
+
+			}
+			else {
+				return GameEvent::ActionComplete;
+			}
+		}
+		else if (shipTypes.getGlobalBounds().contains(mousePos)) {
+			if (shipTypes.input(mousePos, currentLevels.shipType,
+				canAfford(ResearchCosts::shipType[currentLevels.shipType], model.player()->currentResearch()))) {
+
+			}
+			else {
+				return GameEvent::ActionComplete;
+			}
+		}
+		else if (durability.getGlobalBounds().contains(mousePos)) {
+			if (durability.input(mousePos, currentLevels.durability,
+				canAfford(ResearchCosts::durability[currentLevels.durability], model.player()->currentResearch()))) {
+
+			}
+			else {
+				return GameEvent::ActionComplete;
+			}
+		}
+		else if (firepower.getGlobalBounds().contains(mousePos)) {
+			if (firepower.input(mousePos, currentLevels.firepower,
+				canAfford(ResearchCosts::firepower[currentLevels.firepower], model.player()->currentResearch()))) {
+
+			}
+			else {
+				return GameEvent::ActionComplete;
+			}
+		}
+		else if (hull.getGlobalBounds().contains(mousePos)) {
+			if (hull.input(mousePos, currentLevels.hull,
+				canAfford(ResearchCosts::hull[currentLevels.hull], model.player()->currentResearch()))) {
+
+			}
+			else {
+				return GameEvent::ActionComplete;
+			}
+		}
+		else if (engine.getGlobalBounds().contains(mousePos)) {
+			if (engine.input(mousePos, currentLevels.engine,
+				canAfford(ResearchCosts::engine[currentLevels.engine], model.player()->currentResearch()))) {
+
+			}
+			else {
+				return GameEvent::ActionComplete;
+			}
+		}
+		else if (weapons.getGlobalBounds().contains(mousePos)) {
+			if (weapons.input(mousePos, currentLevels.weapons,
+				canAfford(ResearchCosts::weapons[currentLevels.weapons], model.player()->currentResearch()))) {
+
+			}
+			else {
+				return GameEvent::ActionComplete;
+			}
+		}
+		else if (fuelEfficieny.getGlobalBounds().contains(mousePos)) {
+			if (fuelEfficieny.input(mousePos, currentLevels.fuelEfficiency,
+				canAfford(ResearchCosts::fuelEfficiency[currentLevels.fuelEfficiency], model.player()->currentResearch()))) {
+
+			}
+			else {
+				return GameEvent::ActionComplete;
+			}
+		}
+		else if (oilProduction.getGlobalBounds().contains(mousePos)) {
+			if (oilProduction.input(mousePos, currentLevels.oilProduction,
+				canAfford(ResearchCosts::playerProduction[currentLevels.oilProduction], model.player()->currentResearch()))) {
+
+			}
+			else {
+				return GameEvent::ActionComplete;
+			}
+		}
+		else if (cashProduction.getGlobalBounds().contains(mousePos)) {
+			if (cashProduction.input(mousePos, currentLevels.cashProduction,
+				canAfford(ResearchCosts::playerProduction[currentLevels.cashProduction], model.player()->currentResearch()))) {
+
+			}
+			else {
+				return GameEvent::ActionComplete;
+			}
+		}
+		else if (researchProduction.getGlobalBounds().contains(mousePos)) {
+			if (researchProduction.input(mousePos, currentLevels.researchProduction,
+				canAfford(ResearchCosts::playerProduction[currentLevels.researchProduction], model.player()->currentResearch()))) {
+
+			}
+			else {
+				return GameEvent::ActionComplete;
+			}
+		}
 
 		return gameEvent;
 	}
@@ -85,6 +184,29 @@ namespace fleet {
 		checkMouseOver(unitsButton);
 		checkMouseOver(fleetButton);
 		checkMouseOver(worldMapButton);
+
+		shipyard.update(mousePos, currentLevels.shipyard,
+			canAfford(ResearchCosts::playerShipyard[currentLevels.shipyard], model.player()->currentResearch()));
+		shipTypes.update(mousePos, currentLevels.shipType,
+			canAfford(ResearchCosts::shipType[currentLevels.shipType], model.player()->currentResearch()));
+		durability.update(mousePos, currentLevels.durability,
+			canAfford(ResearchCosts::durability[currentLevels.durability], model.player()->currentResearch()));
+		firepower.update(mousePos, currentLevels.firepower,
+			canAfford(ResearchCosts::firepower[currentLevels.firepower], model.player()->currentResearch()));
+		hull.update(mousePos, currentLevels.hull,
+			canAfford(ResearchCosts::hull[currentLevels.hull], model.player()->currentResearch()));
+		engine.update(mousePos, currentLevels.engine,
+			canAfford(ResearchCosts::engine[currentLevels.engine], model.player()->currentResearch()));
+		weapons.update(mousePos, currentLevels.weapons,
+			canAfford(ResearchCosts::weapons[currentLevels.weapons], model.player()->currentResearch()));
+		fuelEfficieny.update(mousePos, currentLevels.fuelEfficiency,
+			canAfford(ResearchCosts::fuelEfficiency[currentLevels.fuelEfficiency], model.player()->currentResearch()));
+		oilProduction.update(mousePos, currentLevels.oilProduction,
+			canAfford(ResearchCosts::playerProduction[currentLevels.oilProduction], model.player()->currentResearch()));
+		cashProduction.update(mousePos, currentLevels.cashProduction,
+			canAfford(ResearchCosts::playerProduction[currentLevels.cashProduction], model.player()->currentResearch()));
+		researchProduction.update(mousePos, currentLevels.researchProduction,
+			canAfford(ResearchCosts::playerProduction[currentLevels.researchProduction], model.player()->currentResearch()));
 	}
 	void ResearchScreen::draw()
 	{
@@ -111,7 +233,8 @@ namespace fleet {
 		window.draw(description);
 		window.draw(displayPanel);
 	}
-	bool canAfford(unsigned cost, unsigned resource)
+
+	bool ResearchScreen::canAfford(unsigned cost, unsigned resource)
 	{
 		return !(resource < cost);
 	}

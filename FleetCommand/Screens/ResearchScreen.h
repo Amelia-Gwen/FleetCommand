@@ -17,6 +17,8 @@ namespace fleet {
 	private:
 		const Model& model;
 		DisplayPanel& displayPanel;
+		PlayerResearch currentLevels;
+
 		sf::RectangleShape dashboardButton{ sf::Vector2f(game_button_width, game_button_height) };
 		sf::Text dashboard{ "Dashboard", font };
 		sf::RectangleShape unitsButton{ sf::Vector2f(game_button_width, game_button_height) };
