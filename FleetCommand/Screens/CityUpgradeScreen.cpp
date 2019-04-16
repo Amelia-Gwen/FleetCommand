@@ -73,7 +73,7 @@ namespace fleet {
 			return GameEvent::GoToWorldMap;
 		}
 		else if (shipyard.getGlobalBounds().contains(mousePos)) {
-			if (shipyard.input(mousePos, currentLevels.shipyard,
+			if (shipyard.input(mousePos,
 				canAfford(ResearchCosts::cityShipyard[currentLevels.shipyard], model.player()->currentCash()))) {
 				price = ResearchCosts::cityShipyard[currentLevels.shipyard];
 				++currentLevels.shipyard;
@@ -84,7 +84,7 @@ namespace fleet {
 			}
 		}
 		else if (airDefense.getGlobalBounds().contains(mousePos)) {
-			if (airDefense.input(mousePos, currentLevels.airDefense,
+			if (airDefense.input(mousePos,
 				canAfford(ResearchCosts::defense[currentLevels.airDefense], model.player()->currentCash()))) {
 				price = ResearchCosts::defense[currentLevels.airDefense];
 				++currentLevels.airDefense;
@@ -95,7 +95,7 @@ namespace fleet {
 			}
 		}
 		else if (groundDefense.getGlobalBounds().contains(mousePos)) {
-			if (groundDefense.input(mousePos, currentLevels.groundDefense,
+			if (groundDefense.input(mousePos,
 				canAfford(ResearchCosts::defense[currentLevels.groundDefense], model.player()->currentCash()))) {
 				price = ResearchCosts::defense[currentLevels.groundDefense];
 				++currentLevels.groundDefense;
@@ -106,7 +106,7 @@ namespace fleet {
 			}
 		}
 		else if (oilProduction.getGlobalBounds().contains(mousePos)) {
-			if (oilProduction.input(mousePos, currentLevels.oilProduction,
+			if (oilProduction.input(mousePos,
 				canAfford(ResearchCosts::cityProduction[currentLevels.oilProduction], model.player()->currentCash()))) {
 				price = ResearchCosts::cityProduction[currentLevels.oilProduction];
 				++currentLevels.oilProduction;
@@ -117,7 +117,7 @@ namespace fleet {
 			}
 		}
 		else if (cashProduction.getGlobalBounds().contains(mousePos)) {
-			if (cashProduction.input(mousePos, currentLevels.cashProduction,
+			if (cashProduction.input(mousePos,
 				canAfford(ResearchCosts::cityProduction[currentLevels.cashProduction], model.player()->currentCash()))) {
 				price = ResearchCosts::cityProduction[currentLevels.cashProduction];
 				++currentLevels.cashProduction;
@@ -128,7 +128,7 @@ namespace fleet {
 			}
 		}
 		else if (researchProduction.getGlobalBounds().contains(mousePos)) {
-			if (researchProduction.input(mousePos, currentLevels.researchProduction,
+			if (researchProduction.input(mousePos,
 				canAfford(ResearchCosts::cityProduction[currentLevels.researchProduction], model.player()->currentCash()))) {
 				price = ResearchCosts::cityProduction[currentLevels.researchProduction];
 				++currentLevels.researchProduction;

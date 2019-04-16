@@ -58,7 +58,7 @@ namespace fleet {
 		label.setOutlineThickness(thickness);
 	}
 
-	bool UpgradeButton::input(const sf::Vector2f& mousePos, unsigned currentLevel, bool canAfford)
+	bool UpgradeButton::input(const sf::Vector2f& mousePos, bool canAfford)
 	{
 		return canAfford && button.getGlobalBounds().contains(mousePos);
 	}

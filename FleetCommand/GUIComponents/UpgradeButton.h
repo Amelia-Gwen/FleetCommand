@@ -23,7 +23,7 @@ namespace fleet {
 
 		sf::FloatRect getGlobalBounds() { return button.getGlobalBounds(); }
 
-		bool input(const sf::Vector2f& mousePos, unsigned currentLevel, bool canAfford);
+		bool input(const sf::Vector2f& mousePos, bool canAfford);
 		void update(const sf::Vector2f& mousePos, unsigned currentLevel, bool canAfford);
 	private:
 		sf::Text label;
