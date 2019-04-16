@@ -151,30 +151,18 @@ namespace fleet {
 		checkMouseOver(cityMapButton);
 		checkMouseOver(worldMapButton);
 
-		if (currentLevels.shipyard < ResearchCosts::cityShipyard.size()) {
-			shipyard.update(mousePos, currentLevels.shipyard,
-				canAfford(ResearchCosts::cityShipyard[currentLevels.shipyard], model.player()->currentCash()));
-		}
-		if (currentLevels.airDefense < ResearchCosts::defense.size()) {
-			airDefense.update(mousePos, currentLevels.airDefense,
-				canAfford(ResearchCosts::defense[currentLevels.airDefense], model.player()->currentCash()));
-		}
-		if (currentLevels.groundDefense < ResearchCosts::defense.size()) {
-			groundDefense.update(mousePos, currentLevels.groundDefense,
-				canAfford(ResearchCosts::defense[currentLevels.groundDefense], model.player()->currentCash()));
-		}
-		if (currentLevels.oilProduction < ResearchCosts::cityProduction.size()) {
-			oilProduction.update(mousePos, currentLevels.oilProduction,
-				canAfford(ResearchCosts::cityProduction[currentLevels.oilProduction], model.player()->currentCash()));
-		}
-		if (currentLevels.cashProduction < ResearchCosts::cityProduction.size()) {
-			cashProduction.update(mousePos, currentLevels.cashProduction,
-				canAfford(ResearchCosts::cityProduction[currentLevels.cashProduction], model.player()->currentCash()));
-		}
-		if (currentLevels.researchProduction < ResearchCosts::cityProduction.size()) {
-			researchProduction.update(mousePos, currentLevels.researchProduction,
-				canAfford(ResearchCosts::cityProduction[currentLevels.researchProduction], model.player()->currentCash()));
-		}
+		shipyard.update(mousePos, currentLevels.shipyard,
+			canAfford(ResearchCosts::cityShipyard[currentLevels.shipyard], model.player()->currentCash()));
+		airDefense.update(mousePos, currentLevels.airDefense,
+			canAfford(ResearchCosts::defense[currentLevels.airDefense], model.player()->currentCash()));
+		groundDefense.update(mousePos, currentLevels.groundDefense,
+			canAfford(ResearchCosts::defense[currentLevels.groundDefense], model.player()->currentCash()));
+		oilProduction.update(mousePos, currentLevels.oilProduction,
+			canAfford(ResearchCosts::cityProduction[currentLevels.oilProduction], model.player()->currentCash()));
+		cashProduction.update(mousePos, currentLevels.cashProduction,
+			canAfford(ResearchCosts::cityProduction[currentLevels.cashProduction], model.player()->currentCash()));
+		researchProduction.update(mousePos, currentLevels.researchProduction,
+			canAfford(ResearchCosts::cityProduction[currentLevels.researchProduction], model.player()->currentCash()));
 	}
 	void CityUpgradeScreen::draw()
 	{

@@ -60,15 +60,19 @@ namespace fleet {
 
 	bool UpgradeButton::input(const sf::Vector2f& mousePos, unsigned currentLevel, bool canAfford)
 	{
-		if (canAfford && button.getGlobalBounds().contains(mousePos)) {
-			indicators[currentLevel].setFillColor(sf::Color::Green);
-			return true;
-		}
-
-		return false;
+		return canAfford && button.getGlobalBounds().contains(mousePos);
 	}
 	void UpgradeButton::update(const sf::Vector2f& mousePos, unsigned currentLevel, bool canAfford)
 	{
+		for (unsigned i = 0; i < currentLevel && i < indicators.size(); ++i) {
+			indicators[i].setFillColor(sf::Color::Green);
+		}
+		for (unsigned i = currentLevel; i < indicators.size(); ++i) {
+			indicators[i].setFillColor(sf::Color::Cyan);
+		}
+
+		if (currentLevel == indicators.size()) { return; }
+
 		if (button.getGlobalBounds().contains(mousePos)) {
 			if (canAfford) {
 				indicators[currentLevel].setFillColor(sf::Color::Green);
