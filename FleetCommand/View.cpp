@@ -137,6 +137,9 @@ namespace fleet {
 			dynamic_cast<CityDashboard*>(currentScreen)->setCity(index);
 			gameEvent = GameEvent::ActionComplete;
 			break;
+		case GameEvent::EndTurn:
+			currentScreen = screens["World Map Screen"].get();
+			break;
 		case GameEvent::None:
 		case GameEvent::ActionComplete:
 		default:

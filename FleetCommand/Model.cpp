@@ -23,6 +23,20 @@ namespace fleet {
 		currentPlayer = &players[0];
 	}
 
+	void Model::endTurn()
+	{
+		for (unsigned i = 0; i < players.size(); ++i) {
+			if (currentPlayer == &players[i]) {
+				if (++i < players.size()) {
+					currentPlayer = &players[i];
+				}
+				else {
+					currentPlayer = &players[0];
+				}
+			}
+		}
+	}
+
 	void Model::update()
 	{
 	}

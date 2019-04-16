@@ -58,6 +58,8 @@ namespace fleet {
 		const Player* player() const { return currentPlayer; }
 
 		void startGame(const GameValues& gameValues = defaultValues);
+		void endTurn();
+
 		void update();
 	private:
 		std::vector<City> cities;

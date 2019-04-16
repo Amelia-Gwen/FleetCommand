@@ -56,10 +56,6 @@ namespace fleet {
 		//case GameEvent::SaveGame:
 		//	// TODO: serialize
 		//	break;
-		//case GameEvent::EndTurn:
-		//	model.endTurn();
-		//	//view.returnControl();
-		//	break;
 		case GameEvent::ResearchAcquired:
 			model.player()->currentLevels() = dynamic_cast<ResearchScreen*>(view.activeScreen())->newLevels();
 			model.player()->currentResearch() -= dynamic_cast<ResearchScreen*>(view.activeScreen())->cost();
@@ -68,6 +64,9 @@ namespace fleet {
 			model.cityList()[dynamic_cast<CityUpgradeScreen*>(view.activeScreen())->city()].currentLevels()
 				= dynamic_cast<CityUpgradeScreen*>(view.activeScreen())->newLevels();
 			model.player()->currentCash() -= dynamic_cast<CityUpgradeScreen*>(view.activeScreen())->cost();
+			break;
+		case GameEvent::EndTurn:
+			model.endTurn();
 			break;
 		case GameEvent::None:
 		case GameEvent::ActionComplete:
