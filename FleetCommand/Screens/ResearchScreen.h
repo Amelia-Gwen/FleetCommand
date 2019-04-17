@@ -11,6 +11,8 @@ namespace fleet {
 	public:
 		explicit ResearchScreen(sf::RenderWindow& window, sf::Font& font, const Model& model, DisplayPanel& displayPanel);
 
+		void setLevels(const PlayerResearch& levels);
+
 		const PlayerResearch& newLevels() const { return currentLevels; };
 		unsigned cost() const { return price; };
 

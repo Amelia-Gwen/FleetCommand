@@ -54,6 +54,11 @@ namespace fleet {
 		description.setCharacterSize(description_character_size);
 	}
 
+	void ResearchScreen::setLevels(const PlayerResearch& levels)
+	{
+		currentLevels = levels;
+	}
+
 	GameEvent ResearchScreen::input()
 	{
 		sf::Vector2f mousePos{ static_cast<float>(sf::Mouse::getPosition(window).x), static_cast<float>(sf::Mouse::getPosition(window).y) };

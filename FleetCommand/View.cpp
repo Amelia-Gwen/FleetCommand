@@ -122,6 +122,7 @@ namespace fleet {
 			break;
 		case GameEvent::GoToResearch:
 			currentScreen = screens["Research Screen"].get();
+			dynamic_cast<ResearchScreen*>(currentScreen)->setLevels(model.player()->currentLevels());
 			gameEvent = GameEvent::ActionComplete;
 			break;
 		case GameEvent::GoToFleet:
