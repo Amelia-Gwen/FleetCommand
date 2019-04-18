@@ -1,7 +1,9 @@
 #pragma once
 
 #include "IScreen.h"
+
 #include "DisplayPanel.h"
+#include "GUIButton.h"
 
 namespace fleet {
 	class CityDashboard : public IScreen {
@@ -17,6 +19,7 @@ namespace fleet {
 		DisplayPanel& displayPanel;
 		unsigned cityIndex{ 0 };
 		bool currentlyOwned{ false };
+		// GUIButton dashboardButton{ sf::Vector2f(game_button_width, game_button_height), "Dashboard", font };
 		sf::RectangleShape dashboardButton{ sf::Vector2f(game_button_width, game_button_height) };
 		sf::Text dashboard{ "Dashboard", font };
 		sf::RectangleShape cityMapButton{ sf::Vector2f(game_button_width, game_button_height) };

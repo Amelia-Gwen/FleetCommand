@@ -30,7 +30,7 @@ namespace fleet {
 	{
 		capitalCity = newCapitalCity;
 	}
-	bool Player::isOwned(City& city)
+	bool Player::isOwned(const City& city) const
 	{
 		for (auto controlledCity : controlledCities) {
 			if (controlledCity->cityName() == city.cityName()) {

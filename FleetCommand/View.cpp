@@ -134,7 +134,8 @@ namespace fleet {
 			break;
 		case GameEvent::OpenCity:
 			index = dynamic_cast<WorldMapScreen*>(screens["World Map Screen"].get())->activeCity();
-			bool owned = model.player()->isOwned(model.cityList()[index]);
+			bool owned;
+			owned = model.player()->isOwned(model.cityList()[index]);
 			currentScreen = screens["City Dashboard"].get();
 			dynamic_cast<CityDashboard*>(currentScreen)->setCity(index, owned);
 			gameEvent = GameEvent::ActionComplete;

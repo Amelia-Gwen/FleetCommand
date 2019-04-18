@@ -64,9 +64,6 @@
     <ClCompile Include="Controller.cpp">
       <Filter>Architecture\Source</Filter>
     </ClCompile>
-    <ClCompile Include="Screens\IScreen.cpp">
-      <Filter>Screens\Source</Filter>
-    </ClCompile>
     <ClCompile Include="Screens\NewGameMenuScreen.cpp">
       <Filter>Screens\Source</Filter>
     </ClCompile>
@@ -141,6 +138,9 @@
     </ClCompile>
     <ClCompile Include="DataComponents\ResearchData.cpp">
       <Filter>DataComponents\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="GUIComponents\GUIButton.cpp">
+      <Filter>GUIComponents\Source</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -257,6 +257,9 @@
     </ClInclude>
     <ClInclude Include="DataComponents\ResearchData.h">
       <Filter>DataComponents\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="GUIComponents\GUIButton.h">
+      <Filter>GUIComponents\Header</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -18,7 +18,7 @@ namespace fleet {
 	*/
 	class IScreen {
 	public:
-		explicit IScreen(sf::RenderWindow& window, const sf::Font& font);
+		explicit IScreen(sf::RenderWindow& window, const sf::Font& font) : window{ window }, font{ font } {}
 		virtual ~IScreen() = default;
 
 		virtual GameEvent input() = 0;
@@ -27,7 +27,5 @@ namespace fleet {
 	protected:
 		sf::RenderWindow& window;
 		const sf::Font& font;
-
-		void checkMouseOver(sf::RectangleShape& button);
 	};
 }

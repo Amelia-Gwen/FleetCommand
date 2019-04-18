@@ -38,6 +38,7 @@
     <ClInclude Include="GUIComponents\DisplayPanel.h" />
     <ClInclude Include="GUIComponents\DropBox.h" />
     <ClInclude Include="GUIComponents\DropDownMenu.h" />
+    <ClInclude Include="GUIComponents\GUIButton.h" />
     <ClInclude Include="GUIComponents\IMap.h" />
     <ClInclude Include="GUIComponents\UpgradeButton.h" />
     <ClInclude Include="GUIComponents\WorldMap.h" />
@@ -67,6 +68,7 @@
     <ClCompile Include="DataComponents\Player.cpp" />
     <ClCompile Include="DataComponents\ResearchData.cpp" />
     <ClCompile Include="FleetCommand.cpp" />
+    <ClCompile Include="GUIComponents\GUIButton.cpp" />
     <ClCompile Include="GUIComponents\IMap.cpp" />
     <ClCompile Include="GUIComponents\CityMap.cpp" />
     <ClCompile Include="GUIComponents\DisplayPanel.cpp" />
@@ -82,7 +84,6 @@
     <ClCompile Include="Screens\CustomMenuScreen.cpp" />
     <ClCompile Include="Screens\Dashboard.cpp" />
     <ClCompile Include="Screens\FleetScreen.cpp" />
-    <ClCompile Include="Screens\IScreen.cpp" />
     <ClCompile Include="Screens\LoadGameScreen.cpp" />
     <ClCompile Include="Screens\MainMenuScreen.cpp" />
     <ClCompile Include="Screens\NewGameMenuScreen.cpp" />
