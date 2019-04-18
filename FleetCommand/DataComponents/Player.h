@@ -21,6 +21,8 @@ namespace fleet {
 		void setAI(Difficulty aiDifficulty);
 		void setCapital(City* newCapitalCity);
 
+		bool isOwned(const City& city) const;
+
 		const std::string& playerName() const { return name; }
 		unsigned& currentOil() { return oil; }
 		unsigned currentOil() const { return oil; }

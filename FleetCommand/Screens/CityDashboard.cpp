@@ -23,9 +23,10 @@ namespace fleet {
 		worldMap.setFillColor(sf::Color::Black);
 	}
 
-	void CityDashboard::setCity(unsigned index)
+	void CityDashboard::setCity(unsigned index, bool owned)
 	{
 		cityIndex = index;
+		currentlyOwned = owned;
 	}
 
 	GameEvent CityDashboard::input()
@@ -38,10 +39,10 @@ namespace fleet {
 		if (dashboardButton.getGlobalBounds().contains(mousePos)) {
 			return GameEvent::GoToDashboard;
 		}
-		else if (cityMapButton.getGlobalBounds().contains(mousePos)) {
+		else if (currentlyOwned && cityMapButton.getGlobalBounds().contains(mousePos)) {
 			return GameEvent::GoToCityMap;
 		}
-		else if (cityUpgradeButton.getGlobalBounds().contains(mousePos)) {
+		else if (currentlyOwned && cityUpgradeButton.getGlobalBounds().contains(mousePos)) {
 			return GameEvent::GoToCityUpgrade;
 		}
 		else if (worldMapButton.getGlobalBounds().contains(mousePos)) {
@@ -56,8 +57,10 @@ namespace fleet {
 
 		displayPanel.update(mousePos);
 		checkMouseOver(dashboardButton);
-		checkMouseOver(cityMapButton);
-		checkMouseOver(cityUpgradeButton);
+		if (currentlyOwned) {
+			checkMouseOver(cityMapButton);
+			checkMouseOver(cityUpgradeButton);
+		}
 		checkMouseOver(worldMapButton);
 	}
 	void CityDashboard::draw()

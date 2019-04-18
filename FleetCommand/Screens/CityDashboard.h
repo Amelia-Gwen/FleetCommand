@@ -8,7 +8,7 @@ namespace fleet {
 	public:
 		explicit CityDashboard(sf::RenderWindow& window, sf::Font& font, DisplayPanel& displayPanel);
 
-		void setCity(unsigned index);
+		void setCity(unsigned index, bool owned);
 
 		GameEvent input() override;
 		void update() override;
@@ -16,6 +16,7 @@ namespace fleet {
 	private:
 		DisplayPanel& displayPanel;
 		unsigned cityIndex{ 0 };
+		bool currentlyOwned{ false };
 		sf::RectangleShape dashboardButton{ sf::Vector2f(game_button_width, game_button_height) };
 		sf::Text dashboard{ "Dashboard", font };
 		sf::RectangleShape cityMapButton{ sf::Vector2f(game_button_width, game_button_height) };

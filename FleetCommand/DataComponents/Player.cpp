@@ -30,6 +30,15 @@ namespace fleet {
 	{
 		capitalCity = newCapitalCity;
 	}
+	bool Player::isOwned(City& city)
+	{
+		for (auto controlledCity : controlledCities) {
+			if (controlledCity->cityName() == city.cityName()) {
+				return true;
+			}
+		}
+		return false;
+	}
 	void Player::loseCity(City* cityToRemove)
 	{
 		for (auto it = controlledCities.begin(); it != controlledCities.end(); ++it) {
