@@ -2,6 +2,7 @@
 
 #include "IScreen.h"
 
+#include "GUIButton.h"
 #include "LoadFile.h"
 
 namespace fleet {
@@ -20,10 +21,10 @@ namespace fleet {
 		void update() override;
 		void draw() override;
 	private:
-		sf::RectangleShape backButton{ sf::Vector2f(menu_back_button_width, menu_back_button_height) };
-		sf::RectangleShape slot1{ sf::Vector2f(slot_width, slot_height) };
-		sf::RectangleShape slot2{ sf::Vector2f(slot_width, slot_height) };
-		sf::RectangleShape slot3{ sf::Vector2f(slot_width, slot_height) };
+		GUIButton backButton{ sf::Vector2f(menu_back_button_width, menu_back_button_height), "Back", font };
+		GUIButton slot1{ sf::Vector2f(slot_width, slot_height), "", font };
+		GUIButton slot2{ sf::Vector2f(slot_width, slot_height), "", font };
+		GUIButton slot3{ sf::Vector2f(slot_width, slot_height), "", font };
 		LoadFile loadFile{ LoadFile::None };
 	};
 }

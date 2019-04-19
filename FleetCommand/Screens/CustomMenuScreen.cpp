@@ -17,12 +17,12 @@ namespace fleet {
 	CustomMenuScreen::CustomMenuScreen(sf::RenderWindow& window, const sf::Font& font) :
 		IScreen{ window, font }
 	{
+		backButton.setLabelOffset(back_x_offset);
 		backButton.setPosition(menu_back_x, menu_back_y);
 		initializeBoxes();
+		startButton.setLabelOffset(start_x_offset);
 		startButton.setPosition(start_button_x, start_button_y);
-		start.setPosition(start_x, start_y);
-		start.setFillColor(sf::Color::Black);
-		start.setCharacterSize(text_character_size);
+		startButton.setCharacterSize(text_character_size);
 	}
 
 	/*
@@ -34,10 +34,10 @@ namespace fleet {
 	{
 		sf::Vector2f mousePos{ static_cast<float>(sf::Mouse::getPosition(window).x), static_cast<float>(sf::Mouse::getPosition(window).y) };
 
-		if (backButton.getGlobalBounds().contains(mousePos)) {
+		if (backButton.input(mousePos)) {
 			return GameEvent::OpenNewGame;
 		}
-		else if (startButton.getGlobalBounds().contains(mousePos)) {
+		else if (startButton.input(mousePos)) {
 			setValues();
 			return GameEvent::StartGame;
 		}
@@ -58,14 +58,14 @@ namespace fleet {
 	{
 		sf::Vector2f mousePos{ static_cast<float>(sf::Mouse::getPosition(window).x), static_cast<float>(sf::Mouse::getPosition(window).y) };
 
-		checkMouseOver(backButton);
+		backButton.update(mousePos);
 		playersBox.update(mousePos);
 		computersBox.update(mousePos);
 		difficultyBox.update(mousePos);
 		oilBox.update(mousePos);
 		cashBox.update(mousePos);
 		researchBox.update(mousePos);
-		checkMouseOver(startButton);
+		startButton.update(mousePos);
 	}
 	/*
 	Render logic. This is the main need for the window reference.
@@ -80,7 +80,6 @@ namespace fleet {
 		window.draw(cashBox);
 		window.draw(researchBox);
 		window.draw(startButton);
-		window.draw(start);
 	}
 
 	void CustomMenuScreen::initializeBoxes()

@@ -1,5 +1,7 @@
 #include "GUIButton.h"
 
+#include "Expressions.h"
+
 namespace fleet {
 	GUIButton::GUIButton(const sf::Vector2f& size, const std::string& newLabel, const sf::Font& font) :
 		button{ size },
@@ -12,7 +14,7 @@ namespace fleet {
 	void GUIButton::setPosition(float x, float y)
 	{
 		button.setPosition(x, y);
-		label.setPosition(x + labelOffset, y);
+		label.setPosition(x + labelOffset, y + text_y_offset);
 	}
 	void GUIButton::setPosition(const sf::Vector2f& position)
 	{
@@ -27,7 +29,10 @@ namespace fleet {
 	{
 		label.setCharacterSize(newSize);
 	}
-
+	void GUIButton::setLabel(const std::string& newLabel)
+	{
+		label.setString(newLabel);
+	}
 	void GUIButton::setActive(bool isActive)
 	{
 		active = isActive;
@@ -45,5 +50,11 @@ namespace fleet {
 		else {
 			button.setFillColor(sf::Color::Cyan);
 		}
+	}
+
+	void GUIButton::draw(sf::RenderTarget& target, sf::RenderStates states) const
+	{
+		target.draw(button, states);
+		target.draw(label, states);
 	}
 }

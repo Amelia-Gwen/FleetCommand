@@ -1,7 +1,9 @@
 #pragma once
 
 #include "IScreen.h"
+
 #include "DisplayPanel.h"
+#include "GUIButton.h"
 
 namespace fleet {
 	class Dashboard : public IScreen {
@@ -13,13 +15,9 @@ namespace fleet {
 		void draw() override;
 	private:
 		DisplayPanel& displayPanel;
-		sf::RectangleShape unitsButton{ sf::Vector2f(game_button_width, game_button_height) };
-		sf::Text units{ "Units", font };
-		sf::RectangleShape researchButton{ sf::Vector2f(game_button_width, game_button_height) };
-		sf::Text research{ "Research", font };
-		sf::RectangleShape fleetButton{ sf::Vector2f(game_button_width, game_button_height) };
-		sf::Text fleet{ "Fleet", font };
-		sf::RectangleShape worldMapButton{ sf::Vector2f(game_button_width, game_button_height) };
-		sf::Text worldMap{ "World Map", font };
+		GUIButton unitsButton{ sf::Vector2f(game_button_width, game_button_height), "Units", font };
+		GUIButton researchButton{ sf::Vector2f(game_button_width, game_button_height), "Research", font };
+		GUIButton fleetButton{ sf::Vector2f(game_button_width, game_button_height), "Fleet", font };
+		GUIButton worldMapButton{ sf::Vector2f(game_button_width, game_button_height), "World Map", font };
 	};
 }

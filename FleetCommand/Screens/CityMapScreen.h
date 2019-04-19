@@ -1,8 +1,10 @@
 #pragma once
 
 #include "IScreen.h"
-#include "DisplayPanel.h"
+
 #include "CityMap.h"
+#include "DisplayPanel.h"
+#include "GUIButton.h"
 
 namespace fleet {
 	class CityMapScreen : public IScreen {
@@ -20,13 +22,9 @@ namespace fleet {
 		DisplayPanel& displayPanel;
 		CityMap cityMap;
 		std::string cityName;
-		sf::RectangleShape dashboardButton{ sf::Vector2f(game_button_width, game_button_height) };
-		sf::Text dashboard{ "Dashboard", font };
-		sf::RectangleShape cityDashboardButton{ sf::Vector2f(game_button_width, game_button_height) };
-		sf::Text cityDashboard{ "", font };
-		sf::RectangleShape cityUpgradeButton{ sf::Vector2f(game_button_width, game_button_height) };
-		sf::Text cityUpgrade{ "City Upgrades", font };
-		sf::RectangleShape worldMapButton{ sf::Vector2f(game_button_width, game_button_height) };
-		sf::Text worldMap{ "World Map", font };
+		GUIButton dashboardButton{ sf::Vector2f(game_button_width, game_button_height), "Dashboard", font };
+		GUIButton cityDashboardButton{ sf::Vector2f(game_button_width, game_button_height), "", font };
+		GUIButton cityUpgradeButton{ sf::Vector2f(game_button_width, game_button_height), "City Upgrades", font };
+		GUIButton worldMapButton{ sf::Vector2f(game_button_width, game_button_height), "World Map", font };
 	};
 }

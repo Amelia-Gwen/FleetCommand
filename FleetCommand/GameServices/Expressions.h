@@ -64,16 +64,9 @@ namespace fleet {
 	constexpr float main_menu_button_width = 300.F;
 	constexpr float main_menu_button_height = 75.F;
 	constexpr float main_menu_button_x = 450.F;
-	constexpr float main_menu_text_y_offset = 10.F;
 	constexpr float play_button_y = 600.F;
-	constexpr float play_text_x = main_menu_button_x + 100.F;
-	constexpr float play_text_y = play_button_y + main_menu_text_y_offset;
 	constexpr float new_game_button_y = 500.F;
-	constexpr float new_text_x = main_menu_button_x + 40.F;
-	constexpr float new_text_y = new_game_button_y + main_menu_text_y_offset;
 	constexpr float load_button_y = 650.F;
-	constexpr float load_text_x = main_menu_button_x + 40.F;
-	constexpr float load_text_y = load_button_y + main_menu_text_y_offset;
 	constexpr unsigned logo_text_character_size = 60;
 
 	// New Game Screen
@@ -82,9 +75,6 @@ namespace fleet {
 	constexpr float campaign_button_x = 150.F;
 	constexpr float custom_button_x = 650.F;
 	constexpr float new_button_y = 200.F;
-	constexpr float new_text_x_offset = 80.F;
-	constexpr float campaign_text_x = campaign_button_x + new_text_x_offset;
-	constexpr float custom_text_x = custom_button_x + new_text_x_offset;
 	constexpr float new_game_text_y = new_button_y + 100.F;
 	constexpr unsigned new_text_size = 60U;
 
@@ -106,8 +96,7 @@ namespace fleet {
 	constexpr float start_button_height = 75.F;
 	constexpr float start_button_x = 400.F;
 	constexpr float start_button_y = 700.F;
-	constexpr float start_x = start_button_x + 40.F;
-	constexpr float start_y = start_button_y + 10.F;
+	constexpr float start_x_offset =  40.F;
 	constexpr unsigned max_players = 4U;
 
 	// Game Screens
@@ -119,8 +108,6 @@ namespace fleet {
 	constexpr float game_button_3_x = game_button_2_x + game_button_width;
 	constexpr float game_button_4_x = game_button_3_x + game_button_width;
 	constexpr float game_button_y = view_height_float - game_button_height;
-	constexpr float game_button_text_y_offset = 20.F;
-	constexpr float game_button_text_y = game_button_y + game_button_text_y_offset;
 
 	// IMap
 	constexpr float map_width = view_width_float;
@@ -145,6 +132,11 @@ namespace fleet {
 	// City Map
 
 	// Button Offsets
+	constexpr float back_x_offset = 20.F;
+	constexpr float load_x_offset = 50.F;
+	constexpr float play_button_x_offset = 100.F;
+	constexpr float new_or_load_x_offset = 40.f;
+	constexpr float new_text_x_offset = 80.F;
 	constexpr float dashboard_x_offset = 60.F;
 	constexpr float research_x_offset = 60.F;
 	constexpr float fleet_x_offset = 100.F;
@@ -154,6 +146,7 @@ namespace fleet {
 	constexpr float cityupgrade_x_offset = 20.F;
 	constexpr float worldmap_x_offset = 50.F;
 	constexpr float unit_x_offset = 100.F;
+	constexpr float text_y_offset = 20.F;
 
 	// UpgradeButtons
 	constexpr float default_upgrade_width = 80.F;

@@ -9,15 +9,14 @@ namespace fleet {
 	NewGameMenuScreen::NewGameMenuScreen(sf::RenderWindow& window, const sf::Font& font) :
 		IScreen{ window, font }
 	{
+		backButton.setLabelOffset(back_x_offset);
 		backButton.setPosition(menu_back_x, menu_back_y);
+		campaignButton.setLabelOffset(new_text_x_offset);
 		campaignButton.setPosition(campaign_button_x, new_button_y);
-		campaign.setPosition(campaign_text_x, new_game_text_y);
-		campaign.setFillColor(sf::Color::Black);
-		campaign.setCharacterSize(new_text_size);
+		campaignButton.setCharacterSize(new_text_size);
+		customButton.setLabelOffset(new_text_x_offset);
 		customButton.setPosition(custom_button_x, new_button_y);
-		custom.setPosition(custom_text_x, new_game_text_y);
-		custom.setFillColor(sf::Color::Black);
-		custom.setCharacterSize(new_text_size);
+		customButton.setCharacterSize(new_text_size);
 	}
 
 	/*
@@ -28,15 +27,15 @@ namespace fleet {
 	{
 		sf::Vector2f mousePos{ static_cast<float>(sf::Mouse::getPosition(window).x), static_cast<float>(sf::Mouse::getPosition(window).y) };
 
-		if (backButton.getGlobalBounds().contains(mousePos))
+		if (backButton.input(mousePos))
 		{
 			return GameEvent::ReturnToMainMenu;
 		}
-		else if (campaignButton.getGlobalBounds().contains(mousePos))
+		else if (campaignButton.input(mousePos))
 		{
 			return GameEvent::StartCampaign;
 		}
-		else if (customButton.getGlobalBounds().contains(mousePos))
+		else if (customButton.input(mousePos))
 		{
 			return GameEvent::OpenCustomGame;
 		}
@@ -48,9 +47,11 @@ namespace fleet {
     */
 	void NewGameMenuScreen::update()
 	{
-		checkMouseOver(backButton);
-		checkMouseOver(campaignButton);
-		checkMouseOver(customButton);
+		sf::Vector2f mousePos{ static_cast<float>(sf::Mouse::getPosition(window).x), static_cast<float>(sf::Mouse::getPosition(window).y) };
+
+		backButton.update(mousePos);
+		campaignButton.update(mousePos);
+		customButton.update(mousePos);
 	}
 	/*
     Render logic. This is the main need for the window reference.
@@ -59,8 +60,6 @@ namespace fleet {
 	{
 		window.draw(backButton);
 		window.draw(campaignButton);
-		window.draw(campaign);
 		window.draw(customButton);
-		window.draw(custom);
 	}
 }

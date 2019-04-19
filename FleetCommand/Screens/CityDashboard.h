@@ -18,15 +18,9 @@ namespace fleet {
 	private:
 		DisplayPanel& displayPanel;
 		unsigned cityIndex{ 0 };
-		bool currentlyOwned{ false };
-		// GUIButton dashboardButton{ sf::Vector2f(game_button_width, game_button_height), "Dashboard", font };
-		sf::RectangleShape dashboardButton{ sf::Vector2f(game_button_width, game_button_height) };
-		sf::Text dashboard{ "Dashboard", font };
-		sf::RectangleShape cityMapButton{ sf::Vector2f(game_button_width, game_button_height) };
-		sf::Text cityMap{ "City Map", font };
-		sf::RectangleShape cityUpgradeButton{ sf::Vector2f(game_button_width, game_button_height) };
-		sf::Text cityUpgrade{ "City Upgrades", font };
-		sf::RectangleShape worldMapButton{ sf::Vector2f(game_button_width, game_button_height) };
-		sf::Text worldMap{ "World Map", font };
+		GUIButton dashboardButton{ sf::Vector2f(game_button_width, game_button_height), "Dashboard", font };
+		GUIButton cityMapButton{ sf::Vector2f(game_button_width, game_button_height), "City Map", font };
+		GUIButton cityUpgradeButton{ sf::Vector2f(game_button_width, game_button_height), "City Upgrades", font };
+		GUIButton worldMapButton{ sf::Vector2f(game_button_width, game_button_height), "World Map", font };
 	};
 }

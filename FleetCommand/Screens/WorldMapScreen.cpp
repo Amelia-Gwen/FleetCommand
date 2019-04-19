@@ -7,22 +7,18 @@ namespace fleet {
 		displayPanel{ displayPanel }
 	{
 		worldMap.setPosition(0.F, panel_box_height);
+		dashButton.setLabelOffset(dashboard_x_offset);
 		dashButton.setPosition(game_button_1_x, game_button_y);
-		dashboard.setPosition(game_button_1_x + dashboard_x_offset, game_button_text_y);
-		dashboard.setCharacterSize(text_character_size);
-		dashboard.setFillColor(sf::Color::Black);
+		dashButton.setCharacterSize(text_character_size);
+		researchButton.setLabelOffset(research_x_offset);
 		researchButton.setPosition(game_button_2_x, game_button_y);
-		research.setPosition(game_button_2_x + research_x_offset, game_button_text_y);
-		research.setCharacterSize(text_character_size);
-		research.setFillColor(sf::Color::Black);
+		researchButton.setCharacterSize(text_character_size);
+		fleetButton.setLabelOffset(fleet_x_offset);
 		fleetButton.setPosition(game_button_3_x, game_button_y);
-		fleet.setPosition(game_button_3_x + fleet_x_offset, game_button_text_y);
-		fleet.setCharacterSize(text_character_size);
-		fleet.setFillColor(sf::Color::Black);
+		fleetButton.setCharacterSize(text_character_size);
+		endTurnButton.setLabelOffset(endturn_x_offset);
 		endTurnButton.setPosition(game_button_4_x, game_button_y);
-		endTurn.setPosition(game_button_4_x + endturn_x_offset, game_button_text_y);
-		endTurn.setCharacterSize(text_character_size);
-	    endTurn.setFillColor(sf::Color::Black);
+		endTurnButton.setCharacterSize(text_character_size);
 	}
 	GameEvent WorldMapScreen::input()
 	{
@@ -31,16 +27,16 @@ namespace fleet {
 		GameEvent gameEvent = displayPanel.input(mousePos);
 		if (gameEvent != GameEvent::None) { return gameEvent; }
 
-		if (dashButton.getGlobalBounds().contains(mousePos)) {
+		if (dashButton.input(mousePos)) {
 			return GameEvent::GoToDashboard;
 		}
-		else if (researchButton.getGlobalBounds().contains(mousePos)) {
+		else if (researchButton.input(mousePos)) {
 			return GameEvent::GoToResearch;
 		}
-		else if (fleetButton.getGlobalBounds().contains(mousePos)) {
+		else if (fleetButton.input(mousePos)) {
 			return GameEvent::GoToFleet;
 		}
-		else if (endTurnButton.getGlobalBounds().contains(mousePos)) {
+		else if (endTurnButton.input(mousePos)) {
 			return GameEvent::EndTurn;
 		}
 		if (gameEvent != GameEvent::None) { return gameEvent; }
@@ -56,22 +52,18 @@ namespace fleet {
 		worldMap.update(mousePos);
 		displayPanel.update(mousePos);
 
-		checkMouseOver(dashButton);
-		checkMouseOver(researchButton);
-		checkMouseOver(fleetButton);
-		checkMouseOver(endTurnButton);
+		dashButton.update(mousePos);
+		researchButton.update(mousePos);
+		fleetButton.update(mousePos);
+		endTurnButton.update(mousePos);
 	}
 	void WorldMapScreen::draw()
 	{
 		window.draw(worldMap);
 		window.draw(displayPanel);
 		window.draw(dashButton);
-		window.draw(dashboard);
 		window.draw(researchButton);
-		window.draw(research);
 		window.draw(fleetButton);
-		window.draw(fleet);
 		window.draw(endTurnButton);
-		window.draw(endTurn);
 	}
 }

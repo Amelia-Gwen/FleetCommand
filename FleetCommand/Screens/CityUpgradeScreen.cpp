@@ -6,22 +6,18 @@ namespace fleet {
 		model{ model },
 		displayPanel{ displayPanel }
 	{
+		dashboardButton.setLabelOffset(dashboard_x_offset);
 		dashboardButton.setPosition(game_button_1_x, game_button_y);
-		dashboard.setPosition(game_button_1_x + dashboard_x_offset, game_button_text_y);
-		dashboard.setCharacterSize(text_character_size);
-		dashboard.setFillColor(sf::Color::Black);
+		dashboardButton.setCharacterSize(text_character_size);
+		cityDashboardButton.setLabelOffset(cityname_x_offset);
 		cityDashboardButton.setPosition(game_button_2_x, game_button_y);
-		cityDashboard.setPosition(game_button_2_x + cityname_x_offset, game_button_text_y);
-		cityDashboard.setCharacterSize(text_character_size);
-		cityDashboard.setFillColor(sf::Color::Black);
+		cityDashboardButton.setCharacterSize(text_character_size);
+		cityMapButton.setLabelOffset(citymap_x_offset);
 		cityMapButton.setPosition(game_button_3_x, game_button_y);
-		cityMap.setPosition(game_button_3_x + citymap_x_offset, game_button_text_y);
-		cityMap.setCharacterSize(text_character_size);
-		cityMap.setFillColor(sf::Color::Black);
+		cityMapButton.setCharacterSize(text_character_size);
+		worldMapButton.setLabelOffset(worldmap_x_offset);
 		worldMapButton.setPosition(game_button_4_x, game_button_y);
-		worldMap.setPosition(game_button_4_x + worldmap_x_offset, game_button_text_y);
-		worldMap.setCharacterSize(text_character_size);
-		worldMap.setFillColor(sf::Color::Black);
+		worldMapButton.setCharacterSize(text_character_size);
 
 		shipyard.setPosition(city_upgrade_column_one_x, city_upgrade_row_one_y);
 		shipyard.setFont(font);
@@ -48,7 +44,7 @@ namespace fleet {
 	void CityUpgradeScreen::setCity(unsigned index)
 	{
 		cityName = model.cityList()[index].cityName();
-		cityDashboard.setString(cityName);
+		cityDashboardButton.setLabel(cityName);
 		currentLevels = model.cityList()[index].currentLevels();
 		cityIndex = index;
 	}
@@ -60,16 +56,16 @@ namespace fleet {
 		GameEvent gameEvent = displayPanel.input(mousePos);
 		if (gameEvent != GameEvent::None) { return gameEvent; }
 
-		if (dashboardButton.getGlobalBounds().contains(mousePos)) {
+		if (dashboardButton.input(mousePos)) {
 			return GameEvent::GoToDashboard;
 		}
-		else if (cityDashboardButton.getGlobalBounds().contains(mousePos)) {
+		else if (cityDashboardButton.input(mousePos)) {
 			return GameEvent::OpenCity;
 		}
-		else if (cityMapButton.getGlobalBounds().contains(mousePos)) {
+		else if (cityMapButton.input(mousePos)) {
 			return GameEvent::GoToCityMap;
 		}
-		else if (worldMapButton.getGlobalBounds().contains(mousePos)) {
+		else if (worldMapButton.input(mousePos)) {
 			return GameEvent::GoToWorldMap;
 		}
 		else if (shipyard.getGlobalBounds().contains(mousePos)) {
@@ -146,10 +142,10 @@ namespace fleet {
 		sf::Vector2f mousePos{ static_cast<float>(sf::Mouse::getPosition(window).x), static_cast<float>(sf::Mouse::getPosition(window).y) };
 
 		displayPanel.update(mousePos);
-		checkMouseOver(dashboardButton);
-		checkMouseOver(cityDashboardButton);
-		checkMouseOver(cityMapButton);
-		checkMouseOver(worldMapButton);
+		dashboardButton.update(mousePos);
+		cityDashboardButton.update(mousePos);
+		cityMapButton.update(mousePos);
+		worldMapButton.update(mousePos);
 
 		shipyard.update(mousePos, currentLevels.shipyard,
 			canAfford(ResearchCosts::cityShipyard[currentLevels.shipyard], model.player()->currentCash()));
@@ -167,13 +163,9 @@ namespace fleet {
 	void CityUpgradeScreen::draw()
 	{
 		window.draw(dashboardButton);
-		window.draw(dashboard);
 		window.draw(cityDashboardButton);
-		window.draw(cityDashboard);
 		window.draw(cityMapButton);
-		window.draw(cityMap);
 		window.draw(worldMapButton);
-		window.draw(worldMap);
 		window.draw(shipyard);
 		window.draw(airDefense);
 		window.draw(groundDefense);

@@ -1,8 +1,10 @@
 #pragma once
 
+#include "IScreen.h"
+
 #include "DropBox.h"
 #include "GameValues.h"
-#include "IScreen.h"
+#include "GUIButton.h"
 
 namespace fleet {
 	class CustomMenuScreen : public IScreen {
@@ -15,15 +17,14 @@ namespace fleet {
 		void update() override;
 		void draw() override;
 	private:
-		sf::RectangleShape backButton{ sf::Vector2f(menu_back_button_width, menu_back_button_height) };
+		GUIButton backButton{ sf::Vector2f(menu_back_button_width, menu_back_button_height), "Back", font };
 		DropBox playersBox{ "Players:" };
 		DropBox computersBox{ "Computer:" };
 		DropBox difficultyBox{ "Difficulty:" };
 		DropBox oilBox{ "Oil:" };
 		DropBox cashBox{ "Cash:" };
 		DropBox researchBox{ "Research:" };
-		sf::RectangleShape startButton{ sf::Vector2f(start_button_width, start_button_height) };
-		sf::Text start{ "Start Game", font };
+		GUIButton startButton{ sf::Vector2f(start_button_width, start_button_height), "Start Game", font };
 		GameValues gameValues;
 
 		void initializeBoxes();

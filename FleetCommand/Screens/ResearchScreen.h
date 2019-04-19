@@ -1,7 +1,9 @@
 #pragma once
 
-#include "DisplayPanel.h"
 #include "IScreen.h"
+
+#include "DisplayPanel.h"
+#include "GUIButton.h"
 #include "Model.h"
 #include "ResearchData.h"
 #include "UpgradeButton.h"
@@ -25,14 +27,10 @@ namespace fleet {
 		PlayerResearch currentLevels;
 		unsigned price{ 0 };
 
-		sf::RectangleShape dashboardButton{ sf::Vector2f(game_button_width, game_button_height) };
-		sf::Text dashboard{ "Dashboard", font };
-		sf::RectangleShape unitsButton{ sf::Vector2f(game_button_width, game_button_height) };
-		sf::Text units{ "Units", font };
-		sf::RectangleShape fleetButton{ sf::Vector2f(game_button_width, game_button_height) };
-		sf::Text fleet{ "Fleet", font };
-		sf::RectangleShape worldMapButton{ sf::Vector2f(game_button_width, game_button_height) };
-		sf::Text worldMap{ "World Map", font };
+		GUIButton dashboardButton{ sf::Vector2f(game_button_width, game_button_height), "Dashboard", font };
+		GUIButton unitsButton{ sf::Vector2f(game_button_width, game_button_height), "Units", font };
+		GUIButton fleetButton{ sf::Vector2f(game_button_width, game_button_height), "Fleet", font };
+		GUIButton worldMapButton{ sf::Vector2f(game_button_width, game_button_height), "World Map", font };
 
 		UpgradeButton shipyard{ "Shipyard", ResearchMaximums::shpiyardMax };
 		UpgradeButton shipTypes{ "Ship Types", ResearchMaximums::shipTypeMax };

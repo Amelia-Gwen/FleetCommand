@@ -1,7 +1,9 @@
 #pragma once
 
-#include "DisplayPanel.h"
 #include "IScreen.h"
+
+#include "DisplayPanel.h"
+#include "GUIButton.h"
 #include "Model.h"
 #include "ResearchData.h"
 #include "UpgradeButton.h"
@@ -28,14 +30,10 @@ namespace fleet {
 		unsigned cityIndex{ 0 };
 		unsigned price{ 0 };
 
-		sf::RectangleShape dashboardButton{ sf::Vector2f(game_button_width, game_button_height) };
-		sf::Text dashboard{ "Dashboard", font };
-		sf::RectangleShape cityDashboardButton{ sf::Vector2f(game_button_width, game_button_height) };
-		sf::Text cityDashboard{ "", font };
-		sf::RectangleShape cityMapButton{ sf::Vector2f(game_button_width, game_button_height) };
-		sf::Text cityMap{ "City Map", font };
-		sf::RectangleShape worldMapButton{ sf::Vector2f(game_button_width, game_button_height) };
-		sf::Text worldMap{ "World Map", font };
+		GUIButton dashboardButton{ sf::Vector2f(game_button_width, game_button_height), "Dashboard", font };
+		GUIButton cityDashboardButton{ sf::Vector2f(game_button_width, game_button_height), "", font };
+		GUIButton cityMapButton{ sf::Vector2f(game_button_width, game_button_height), "City Map", font };
+		GUIButton worldMapButton{ sf::Vector2f(game_button_width, game_button_height), "World Map", font };
 
 		UpgradeButton shipyard{ "Shipyard", ResearchMaximums::shpiyardMax };
 		UpgradeButton airDefense{ "Air Defense", ResearchMaximums::defenseMax };

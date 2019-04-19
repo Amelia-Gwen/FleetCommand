@@ -6,22 +6,18 @@ namespace fleet {
 		model{ model },
 		displayPanel{ displayPanel }
 	{
+		dashboardButton.setLabelOffset(dashboard_x_offset);
 		dashboardButton.setPosition(game_button_1_x, game_button_y);
-		dashboard.setPosition(game_button_1_x + dashboard_x_offset, game_button_text_y);
-		dashboard.setCharacterSize(text_character_size);
-		dashboard.setFillColor(sf::Color::Black);
+		dashboardButton.setCharacterSize(text_character_size);
+		unitsButton.setLabelOffset(unit_x_offset);
 		unitsButton.setPosition(game_button_2_x, game_button_y);
-		units.setPosition(game_button_2_x + unit_x_offset, game_button_text_y);
-		units.setCharacterSize(text_character_size);
-		units.setFillColor(sf::Color::Black);
+		unitsButton.setCharacterSize(text_character_size);
+		fleetButton.setLabelOffset(fleet_x_offset);
 		fleetButton.setPosition(game_button_3_x, game_button_y);
-		fleet.setPosition(game_button_3_x + fleet_x_offset, game_button_text_y);
-		fleet.setCharacterSize(text_character_size);
-		fleet.setFillColor(sf::Color::Black);
+		fleetButton.setCharacterSize(text_character_size);
+		worldMapButton.setLabelOffset(worldmap_x_offset);
 		worldMapButton.setPosition(game_button_4_x, game_button_y);
-		worldMap.setPosition(game_button_4_x + worldmap_x_offset, game_button_text_y);
-		worldMap.setCharacterSize(text_character_size);
-		worldMap.setFillColor(sf::Color::Black);
+		worldMapButton.setCharacterSize(text_character_size);
 
 		shipyard.setPosition(research_column_one_x, research_row_one_y);
 		shipyard.setFont(font);
@@ -66,16 +62,16 @@ namespace fleet {
 		GameEvent gameEvent = displayPanel.input(mousePos);
 		if (gameEvent != GameEvent::None) { return gameEvent; }
 
-		if (dashboardButton.getGlobalBounds().contains(mousePos)) {
+		if (dashboardButton.input(mousePos)) {
 			return GameEvent::GoToDashboard;
 		}
-		else if (unitsButton.getGlobalBounds().contains(mousePos)) {
+		else if (unitsButton.input(mousePos)) {
 			return GameEvent::GoToUnits;
 		}
-		else if (fleetButton.getGlobalBounds().contains(mousePos)) {
+		else if (fleetButton.input(mousePos)) {
 			return GameEvent::GoToFleet;
 		}
-		else if (worldMapButton.getGlobalBounds().contains(mousePos)) {
+		else if (worldMapButton.input(mousePos)) {
 			return GameEvent::GoToWorldMap;
 		}
 		else if (shipyard.getGlobalBounds().contains(mousePos)) {
@@ -207,10 +203,10 @@ namespace fleet {
 		sf::Vector2f mousePos{ static_cast<float>(sf::Mouse::getPosition(window).x), static_cast<float>(sf::Mouse::getPosition(window).y) };
 
 		displayPanel.update(mousePos);
-		checkMouseOver(dashboardButton);
-		checkMouseOver(unitsButton);
-		checkMouseOver(fleetButton);
-		checkMouseOver(worldMapButton);
+		dashboardButton.update(mousePos);
+		unitsButton.update(mousePos);
+		fleetButton.update(mousePos);
+		worldMapButton.update(mousePos);
 
 		shipyard.update(mousePos, currentLevels.shipyard,
 			canAfford(ResearchCosts::playerShipyard[currentLevels.shipyard], model.player()->currentResearch()));
@@ -238,13 +234,9 @@ namespace fleet {
 	void ResearchScreen::draw()
 	{
 		window.draw(dashboardButton);
-		window.draw(dashboard);
 		window.draw(unitsButton);
-		window.draw(units);
 		window.draw(fleetButton);
-		window.draw(fleet);
 		window.draw(worldMapButton);
-		window.draw(worldMap);
 		window.draw(shipyard);
 		window.draw(shipTypes);
 		window.draw(durability);

@@ -1,7 +1,9 @@
 #pragma once
 
 #include "IScreen.h"
+
 #include "DisplayPanel.h"
+#include "GUIButton.h"
 #include "WorldMap.h"
 
 namespace fleet {
@@ -19,13 +21,9 @@ namespace fleet {
 		const Model& model;
 		DisplayPanel& displayPanel;		
 		WorldMap worldMap{ model, font };
-		sf::RectangleShape dashButton{ sf::Vector2f(game_button_width, game_button_height) };
-		sf::Text dashboard{ "Dashboard", font };
-		sf::RectangleShape researchButton{ sf::Vector2f(game_button_width, game_button_height) };
-		sf::Text research{ "Research", font };
-		sf::RectangleShape fleetButton{ sf::Vector2f(game_button_width, game_button_height) };
-		sf::Text fleet{ "Fleet", font };
-		sf::RectangleShape endTurnButton{ sf::Vector2f(game_button_width, game_button_height) };
-		sf::Text endTurn{ "End Turn", font };
+		GUIButton dashButton{ sf::Vector2f(game_button_width, game_button_height), "Dashboard", font };
+		GUIButton researchButton{ sf::Vector2f(game_button_width, game_button_height), "Research", font };
+		GUIButton fleetButton{ sf::Vector2f(game_button_width, game_button_height), "Fleet", font };
+		GUIButton endTurnButton{ sf::Vector2f(game_button_width, game_button_height), "End Turn", font };
 	};
 }
