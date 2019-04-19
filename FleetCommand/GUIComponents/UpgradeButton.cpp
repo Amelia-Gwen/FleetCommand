@@ -1,9 +1,9 @@
 #include "UpgradeButton.h"
 
 namespace fleet {
-	UpgradeButton::UpgradeButton(std::string newLabel, unsigned short numUpgrades)
+	UpgradeButton::UpgradeButton(const std::string& newLabel, const sf::Font& font, unsigned short numUpgrades) :
+		label{ newLabel, font }
 	{
-		label.setString(newLabel);
 		float indicatorWidth = default_upgrade_width / numUpgrades;
 		for (unsigned i = 0; i < numUpgrades; ++i) {
 			indicators.emplace_back(sf::RectangleShape(sf::Vector2f(indicatorWidth, default_indicator_height)));
@@ -32,10 +32,6 @@ namespace fleet {
 	void UpgradeButton::setPosition(const sf::Vector2f& position)
 	{
 		setPosition(position.x, position.y);
-	}
-	void UpgradeButton::setFont(const sf::Font& font)
-	{
-		label.setFont(font);
 	}
 	void UpgradeButton::setLabelString(const std::string& string)
 	{

@@ -35,12 +35,12 @@ namespace fleet {
 		GUIButton cityMapButton{ sf::Vector2f(game_button_width, game_button_height), "City Map", font };
 		GUIButton worldMapButton{ sf::Vector2f(game_button_width, game_button_height), "World Map", font };
 
-		UpgradeButton shipyard{ "Shipyard", ResearchMaximums::shpiyardMax };
-		UpgradeButton airDefense{ "Air Defense", ResearchMaximums::defenseMax };
-		UpgradeButton groundDefense{ "Ground Defense", ResearchMaximums::defenseMax };
-		UpgradeButton oilProduction{ "Oil Production", ResearchMaximums::productionMax };
-		UpgradeButton cashProduction{ "Cash Production", ResearchMaximums::productionMax };
-		UpgradeButton researchProduction{ "Research Production", ResearchMaximums::productionMax };
+		UpgradeButton shipyard{ "Shipyard", font, ResearchMaximums::shpiyardMax };
+		UpgradeButton airDefense{ "Air Defense", font, ResearchMaximums::defenseMax };
+		UpgradeButton groundDefense{ "Ground Defense", font, ResearchMaximums::defenseMax };
+		UpgradeButton oilProduction{ "Oil Production", font, ResearchMaximums::productionMax };
+		UpgradeButton cashProduction{ "Cash Production", font, ResearchMaximums::productionMax };
+		UpgradeButton researchProduction{ "Research Production", font, ResearchMaximums::productionMax };
 
 		sf::RectangleShape textDisplay{ sf::Vector2f(city_upgrade_text_box_width, city_upgrade_text_box_height) };
 		sf::Text description{ "Invalid test string", font };

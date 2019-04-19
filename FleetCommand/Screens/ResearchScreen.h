@@ -32,17 +32,17 @@ namespace fleet {
 		GUIButton fleetButton{ sf::Vector2f(game_button_width, game_button_height), "Fleet", font };
 		GUIButton worldMapButton{ sf::Vector2f(game_button_width, game_button_height), "World Map", font };
 
-		UpgradeButton shipyard{ "Shipyard", ResearchMaximums::shpiyardMax };
-		UpgradeButton shipTypes{ "Ship Types", ResearchMaximums::shipTypeMax };
-		UpgradeButton durability{ "Durability", ResearchMaximums::durabilityMax };
-		UpgradeButton firepower{ "Firepower", ResearchMaximums::firepowerMax };
-		UpgradeButton hull{ "Hull", ResearchMaximums::hullMax };
-		UpgradeButton engine{ "Engines", ResearchMaximums::engineMax };
-		UpgradeButton weapons{ "Weapons", ResearchMaximums::weaponMax };
-		UpgradeButton fuelEfficieny{ "Fuel Efficiency", ResearchMaximums::fuelEfficiencyMax };
-		UpgradeButton oilProduction{ "Oil Production", ResearchMaximums::productionMax };
-		UpgradeButton cashProduction{ "Cash Production", ResearchMaximums::productionMax };
-		UpgradeButton researchProduction{ "Research Production", ResearchMaximums::productionMax };
+		UpgradeButton shipyard{ "Shipyard", font, ResearchMaximums::shpiyardMax };
+		UpgradeButton shipTypes{ "Ship Types", font, ResearchMaximums::shipTypeMax };
+		UpgradeButton durability{ "Durability", font, ResearchMaximums::durabilityMax };
+		UpgradeButton firepower{ "Firepower", font, ResearchMaximums::firepowerMax };
+		UpgradeButton hull{ "Hull", font, ResearchMaximums::hullMax };
+		UpgradeButton engine{ "Engines", font, ResearchMaximums::engineMax };
+		UpgradeButton weapons{ "Weapons", font, ResearchMaximums::weaponMax };
+		UpgradeButton fuelEfficieny{ "Fuel Efficiency", font, ResearchMaximums::fuelEfficiencyMax };
+		UpgradeButton oilProduction{ "Oil Production", font, ResearchMaximums::productionMax };
+		UpgradeButton cashProduction{ "Cash Production", font, ResearchMaximums::productionMax };
+		UpgradeButton researchProduction{ "Research Production", font, ResearchMaximums::productionMax };
 
 		sf::RectangleShape textDisplay{ sf::Vector2f(research_text_box_width, research_text_box_height) };
 		sf::Text description{ "Invalid test string", font };

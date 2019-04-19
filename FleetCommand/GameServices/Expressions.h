@@ -1,7 +1,6 @@
 #pragma once
 
 namespace fleet {
-
 	// View
 	constexpr unsigned view_width = 1200U;
 	constexpr unsigned view_height = 800U;
