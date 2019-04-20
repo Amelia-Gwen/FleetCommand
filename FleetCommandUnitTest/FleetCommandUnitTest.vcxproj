@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{0adef4d5-ecf4-4827-ac54-09a0d7628e9b}</ProjectGuid>
+    <ProjectGuid>{6523bc2b-e12e-44ef-9cfb-d66fb0a7be23}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
     <ConfigurationType>Application</ConfigurationType>
@@ -62,12 +62,12 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>SFML_STATIC;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level4</WarningLevel>
-      <AdditionalIncludeDirectories>C:\SFML\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SFML\include;%(AdditionalIncludeDirectories);C:\Developer\Projects\FleetCommand\FleetCommand;C:\Developer\Projects\FleetCommand\FleetCommand\DataComponents;C:\Developer\Projects\FleetCommand\FleetCommand\GameServices;C:\Developer\Projects\FleetCommand\FleetCommand\GUIComponents;C:\Developer\Projects\FleetCommand\FleetCommand\Screens</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -81,12 +81,12 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>X64;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>SFML_STATIC;X64;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level4</WarningLevel>
-      <AdditionalIncludeDirectories>C:\SFML\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SFML\include;%(AdditionalIncludeDirectories);C:\Developer\Projects\FleetCommand\FleetCommand;C:\Developer\Projects\FleetCommand\FleetCommand\DataComponents;C:\Developer\Projects\FleetCommand\FleetCommand\GameServices;C:\Developer\Projects\FleetCommand\FleetCommand\GUIComponents;C:\Developer\Projects\FleetCommand\FleetCommand\Screens</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -99,11 +99,11 @@
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>SFML_STATIC;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level4</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <AdditionalIncludeDirectories>C:\SFML\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SFML\include;C:\Developer\Projects\FleetCommand\FleetCommand;C:\Developer\Projects\FleetCommand\FleetCommand\DataComponents;C:\Developer\Projects\FleetCommand\FleetCommand\GameServices;C:\Developer\Projects\FleetCommand\FleetCommand\GUIComponents;C:\Developer\Projects\FleetCommand\FleetCommand\Screens;%(AdditionalIncludeDirectories);C:\Developer\Projects\FleetCommand\FleetCommand;C:\Developer\Projects\FleetCommand\FleetCommand\DataComponents;C:\Developer\Projects\FleetCommand\FleetCommand\GameServices;C:\Developer\Projects\FleetCommand\FleetCommand\GUIComponents;C:\Developer\Projects\FleetCommand\FleetCommand\Screens</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -118,11 +118,11 @@
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <PreprocessorDefinitions>X64;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>SFML_STATIC;X64;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level4</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <AdditionalIncludeDirectories>C:\SFML\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SFML\include;C:\Developer\Projects\FleetCommand\FleetCommand;C:\Developer\Projects\FleetCommand\FleetCommand\DataComponents;C:\Developer\Projects\FleetCommand\FleetCommand\GameServices;C:\Developer\Projects\FleetCommand\FleetCommand\GUIComponents;C:\Developer\Projects\FleetCommand\FleetCommand\Screens;%(AdditionalIncludeDirectories);C:\Developer\Projects\FleetCommand\FleetCommand;C:\Developer\Projects\FleetCommand\FleetCommand\DataComponents;C:\Developer\Projects\FleetCommand\FleetCommand\GameServices;C:\Developer\Projects\FleetCommand\FleetCommand\GUIComponents;C:\Developer\Projects\FleetCommand\FleetCommand\Screens</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>

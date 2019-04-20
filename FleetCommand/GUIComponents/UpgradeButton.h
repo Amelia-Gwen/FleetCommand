@@ -20,6 +20,8 @@ namespace fleet {
 		void setTextOutlineColor(const sf::Color& color);
 		void setTextOutlineThickness(float thickness);
 
+		const sf::Vector2f& getPosition() const { return button.getPosition(); }
+
 		bool input(const sf::Vector2f& mousePos, bool canAfford);
 		void update(const sf::Vector2f& mousePos, unsigned currentLevel, bool canAfford);
 	private:

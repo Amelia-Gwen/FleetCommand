@@ -147,10 +147,14 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>$(IncludePath)</IncludePath>
+    <CodeAnalysisRuleSet>NativeRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>$(IncludePath)</IncludePath>
+    <CodeAnalysisRuleSet>NativeRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -169,11 +173,12 @@
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>C:\SFML\include;C:\Developer\Projects\FleetCommand\FleetCommand;C:\Developer\Projects\FleetCommand\FleetCommand\Screens;C:\Developer\Projects\FleetCommand\FleetCommand\GameServices;C:\Developer\Projects\FleetCommand\FleetCommand\GUIComponents;C:\Developer\Projects\FleetCommand\FleetCommand\DataComponents;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <TreatWarningAsError>true</TreatWarningAsError>
+      <EnablePREfast>false</EnablePREfast>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
-      <AdditionalLibraryDirectories>C:\Developer\Projects\FleetCommand\FleetCommand\Screens;C:\SFML\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\SFML\lib;C:\Developer\Projects\FleetCommand\FleetCommand\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-audio-s-d.lib;sfml-graphics-s-d.lib;sfml-network-s-d.lib;sfml-system-s-d.lib;sfml-window-s-d.lib;sfml-main-d.lib;opengl32.lib;winmm.lib;gdi32.lib;freetype.lib;jpeg.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -186,11 +191,12 @@
       <ConformanceMode>true</ConformanceMode>
       <TreatWarningAsError>true</TreatWarningAsError>
       <AdditionalIncludeDirectories>C:\SFML\include;C:\Developer\Projects\FleetCommand\FleetCommand;C:\Developer\Projects\FleetCommand\FleetCommand\Screens;C:\Developer\Projects\FleetCommand\FleetCommand\GameServices;C:\Developer\Projects\FleetCommand\FleetCommand\GUIComponents;C:\Developer\Projects\FleetCommand\FleetCommand\DataComponents;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <EnablePREfast>false</EnablePREfast>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
-      <AdditionalLibraryDirectories>C:\Developer\Projects\FleetCommand\FleetCommand\Screens;C:\SFML\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\SFML\lib;C:\Developer\Projects\FleetCommand\FleetCommand\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-audio-s-d.lib;sfml-graphics-s-d.lib;sfml-network-s-d.lib;sfml-system-s-d.lib;sfml-window-s-d.lib;sfml-main-d.lib;opengl32.lib;winmm.lib;gdi32.lib;freetype.lib;jpeg.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -211,7 +217,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
-      <AdditionalLibraryDirectories>C:\Developer\Projects\FleetCommand\FleetCommand\Screens;C:\SFML\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\SFML\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-audio-s.lib;sfml-graphics-s.lib;sfml-network-s.lib;sfml-system-s.lib;sfml-window-s.lib;sfml-main.lib;opengl32.lib;winmm.lib;gdi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -233,7 +239,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
       <AdditionalDependencies>sfml-audio-s.lib;sfml-graphics-s.lib;sfml-network-s.lib;sfml-system-s.lib;sfml-window-s.lib;sfml-main.lib;opengl32.lib;winmm.lib;gdi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Developer\Projects\FleetCommand\FleetCommand\Screens;C:\SFML\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\SFML\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
