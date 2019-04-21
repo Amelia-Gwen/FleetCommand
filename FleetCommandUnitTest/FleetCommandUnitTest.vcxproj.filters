@@ -5,6 +5,7 @@
     <ClCompile Include="..\FleetCommand\GUIComponents\UpgradeButton.cpp">
       <Filter>CPPFiles%28HandsOFF%29</Filter>
     </ClCompile>
+    <ClCompile Include="UpgradeButtonTests.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CPPFiles%28HandsOFF%29">

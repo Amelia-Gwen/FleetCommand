@@ -35,6 +35,7 @@
   <ItemGroup>
     <ClCompile Include="..\FleetCommand\GUIComponents\UpgradeButton.cpp" />
     <ClCompile Include="test.cpp" />
+    <ClCompile Include="UpgradeButtonTests.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FleetCommand\FleetCommand.vcxproj">

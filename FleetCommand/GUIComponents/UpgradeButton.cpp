@@ -45,14 +45,6 @@ namespace fleet {
 	{
 		label.setFillColor(color);
 	}
-	void UpgradeButton::setTextOutlineColor(const sf::Color& color)
-	{
-		label.setOutlineColor(color);
-	}
-	void UpgradeButton::setTextOutlineThickness(float thickness)
-	{
-		label.setOutlineThickness(thickness);
-	}
 
 	bool UpgradeButton::input(const sf::Vector2f& mousePos, bool canAfford)
 	{

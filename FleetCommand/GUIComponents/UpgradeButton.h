@@ -17,10 +17,11 @@ namespace fleet {
 		void setLabelString(const std::string& string);
 		void setCharacterSize(unsigned newSize);
 		void setTextFillColor(const sf::Color& color);
-		void setTextOutlineColor(const sf::Color& color);
-		void setTextOutlineThickness(float thickness);
 
 		const sf::Vector2f& getPosition() const { return button.getPosition(); }
+		const sf::String& getLabelString() const { return label.getString(); }
+		unsigned getCharacterSize() const { return label.getCharacterSize(); }
+		const sf::Color& getTextFillColor() const { return label.getFillColor(); }
 
 		bool input(const sf::Vector2f& mousePos, bool canAfford);
 		void update(const sf::Vector2f& mousePos, unsigned currentLevel, bool canAfford);
