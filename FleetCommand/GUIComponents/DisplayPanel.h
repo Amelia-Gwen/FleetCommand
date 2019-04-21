@@ -4,7 +4,7 @@
 #include "DropDownMenu.h"
 #include "Expressions.h"
 
-#include <SFML\Graphics.hpp>
+#include <Graphics.hpp>
 
 namespace fleet {
 	class DisplayPanel : public sf::Drawable {

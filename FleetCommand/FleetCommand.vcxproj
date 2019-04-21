@@ -171,7 +171,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>SFML_STATIC;SFML_STATIC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)SFML_STATIC</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\SFML\include;C:\Developer\Projects\FleetCommand\FleetCommand;C:\Developer\Projects\FleetCommand\FleetCommand\Screens;C:\Developer\Projects\FleetCommand\FleetCommand\GameServices;C:\Developer\Projects\FleetCommand\FleetCommand\GUIComponents;C:\Developer\Projects\FleetCommand\FleetCommand\DataComponents;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SFML\include;C:\SFML\include\SFML;C:\Developer\Projects\FleetCommand\FleetCommand;C:\Developer\Projects\FleetCommand\FleetCommand\Screens;C:\Developer\Projects\FleetCommand\FleetCommand\GameServices;C:\Developer\Projects\FleetCommand\FleetCommand\GUIComponents;C:\Developer\Projects\FleetCommand\FleetCommand\DataComponents;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <TreatWarningAsError>true</TreatWarningAsError>
       <EnablePREfast>false</EnablePREfast>
     </ClCompile>
@@ -191,7 +191,7 @@
       <PreprocessorDefinitions>SFML_STATIC;SFML_STATIC;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <TreatWarningAsError>true</TreatWarningAsError>
-      <AdditionalIncludeDirectories>C:\SFML\include;C:\Developer\Projects\FleetCommand\FleetCommand;C:\Developer\Projects\FleetCommand\FleetCommand\Screens;C:\Developer\Projects\FleetCommand\FleetCommand\GameServices;C:\Developer\Projects\FleetCommand\FleetCommand\GUIComponents;C:\Developer\Projects\FleetCommand\FleetCommand\DataComponents;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SFML\include;C:\SFML\include\SFML;C:\Developer\Projects\FleetCommand\FleetCommand;C:\Developer\Projects\FleetCommand\FleetCommand\Screens;C:\Developer\Projects\FleetCommand\FleetCommand\GameServices;C:\Developer\Projects\FleetCommand\FleetCommand\GUIComponents;C:\Developer\Projects\FleetCommand\FleetCommand\DataComponents;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <EnablePREfast>false</EnablePREfast>
     </ClCompile>
     <Link>
@@ -211,7 +211,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>SFML_STATIC;SFML_STATIC;WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)SFML_STATIC</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\SFML\include;C:\Developer\Projects\FleetCommand\FleetCommand;C:\Developer\Projects\FleetCommand\FleetCommand\Screens;C:\Developer\Projects\FleetCommand\FleetCommand\GameServices;C:\Developer\Projects\FleetCommand\FleetCommand\GUIComponents;C:\Developer\Projects\FleetCommand\FleetCommand\DataComponents;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SFML\include;C:\SFML\include\SFML;C:\Developer\Projects\FleetCommand\FleetCommand;C:\Developer\Projects\FleetCommand\FleetCommand\Screens;C:\Developer\Projects\FleetCommand\FleetCommand\GameServices;C:\Developer\Projects\FleetCommand\FleetCommand\GUIComponents;C:\Developer\Projects\FleetCommand\FleetCommand\DataComponents;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <TreatWarningAsError>true</TreatWarningAsError>
     </ClCompile>
     <Link>
@@ -234,7 +234,7 @@
       <PreprocessorDefinitions>SFML_STATIC;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)SFML_STATIC</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <TreatWarningAsError>true</TreatWarningAsError>
-      <AdditionalIncludeDirectories>C:\SFML\include;C:\Developer\Projects\FleetCommand\FleetCommand;C:\Developer\Projects\FleetCommand\FleetCommand\Screens;C:\Developer\Projects\FleetCommand\FleetCommand\GameServices;C:\Developer\Projects\FleetCommand\FleetCommand\GUIComponents;C:\Developer\Projects\FleetCommand\FleetCommand\DataComponents;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SFML\include;C:\SFML\include\SFML;C:\Developer\Projects\FleetCommand\FleetCommand;C:\Developer\Projects\FleetCommand\FleetCommand\Screens;C:\Developer\Projects\FleetCommand\FleetCommand\GameServices;C:\Developer\Projects\FleetCommand\FleetCommand\GUIComponents;C:\Developer\Projects\FleetCommand\FleetCommand\DataComponents;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>

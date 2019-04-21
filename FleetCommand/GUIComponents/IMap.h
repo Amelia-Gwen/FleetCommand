@@ -3,7 +3,7 @@
 #include "GameEvent.h"
 #include "Expressions.h"
 
-#include <SFML\Graphics.hpp>
+#include <Graphics.hpp>
 
 namespace fleet {
 	class IMap : public sf::Drawable {

@@ -7,7 +7,7 @@
 #include "IScreen.h"
 #include "Model.h"
 
-#include <SFML\Graphics.hpp>
+#include <Graphics.hpp>
 
 #include <unordered_map>
 #include <memory>

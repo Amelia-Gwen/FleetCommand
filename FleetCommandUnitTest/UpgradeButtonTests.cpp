@@ -2,7 +2,7 @@
 
 #include "UpgradeButton.h"
 
-#include <SFML\Graphics.hpp>
+#include <Graphics.hpp>
 
 namespace fleet {
 	class UpgradeButtonTest : public testing::Test {

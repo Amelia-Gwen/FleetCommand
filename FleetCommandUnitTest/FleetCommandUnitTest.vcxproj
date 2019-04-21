@@ -60,7 +60,7 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level4</WarningLevel>
-      <AdditionalIncludeDirectories>C:\SFML\include;%(AdditionalIncludeDirectories);C:\Developer\Projects\FleetCommand\FleetCommand;C:\Developer\Projects\FleetCommand\FleetCommand\DataComponents;C:\Developer\Projects\FleetCommand\FleetCommand\GameServices;C:\Developer\Projects\FleetCommand\FleetCommand\GUIComponents;C:\Developer\Projects\FleetCommand\FleetCommand\Screens</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SFML\include;C:\SFML\include\SFML;C:\Developer\Projects\FleetCommand\FleetCommand;C:\Developer\Projects\FleetCommand\FleetCommand\DataComponents;C:\Developer\Projects\FleetCommand\FleetCommand\GameServices;C:\Developer\Projects\FleetCommand\FleetCommand\GUIComponents;C:\Developer\Projects\FleetCommand\FleetCommand\Screens;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -79,7 +79,7 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level4</WarningLevel>
-      <AdditionalIncludeDirectories>C:\SFML\include;%(AdditionalIncludeDirectories);C:\Developer\Projects\FleetCommand\FleetCommand;C:\Developer\Projects\FleetCommand\FleetCommand\DataComponents;C:\Developer\Projects\FleetCommand\FleetCommand\GameServices;C:\Developer\Projects\FleetCommand\FleetCommand\GUIComponents;C:\Developer\Projects\FleetCommand\FleetCommand\Screens</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SFML\include;C:\SFML\include\SFML;C:\Developer\Projects\FleetCommand\FleetCommand;C:\Developer\Projects\FleetCommand\FleetCommand\DataComponents;C:\Developer\Projects\FleetCommand\FleetCommand\GameServices;C:\Developer\Projects\FleetCommand\FleetCommand\GUIComponents;C:\Developer\Projects\FleetCommand\FleetCommand\Screens;%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -96,7 +96,7 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level4</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <AdditionalIncludeDirectories>C:\SFML\include;C:\Developer\Projects\FleetCommand\FleetCommand;C:\Developer\Projects\FleetCommand\FleetCommand\DataComponents;C:\Developer\Projects\FleetCommand\FleetCommand\GameServices;C:\Developer\Projects\FleetCommand\FleetCommand\GUIComponents;C:\Developer\Projects\FleetCommand\FleetCommand\Screens;%(AdditionalIncludeDirectories);C:\Developer\Projects\FleetCommand\FleetCommand;C:\Developer\Projects\FleetCommand\FleetCommand\DataComponents;C:\Developer\Projects\FleetCommand\FleetCommand\GameServices;C:\Developer\Projects\FleetCommand\FleetCommand\GUIComponents;C:\Developer\Projects\FleetCommand\FleetCommand\Screens</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SFML\include;C:\SFML\include\SFML;C:\Developer\Projects\FleetCommand\FleetCommand;C:\Developer\Projects\FleetCommand\FleetCommand\DataComponents;C:\Developer\Projects\FleetCommand\FleetCommand\GameServices;C:\Developer\Projects\FleetCommand\FleetCommand\GUIComponents;C:\Developer\Projects\FleetCommand\FleetCommand\Screens;%(AdditionalIncludeDirectories);C:\Developer\Projects\FleetCommand\FleetCommand;C:\Developer\Projects\FleetCommand\FleetCommand\DataComponents;C:\Developer\Projects\FleetCommand\FleetCommand\GameServices;C:\Developer\Projects\FleetCommand\FleetCommand\GUIComponents;C:\Developer\Projects\FleetCommand\FleetCommand\Screens</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -115,7 +115,7 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level4</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <AdditionalIncludeDirectories>C:\SFML\include;C:\Developer\Projects\FleetCommand\FleetCommand;C:\Developer\Projects\FleetCommand\FleetCommand\DataComponents;C:\Developer\Projects\FleetCommand\FleetCommand\GameServices;C:\Developer\Projects\FleetCommand\FleetCommand\GUIComponents;C:\Developer\Projects\FleetCommand\FleetCommand\Screens;%(AdditionalIncludeDirectories);C:\Developer\Projects\FleetCommand\FleetCommand;C:\Developer\Projects\FleetCommand\FleetCommand\DataComponents;C:\Developer\Projects\FleetCommand\FleetCommand\GameServices;C:\Developer\Projects\FleetCommand\FleetCommand\GUIComponents;C:\Developer\Projects\FleetCommand\FleetCommand\Screens</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SFML\include;C:\SFML\include\SFML;C:\Developer\Projects\FleetCommand\FleetCommand;C:\Developer\Projects\FleetCommand\FleetCommand\DataComponents;C:\Developer\Projects\FleetCommand\FleetCommand\GameServices;C:\Developer\Projects\FleetCommand\FleetCommand\GUIComponents;C:\Developer\Projects\FleetCommand\FleetCommand\Screens;%(AdditionalIncludeDirectories);C:\Developer\Projects\FleetCommand\FleetCommand;C:\Developer\Projects\FleetCommand\FleetCommand\DataComponents;C:\Developer\Projects\FleetCommand\FleetCommand\GameServices;C:\Developer\Projects\FleetCommand\FleetCommand\GUIComponents;C:\Developer\Projects\FleetCommand\FleetCommand\Screens</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>

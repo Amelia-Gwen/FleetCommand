@@ -2,7 +2,7 @@
 
 #include "Expressions.h"
 
-#include <SFML\Graphics.hpp>
+#include <Graphics.hpp>
 
 #include <utility>
 #include <vector>
