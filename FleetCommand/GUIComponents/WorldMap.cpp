@@ -2,8 +2,7 @@
 
 namespace fleet {
 	WorldMap::WorldMap(const Model& model, const sf::Font& font) :
-		model{ model },
-		font{ font }
+		model{ model }
 	{
 		unsigned counter = 0;
 		for (const auto& city : model.cityList()) {

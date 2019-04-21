@@ -16,7 +16,7 @@ namespace fleet {
 		button.setPosition(position);
 		ASSERT_FLOAT_EQ(position.x, button.getPosition().x);
 		ASSERT_FLOAT_EQ(position.y, button.getPosition().y);
-		button.setPosition(0.f, 0.f);
+		button.setPosition(0.F, 0.F);
 		ASSERT_FLOAT_EQ(position.x, button.getPosition().x);
 		ASSERT_FLOAT_EQ(position.y, button.getPosition().y);
 		button.setPosition(sf::Vector2f());

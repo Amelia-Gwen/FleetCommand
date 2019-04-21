@@ -39,7 +39,7 @@ namespace fleet {
 	/*
 	The processing function represents the main funtion of the entire class. It swallows a GameEvent enum and
 	processes accordingly, including making changes to both the View and the Model.
-	//param: constant reference to GameEvent - The event is no longer used after this point.
+	param: constant reference to GameEvent - The event is no longer used after this point.
 	*/
 	void Controller::processEvent(const GameEvent& gameEvent)
 	{

@@ -2,8 +2,8 @@
 
 namespace fleet {
 	/*
-	///param: reference to RenderWindow
-	///param: constant reference to Font
+	param: reference to RenderWindow
+	param: constant reference to Font
 	The constructor takes these references and forwards them to the base class.
 	*/
 	MainMenuScreen::MainMenuScreen(sf::RenderWindow& window, const sf::Font& font) :
@@ -27,7 +27,7 @@ namespace fleet {
 
 	/*
 	Specific choices for user include: expand the play button, navigate to the new game screen, and navigate to the load game screen.
-	///return: GameEvent - custum enum to handle game level events.
+	return: GameEvent - custum enum to handle game level events.
 	*/
 	GameEvent MainMenuScreen::input()
 	{

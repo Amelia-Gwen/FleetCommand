@@ -14,7 +14,7 @@ namespace fleet {
 	*/
 	class DropBox : public sf::Drawable {
 	public:
-		DropBox(const std::string& newLabel);
+		explicit DropBox(const std::string& newLabel);
 
 		/*
 		Position will define the x,y coordinate of the upper left corner of the label.

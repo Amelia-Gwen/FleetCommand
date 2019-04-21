@@ -14,7 +14,6 @@ namespace fleet {
 		void update(const sf::Vector2f& mousePos) override;
 	private:
 		const Model& model;
-		const sf::Font& font;
 		std::vector<std::pair<sf::RectangleShape, sf::Text>> cities;
 		unsigned cityIndex{ 0 };
 

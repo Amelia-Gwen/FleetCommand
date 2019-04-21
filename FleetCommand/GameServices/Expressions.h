@@ -89,7 +89,7 @@ namespace fleet {
 	constexpr float column_one_x = 300.F;
 	constexpr float column_two_x = 700.F;
 	constexpr float row_one_y = 50.F;
-	constexpr float row_two_y = 275.f;
+	constexpr float row_two_y = 275.F;
 	constexpr float row_three_y = 500.F;
 	constexpr float start_button_width = 300.F;
 	constexpr float start_button_height = 75.F;
@@ -134,7 +134,7 @@ namespace fleet {
 	constexpr float back_x_offset = 20.F;
 	constexpr float load_x_offset = 50.F;
 	constexpr float play_button_x_offset = 100.F;
-	constexpr float new_or_load_x_offset = 40.f;
+	constexpr float new_or_load_x_offset = 40.F;
 	constexpr float new_text_x_offset = 80.F;
 	constexpr float dashboard_x_offset = 60.F;
 	constexpr float research_x_offset = 60.F;
