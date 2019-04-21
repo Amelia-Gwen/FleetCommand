@@ -6,6 +6,7 @@
       <Filter>CPPFiles%28HandsOFF%29</Filter>
     </ClCompile>
     <ClCompile Include="UpgradeButtonTests.cpp" />
+    <ClCompile Include="GUIButtonTests.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CPPFiles%28HandsOFF%29">

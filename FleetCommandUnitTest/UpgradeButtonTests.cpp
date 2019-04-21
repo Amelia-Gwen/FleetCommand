@@ -7,7 +7,6 @@
 namespace fleet {
 	class UpgradeButtonTest : public testing::Test {
 	protected:
-		sf::Font font;
 		UpgradeButton button{ "Test Button", sf::Font(), 5 };
 	};
 
@@ -60,5 +59,6 @@ namespace fleet {
 		ASSERT_TRUE(button.input(sf::Vector2f(), true));
 		ASSERT_FALSE(button.input(sf::Vector2f(), false));
 		ASSERT_FALSE(button.input(sf::Vector2f(500.F, 900.F), true));
+		ASSERT_FALSE(button.input(sf::Vector2f(500.F, 900.F), false));
 	}
 }
