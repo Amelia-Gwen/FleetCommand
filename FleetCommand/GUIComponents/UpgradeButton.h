@@ -13,7 +13,6 @@ namespace fleet {
 
 		void setPosition(float x, float y);
 		void setPosition(const sf::Vector2f& position);
-
 		void setLabelString(const std::string& string);
 		void setCharacterSize(unsigned newSize);
 		void setTextFillColor(const sf::Color& color);

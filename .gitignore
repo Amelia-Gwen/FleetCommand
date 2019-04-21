@@ -3,6 +3,8 @@
 
 # User added files
 backlog.txt
+.sonarqube
+bw-output
 
 # User-specific files
 *.suo
