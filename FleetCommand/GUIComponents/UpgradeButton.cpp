@@ -1,9 +1,14 @@
 #include "UpgradeButton.h"
 
+#include "Exceptions.h"
+
 namespace fleet {
 	UpgradeButton::UpgradeButton(const std::string& newLabel, const sf::Font& font, unsigned short numUpgrades) :
 		label{ newLabel, font }
 	{
+		if (numUpgrades == 0) {
+			throw DivideByZeroException("Attempted to divide by zero in the constructor of UpgradeButton");
+		}
 		float indicatorWidth = default_upgrade_width / numUpgrades;
 		for (unsigned i = 0; i < numUpgrades; ++i) {
 			indicators.emplace_back(sf::RectangleShape(sf::Vector2f(indicatorWidth, default_indicator_height)));
@@ -17,6 +22,8 @@ namespace fleet {
 		}
 	}
 
+	// UpgradeButton requires one call to setPosition minimum to properly initialize indicators
+	// in there proper position. Failure to do so will leave them all positioned at 0, 0;
 	void UpgradeButton::setPosition(float x, float y)
 	{
 		button.setPosition(x, y);
@@ -59,7 +66,7 @@ namespace fleet {
 			indicators[i].setFillColor(sf::Color::Cyan);
 		}
 
-		if (currentLevel == indicators.size()) { return; }
+		if (currentLevel >= indicators.size()) { return; }
 
 		if (button.getGlobalBounds().contains(mousePos)) {
 			if (canAfford) {

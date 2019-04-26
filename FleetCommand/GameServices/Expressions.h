@@ -156,6 +156,7 @@ namespace fleet {
 	constexpr float text_box_outline = 2.F;
 	constexpr float description_text_offset = 5.F;
 	constexpr unsigned description_character_size = 15U;
+	constexpr unsigned max_label_length = 30U;
 
 	// Research Screen Upgrade Buttons
 	constexpr float research_column_one_x = 100.F;

@@ -261,5 +261,8 @@
     <ClInclude Include="GUIComponents\GUIButton.h">
       <Filter>GUIComponents\Header</Filter>
     </ClInclude>
+    <ClInclude Include="GameServices\Exceptions.h">
+      <Filter>GameServices\Header</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

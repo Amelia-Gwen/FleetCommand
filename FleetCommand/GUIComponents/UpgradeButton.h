@@ -21,6 +21,7 @@ namespace fleet {
 		const sf::String& getLabelString() const { return label.getString(); }
 		unsigned getCharacterSize() const { return label.getCharacterSize(); }
 		const sf::Color& getTextFillColor() const { return label.getFillColor(); }
+		const std::vector<sf::RectangleShape>& getIndicators() const { return indicators; }
 
 		bool input(const sf::Vector2f& mousePos, bool canAfford);
 		void update(const sf::Vector2f& mousePos, unsigned currentLevel, bool canAfford);
