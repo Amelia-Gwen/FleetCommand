@@ -56,7 +56,6 @@ namespace fleet {
 			indicatorX += indicator.getSize().x;
 		}
 
-
 		position = sf::Vector2f(indicatorX, indicatorY);
 		button->setPosition(position);
 		indicatorY = position.y + (default_upgrade_height - default_indicator_height);

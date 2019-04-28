@@ -23,7 +23,7 @@ namespace fleet {
 	}
 
 	// UpgradeButton requires one call to setPosition minimum to properly initialize indicators
-	// in there proper position. Failure to do so will leave them all positioned at 0, 0;
+	// in their proper position. Failure to do so will leave them all positioned at 0, 0;
 	void UpgradeButton::setPosition(float x, float y)
 	{
 		button.setPosition(x, y);
