@@ -145,7 +145,8 @@ namespace fleet {
 	constexpr float cityupgrade_x_offset = 20.F;
 	constexpr float worldmap_x_offset = 50.F;
 	constexpr float unit_x_offset = 100.F;
-	constexpr float text_y_offset = 20.F;
+	constexpr float game_text_y_offset = 20.F;
+	constexpr float menu_text_y_offset = 10.F;
 
 	// UpgradeButtons
 	constexpr float default_upgrade_width = 80.F;
@@ -157,6 +158,11 @@ namespace fleet {
 	constexpr float description_text_offset = 5.F;
 	constexpr unsigned description_character_size = 15U;
 	constexpr unsigned max_label_length = 30U;
+
+	// UnitButtons
+	constexpr float default_unit_button_width = 100.F;
+	constexpr float default_unit_button_height = 140.F;
+	constexpr float default_cost_y_offset = 120.F;
 
 	// Research Screen Upgrade Buttons
 	constexpr float research_column_one_x = 100.F;

@@ -9,13 +9,13 @@ namespace fleet {
 	LoadGameScreen::LoadGameScreen(sf::RenderWindow& window, const sf::Font& font) :
 		IScreen{ window, font }
 	{
-		backButton.setLabelOffset(back_x_offset);
+		backButton.setLabelOffset(sf::Vector2f(back_x_offset, menu_text_y_offset));
 		backButton.setPosition(menu_back_x, menu_back_y);
-		slot1.setLabelOffset(load_x_offset);
+		slot1.setLabelOffset(sf::Vector2f(load_x_offset, menu_text_y_offset));
 		slot1.setPosition(slot1_x, slot_y);
-		slot2.setLabelOffset(load_x_offset);
+		slot2.setLabelOffset(sf::Vector2f(load_x_offset, menu_text_y_offset));
 		slot2.setPosition(slot2_x, slot_y);
-		slot3.setLabelOffset(load_x_offset);
+		slot3.setLabelOffset(sf::Vector2f(load_x_offset, menu_text_y_offset));
 		slot3.setPosition(slot3_x, slot_y);
 	}
 

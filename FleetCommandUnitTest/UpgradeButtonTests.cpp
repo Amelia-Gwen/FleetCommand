@@ -9,6 +9,12 @@
 
 namespace fleet {
 	class UpgradeButtonTest : public testing::Test {
+	public:
+		void TearDown() override {
+			if (button) {
+				delete button;
+			}
+		}
 	protected:
 		UpgradeButton* button;
 	};
@@ -16,7 +22,6 @@ namespace fleet {
 	TEST_F(UpgradeButtonTest, constructor_accepts_empty_string) {
 		button = new UpgradeButton("", sf::Font(), 5);
 		ASSERT_STREQ("", button->getLabelString().toAnsiString().c_str());
-		delete button;
 	}
 
 	TEST_F(UpgradeButtonTest, constructor_handles_large_strings) {

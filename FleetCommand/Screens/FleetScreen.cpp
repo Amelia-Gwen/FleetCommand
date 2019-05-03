@@ -5,16 +5,16 @@ namespace fleet {
 		IScreen{ window, font },
 		displayPanel{ displayPanel }
 	{
-		dashboardButton.setLabelOffset(dashboard_x_offset);
+		dashboardButton.setLabelOffset(sf::Vector2f(dashboard_x_offset, game_text_y_offset));
 		dashboardButton.setPosition(game_button_1_x, game_button_y);
 		dashboardButton.setCharacterSize(text_character_size);
-		researchButton.setLabelOffset(research_x_offset);
+		researchButton.setLabelOffset(sf::Vector2f(research_x_offset, game_text_y_offset));
 		researchButton.setPosition(game_button_2_x, game_button_y);
 		researchButton.setCharacterSize(text_character_size);
-		unitsButton.setLabelOffset(unit_x_offset);
+		unitsButton.setLabelOffset(sf::Vector2f(unit_x_offset, game_text_y_offset));
 		unitsButton.setPosition(game_button_3_x, game_button_y);
 		unitsButton.setCharacterSize(text_character_size);
-		worldMapButton.setLabelOffset(worldmap_x_offset);
+		worldMapButton.setLabelOffset(sf::Vector2f(worldmap_x_offset, game_text_y_offset));
 		worldMapButton.setPosition(game_button_4_x, game_button_y);
 		worldMapButton.setCharacterSize(text_character_size);
 	}

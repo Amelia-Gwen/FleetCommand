@@ -14,13 +14,13 @@ namespace fleet {
 		logoText.setPosition(logo_text_x, logo_text_y);
 		logoText.setCharacterSize(logo_text_character_size);
 		logoText.setFillColor(sf::Color::Black);
-		playButton.setLabelOffset(play_button_x_offset);
+		playButton.setLabelOffset(sf::Vector2f(play_button_x_offset, menu_text_y_offset));
 		playButton.setPosition(main_menu_button_x, play_button_y);
 		playButton.setCharacterSize(text_character_size);
-		newGameButton.setLabelOffset(new_or_load_x_offset);
+		newGameButton.setLabelOffset(sf::Vector2f(new_or_load_x_offset, menu_text_y_offset));
 		newGameButton.setPosition(main_menu_button_x, new_game_button_y);
 		newGameButton.setCharacterSize(text_character_size);
-		loadGameButton.setLabelOffset(new_or_load_x_offset);
+		loadGameButton.setLabelOffset(sf::Vector2f(new_or_load_x_offset, menu_text_y_offset));
 		loadGameButton.setPosition(main_menu_button_x, load_button_y);
 		loadGameButton.setCharacterSize(text_character_size);
 	}

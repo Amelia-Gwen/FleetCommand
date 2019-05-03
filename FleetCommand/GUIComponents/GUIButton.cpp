@@ -14,16 +14,16 @@ namespace fleet {
 	void GUIButton::setPosition(float x, float y)
 	{
 		button.setPosition(x, y);
-		label.setPosition(x + labelOffset, y + text_y_offset);
+		label.setPosition(x + labelOffset.x, y + labelOffset.y);
 	}
 	void GUIButton::setPosition(const sf::Vector2f& position)
 	{
 		setPosition(position.x, position.y);
 	}
-	void GUIButton::setLabelOffset(float offset)
+	void GUIButton::setLabelOffset(const sf::Vector2f& offset)
 	{
 		labelOffset = offset;
-		label.setPosition(button.getPosition().x + labelOffset, button.getPosition().y);
+		label.setPosition(button.getPosition().x + labelOffset.x, button.getPosition().y + labelOffset.y);
 	}
 	void GUIButton::setCharacterSize(unsigned newSize)
 	{

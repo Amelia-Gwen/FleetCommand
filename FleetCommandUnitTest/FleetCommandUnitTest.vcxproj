@@ -36,6 +36,7 @@
     <ClCompile Include="..\FleetCommand\GUIComponents\UpgradeButton.cpp" />
     <ClCompile Include="GUIButtonTests.cpp" />
     <ClCompile Include="test.cpp" />
+    <ClCompile Include="UnitButtonTests.cpp" />
     <ClCompile Include="UpgradeButtonTests.cpp" />
   </ItemGroup>
   <ItemGroup>

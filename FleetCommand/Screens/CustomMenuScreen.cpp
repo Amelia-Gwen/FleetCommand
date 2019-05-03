@@ -17,10 +17,10 @@ namespace fleet {
 	CustomMenuScreen::CustomMenuScreen(sf::RenderWindow& window, const sf::Font& font) :
 		IScreen{ window, font }
 	{
-		backButton.setLabelOffset(back_x_offset);
+		backButton.setLabelOffset(sf::Vector2f(back_x_offset, menu_text_y_offset));
 		backButton.setPosition(menu_back_x, menu_back_y);
 		initializeBoxes();
-		startButton.setLabelOffset(start_x_offset);
+		startButton.setLabelOffset(sf::Vector2f(start_x_offset, menu_text_y_offset));
 		startButton.setPosition(start_button_x, start_button_y);
 		startButton.setCharacterSize(text_character_size);
 	}

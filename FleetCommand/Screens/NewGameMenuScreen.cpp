@@ -9,12 +9,12 @@ namespace fleet {
 	NewGameMenuScreen::NewGameMenuScreen(sf::RenderWindow& window, const sf::Font& font) :
 		IScreen{ window, font }
 	{
-		backButton.setLabelOffset(back_x_offset);
+		backButton.setLabelOffset(sf::Vector2f(back_x_offset, menu_text_y_offset));
 		backButton.setPosition(menu_back_x, menu_back_y);
-		campaignButton.setLabelOffset(new_text_x_offset);
+		campaignButton.setLabelOffset(sf::Vector2f(new_text_x_offset, menu_text_y_offset));
 		campaignButton.setPosition(campaign_button_x, new_button_y);
 		campaignButton.setCharacterSize(new_text_size);
-		customButton.setLabelOffset(new_text_x_offset);
+		customButton.setLabelOffset(sf::Vector2f(new_text_x_offset, menu_text_y_offset));
 		customButton.setPosition(custom_button_x, new_button_y);
 		customButton.setCharacterSize(new_text_size);
 	}

@@ -41,6 +41,7 @@
     <ClInclude Include="GUIComponents\DropDownMenu.h" />
     <ClInclude Include="GUIComponents\GUIButton.h" />
     <ClInclude Include="GUIComponents\IMap.h" />
+    <ClInclude Include="GUIComponents\UnitButton.h" />
     <ClInclude Include="GUIComponents\UpgradeButton.h" />
     <ClInclude Include="GUIComponents\WorldMap.h" />
     <ClInclude Include="Model.h" />
@@ -75,6 +76,7 @@
     <ClCompile Include="GUIComponents\DisplayPanel.cpp" />
     <ClCompile Include="GUIComponents\DropBox.cpp" />
     <ClCompile Include="GUIComponents\DropDownMenu.cpp" />
+    <ClCompile Include="GUIComponents\UnitButton.cpp" />
     <ClCompile Include="GUIComponents\UpgradeButton.cpp" />
     <ClCompile Include="GUIComponents\WorldMap.cpp" />
     <ClCompile Include="Main.cpp" />

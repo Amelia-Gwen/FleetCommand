@@ -4,6 +4,7 @@
 
 #include "DisplayPanel.h"
 #include "GUIButton.h"
+#include "UnitButton.h"
 
 namespace fleet {
 	class UnitScreen : public IScreen {
