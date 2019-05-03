@@ -8,6 +8,12 @@
     <ClCompile Include="UpgradeButtonTests.cpp" />
     <ClCompile Include="GUIButtonTests.cpp" />
     <ClCompile Include="UnitButtonTests.cpp" />
+    <ClCompile Include="..\FleetCommand\GUIComponents\GUIButton.cpp">
+      <Filter>CPPFiles%28HandsOFF%29</Filter>
+    </ClCompile>
+    <ClCompile Include="..\FleetCommand\GUIComponents\UnitButton.cpp">
+      <Filter>CPPFiles%28HandsOFF%29</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CPPFiles%28HandsOFF%29">

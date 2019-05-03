@@ -33,6 +33,8 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <ItemGroup>
+    <ClCompile Include="..\FleetCommand\GUIComponents\GUIButton.cpp" />
+    <ClCompile Include="..\FleetCommand\GUIComponents\UnitButton.cpp" />
     <ClCompile Include="..\FleetCommand\GUIComponents\UpgradeButton.cpp" />
     <ClCompile Include="GUIButtonTests.cpp" />
     <ClCompile Include="test.cpp" />
