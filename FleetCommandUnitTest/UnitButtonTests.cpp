@@ -25,7 +25,7 @@ namespace fleet {
 
 	TEST_F(UnitButtonTest, constructor_handles_large_strings) {
 		std::string longString = "This is a very long string to test that the constructor of the \
-			UpgradeButton class properly handles very long strings.";
+			UnitButton class properly handles very long strings.";
 		button = new UnitButton(longString, sf::Font(), 5);
 		ASSERT_EQ(longString, button->getLabelString());
 	}
