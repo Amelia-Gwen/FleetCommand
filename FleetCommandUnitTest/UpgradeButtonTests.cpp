@@ -33,6 +33,7 @@ namespace fleet {
 
 	TEST_F(UpgradeButtonTest, constructor_fails_on_zero) {
 		ASSERT_THROW(button = new UpgradeButton("Test String", sf::Font(), 0), DivideByZeroException);
+		button = nullptr;
 	}
 
 	TEST_F(UpgradeButtonTest, text_is_white_on_contruction) {
