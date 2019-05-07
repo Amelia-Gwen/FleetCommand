@@ -17,6 +17,29 @@ namespace fleet {
 		worldMapButton.setLabelOffset(sf::Vector2f(worldmap_x_offset, game_text_y_offset));
 		worldMapButton.setPosition(game_button_4_x, game_button_y);
 		worldMapButton.setCharacterSize(text_character_size);
+
+		marines.setPosition(unit_column_one_x, unit_row_one_y);
+		patrol.setPosition(unit_column_two_x, unit_row_one_y);
+		corvette.setPosition(unit_column_three_x, unit_row_one_y);
+		frigate.setPosition(unit_column_four_x, unit_row_one_y);
+
+		submarine.setPosition(unit_column_one_x, unit_row_two_y);
+		destroyer.setPosition(unit_column_two_x, unit_row_two_y);
+		cruiser.setPosition(unit_column_three_x, unit_row_two_y);
+		carrier.setPosition(unit_column_four_x, unit_row_two_y);
+
+		tanker.setPosition(unit_column_one_x, unit_row_three_y);
+		transport.setPosition(unit_column_two_x, unit_row_three_y);
+		cargo.setPosition(unit_column_three_x, unit_row_three_y);
+		missile.setPosition(unit_column_four_x, unit_row_three_y);
+
+		textDisplay.setPosition(unit_text_box_x, unit_text_box_y);
+		textDisplay.setFillColor(sf::Color::Yellow);
+		textDisplay.setOutlineThickness(text_box_outline);
+		description.setPosition(unit_text_box_x + description_text_offset,
+			unit_text_box_y + description_text_offset);
+		description.setFillColor(sf::Color::Black);
+		description.setCharacterSize(description_character_size);
 	}
 
 	GameEvent UnitScreen::input()
@@ -58,5 +81,21 @@ namespace fleet {
 		window.draw(researchButton);
 		window.draw(fleetButton);
 		window.draw(worldMapButton);
+
+		window.draw(marines);
+		window.draw(patrol);
+		window.draw(corvette);
+		window.draw(frigate);
+		window.draw(submarine);
+		window.draw(destroyer);
+		window.draw(cruiser);
+		window.draw(carrier);
+		window.draw(tanker);
+		window.draw(transport);
+		window.draw(cargo);
+		window.draw(missile);
+
+		window.draw(textDisplay);
+		window.draw(description);
 	}
 }

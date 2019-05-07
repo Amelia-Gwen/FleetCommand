@@ -163,6 +163,17 @@ namespace fleet {
 	constexpr float default_unit_button_width = 100.F;
 	constexpr float default_unit_button_height = 140.F;
 	constexpr float default_cost_y_offset = 120.F;
+	constexpr float unit_column_one_x = 100.F;
+	constexpr float unit_column_two_x = 310.F;
+	constexpr float unit_column_three_x = 525.F;
+	constexpr float unit_column_four_x = 730.F;
+	constexpr float unit_row_one_y = 120.F;
+	constexpr float unit_row_two_y = 300.F;
+	constexpr float unit_row_three_y = 480.F;
+	constexpr float unit_text_box_x = 930.F;
+	constexpr float unit_text_box_y = 120.F;
+	constexpr float unit_text_box_width = 250.F;
+	constexpr float unit_text_box_height = 520.F;
 
 	// Research Screen Upgrade Buttons
 	constexpr float research_column_one_x = 100.F;

@@ -270,5 +270,8 @@
     <ClInclude Include="GUIComponents\UnitButton.h">
       <Filter>GUIComponents\Header</Filter>
     </ClInclude>
+    <ClInclude Include="DataComponents\UnitData.h">
+      <Filter>DataComponents\Header</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

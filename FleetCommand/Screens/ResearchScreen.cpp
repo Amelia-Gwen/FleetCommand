@@ -34,7 +34,8 @@ namespace fleet {
 		textDisplay.setPosition(research_text_box_x, research_text_box_y);
 		textDisplay.setFillColor(sf::Color::Yellow);
 		textDisplay.setOutlineThickness(text_box_outline);
-		description.setPosition(research_text_box_x + description_text_offset, research_text_box_y + description_text_offset);
+		description.setPosition(research_text_box_x + description_text_offset,
+			research_text_box_y + description_text_offset);
 		description.setFillColor(sf::Color::Black);
 		description.setCharacterSize(description_character_size);
 	}

@@ -29,4 +29,9 @@ namespace fleet {
 		button = new UnitButton(longString, sf::Font(), 5);
 		ASSERT_EQ(longString, button->getLabelString());
 	}
+
+	TEST_F(UnitButtonTest, default_label_color_is_white) {
+		button = new UnitButton("Test String", sf::Font(), 5);
+		ASSERT_EQ(sf::Color::White, button->getTextFillColor());
+	}
 }
