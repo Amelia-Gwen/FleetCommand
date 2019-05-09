@@ -183,6 +183,7 @@ namespace fleet {
 		window.draw(oilProduction);
 		window.draw(cashProduction);
 		window.draw(researchProduction);
+
 		window.draw(textDisplay);
 		window.draw(description);
 		window.draw(displayPanel);

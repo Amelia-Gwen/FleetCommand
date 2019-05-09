@@ -76,7 +76,6 @@ namespace fleet {
 	}
 	void UnitScreen::draw()
 	{
-		window.draw(displayPanel);
 		window.draw(dashboardButton);
 		window.draw(researchButton);
 		window.draw(fleetButton);
@@ -97,5 +96,6 @@ namespace fleet {
 
 		window.draw(textDisplay);
 		window.draw(description);
+		window.draw(displayPanel);
 	}
 }

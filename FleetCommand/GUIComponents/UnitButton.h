@@ -24,7 +24,7 @@ namespace fleet {
 		sf::RectangleShape button{ sf::Vector2f(default_unit_button_width, default_unit_button_height) };
 		sf::Text label;
 		unsigned baseCost;
-		sf::Text baseCostLabel;
+		sf::Text CostLabel;
 		bool active{ false };
 
 		void draw(sf::RenderTarget& target, sf::RenderStates states) const override;

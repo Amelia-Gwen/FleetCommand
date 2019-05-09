@@ -4,15 +4,16 @@ namespace fleet {
 	UnitButton::UnitButton(const std::string& newLabel, const sf::Font& font, unsigned baseCost) :
 		label{ newLabel, font },
 		baseCost{ baseCost },
-		baseCostLabel{ std::to_string(baseCost), font }
+		CostLabel{ "$" + std::to_string(baseCost), font }
 	{
+		CostLabel.setFillColor(sf::Color::Yellow);
 	}
 
 	void UnitButton::setPosition(float x, float y)
 	{
 		button.setPosition(x, y);
 		label.setPosition(x, y + default_unit_button_height);
-		baseCostLabel.setPosition(x, default_cost_y_offset);
+		CostLabel.setPosition(x, y);
 	}
 	void UnitButton::setPosition(const sf::Vector2f& position)
 	{
@@ -36,6 +37,6 @@ namespace fleet {
 	{
 		target.draw(button, states);
 		target.draw(label, states);
-		target.draw(baseCostLabel, states);
+		target.draw(CostLabel, states);
 	}
 }
