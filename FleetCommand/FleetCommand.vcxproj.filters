@@ -273,5 +273,8 @@
     <ClInclude Include="DataComponents\UnitData.h">
       <Filter>DataComponents\Header</Filter>
     </ClInclude>
+    <ClInclude Include="GameServices\Evaluations.h">
+      <Filter>GameServices\Header</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

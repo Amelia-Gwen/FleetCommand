@@ -1,9 +1,11 @@
 #include "UnitButton.h"
 
+#include "Evaluations.h"
+
 namespace fleet {
 	UnitButton::UnitButton(const std::string& newLabel, const sf::Font& font, unsigned baseCost) :
 		label{ newLabel, font },
-		baseCost{ baseCost },
+		cost{ baseCost },
 		CostLabel{ "$" + std::to_string(baseCost), font }
 	{
 		CostLabel.setFillColor(sf::Color::Yellow);
@@ -19,13 +21,13 @@ namespace fleet {
 	{
 		setPosition(position.x, position.y);
 	}
-	bool UnitButton::input(const sf::Vector2f& mousePos, bool canAfford)
+	bool UnitButton::input(const sf::Vector2f& mousePos, unsigned cash)
 	{
-		return canAfford && button.getGlobalBounds().contains(mousePos);
+		return canAfford(cost, cash) && button.getGlobalBounds().contains(mousePos);
 	}
-	void UnitButton::update(const sf::Vector2f& mousePos, bool canAfford)
+	void UnitButton::update(const sf::Vector2f& mousePos, unsigned cash)
 	{
-		if (canAfford && button.getGlobalBounds().contains(mousePos)) {
+		if (canAfford(cost, cash) && button.getGlobalBounds().contains(mousePos)) {
 			button.setFillColor(sf::Color::Green);
 		}
 		else {

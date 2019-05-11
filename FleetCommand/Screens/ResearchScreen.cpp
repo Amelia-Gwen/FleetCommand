@@ -1,5 +1,7 @@
 #include "ResearchScreen.h"
 
+#include "Evaluations.h"
+
 namespace fleet {
 	ResearchScreen::ResearchScreen(sf::RenderWindow& window, sf::Font& font, const Model& model, DisplayPanel& displayPanel) :
 		IScreen{ window, font },
@@ -187,10 +189,5 @@ namespace fleet {
 		window.draw(textDisplay);
 		window.draw(description);
 		window.draw(displayPanel);
-	}
-
-	bool ResearchScreen::canAfford(unsigned cost, unsigned resource)
-	{
-		return !(resource < cost);
 	}
 }

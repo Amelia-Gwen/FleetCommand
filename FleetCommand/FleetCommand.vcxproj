@@ -31,6 +31,7 @@
     <ClInclude Include="FleetCommand.h" />
     <ClInclude Include="GameServices\Coordinate.h" />
     <ClInclude Include="GameServices\Difficulty.h" />
+    <ClInclude Include="GameServices\Evaluations.h" />
     <ClInclude Include="GameServices\Exceptions.h" />
     <ClInclude Include="GameServices\Expressions.h" />
     <ClInclude Include="GameServices\GameEvent.h" />

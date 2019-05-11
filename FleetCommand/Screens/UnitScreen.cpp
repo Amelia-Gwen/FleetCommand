@@ -1,8 +1,11 @@
 #include "UnitScreen.h"
 
+#include "Evaluations.h"
+
 namespace fleet {
-	UnitScreen::UnitScreen(sf::RenderWindow& window, sf::Font& font, DisplayPanel& displayPanel) :
+	UnitScreen::UnitScreen(sf::RenderWindow& window, sf::Font& font, const Model& model, DisplayPanel& displayPanel) :
 		IScreen{ window, font },
+		model{ model },
 		displayPanel{ displayPanel }
 	{
 		dashboardButton.setLabelOffset(sf::Vector2f(dashboard_x_offset, game_text_y_offset));
@@ -52,14 +55,62 @@ namespace fleet {
 		if (dashboardButton.input(mousePos)) {
 			return GameEvent::GoToDashboard;
 		}
-		else if (researchButton.input(mousePos)) {
+		if (researchButton.input(mousePos)) {
 			return GameEvent::GoToResearch;
 		}
-		else if (fleetButton.input(mousePos)) {
+		if (fleetButton.input(mousePos)) {
 			return GameEvent::GoToFleet;
 		}
-		else if (worldMapButton.input(mousePos)) {
+		if (worldMapButton.input(mousePos)) {
 			return GameEvent::GoToWorldMap;
+		}
+		if (marines.input(mousePos, model.player()->currentCash())) {
+			// prompt user
+			return GameEvent::ActionComplete;
+		}
+		if (patrol.input(mousePos, model.player()->currentCash())) {
+			// prompt user
+			return GameEvent::ActionComplete;
+		}
+		if (corvette.input(mousePos, model.player()->currentCash())) {
+			// prompt user
+			return GameEvent::ActionComplete;
+		}
+		if (frigate.input(mousePos, model.player()->currentCash())) {
+			// prompt user
+			return GameEvent::ActionComplete;
+		}
+		if (submarine.input(mousePos, model.player()->currentCash())) {
+			// prompt user
+			return GameEvent::ActionComplete;
+		}
+		if (destroyer.input(mousePos, model.player()->currentCash())) {
+			// prompt user
+			return GameEvent::ActionComplete;
+		}
+		if (cruiser.input(mousePos, model.player()->currentCash())) {
+			// prompt user
+			return GameEvent::ActionComplete;
+		}
+		if (carrier.input(mousePos, model.player()->currentCash())) {
+			// prompt user
+			return GameEvent::ActionComplete;
+		}
+		if (tanker.input(mousePos, model.player()->currentCash())) {
+			// prompt user
+			return GameEvent::ActionComplete;
+		}
+		if (transport.input(mousePos, model.player()->currentCash())) {
+			// prompt user
+			return GameEvent::ActionComplete;
+		}
+		if (cargo.input(mousePos, model.player()->currentCash())) {
+			// prompt user
+			return GameEvent::ActionComplete;
+		}
+		if (missile.input(mousePos, model.player()->currentCash())) {
+			// prompt user
+			return GameEvent::ActionComplete;
 		}
 
 		return gameEvent;
@@ -73,6 +124,19 @@ namespace fleet {
 		researchButton.update(mousePos);
 		fleetButton.update(mousePos);
 		worldMapButton.update(mousePos);
+
+		marines.update(mousePos, model.player()->currentCash());
+		patrol.update(mousePos, model.player()->currentCash());
+		corvette.update(mousePos, model.player()->currentCash());
+		frigate.update(mousePos, model.player()->currentCash());
+		submarine.update(mousePos, model.player()->currentCash());
+		destroyer.update(mousePos, model.player()->currentCash());
+		cruiser.update(mousePos, model.player()->currentCash());
+		carrier.update(mousePos, model.player()->currentCash());
+		tanker.update(mousePos, model.player()->currentCash());
+		transport.update(mousePos, model.player()->currentCash());
+		cargo.update(mousePos, model.player()->currentCash());
+		missile.update(mousePos, model.player()->currentCash());
 	}
 	void UnitScreen::draw()
 	{

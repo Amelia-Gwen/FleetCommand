@@ -18,12 +18,12 @@ namespace fleet {
 		const sf::String& getLabelString() const { return label.getString(); }
 		const sf::Color& getTextFillColor() const { return label.getFillColor(); }
 
-		bool input(const sf::Vector2f& mousePos, bool canAfford);
-		void update(const sf::Vector2f& mousePos, bool canAfford);
+		bool input(const sf::Vector2f& mousePos, unsigned cash);
+		void update(const sf::Vector2f& mousePos, unsigned cash);
 	private:
 		sf::RectangleShape button{ sf::Vector2f(default_unit_button_width, default_unit_button_height) };
 		sf::Text label;
-		unsigned baseCost;
+		unsigned cost;
 		sf::Text CostLabel;
 		bool active{ false };
 
