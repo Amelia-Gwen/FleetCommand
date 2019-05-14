@@ -47,6 +47,15 @@
     <Filter Include="DataComponents\Source">
       <UniqueIdentifier>{698d8255-e4e0-4d41-b308-8015d9a7b5f0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="DataComponents\Units">
+      <UniqueIdentifier>{bc4115f9-f9cc-4219-ba67-f6b4e0547033}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataComponents\Units\Header">
+      <UniqueIdentifier>{9d98f09c-e1c3-4d1b-a4eb-8296020ee913}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataComponents\Units\Source">
+      <UniqueIdentifier>{b29b326f-5ba5-49eb-8b5c-ada50c15e885}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -275,6 +284,9 @@
     </ClInclude>
     <ClInclude Include="GameServices\Evaluations.h">
       <Filter>GameServices\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="DataComponents\Units\IUnit.h">
+      <Filter>DataComponents\Units\Header</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -28,6 +28,7 @@
     <ClInclude Include="DataComponents\Player.h" />
     <ClInclude Include="DataComponents\ResearchData.h" />
     <ClInclude Include="DataComponents\UnitData.h" />
+    <ClInclude Include="DataComponents\Units\IUnit.h" />
     <ClInclude Include="FleetCommand.h" />
     <ClInclude Include="GameServices\Coordinate.h" />
     <ClInclude Include="GameServices\Difficulty.h" />
