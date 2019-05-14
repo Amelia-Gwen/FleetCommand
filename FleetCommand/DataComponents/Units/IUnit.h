@@ -6,6 +6,7 @@ namespace fleet {
 
 	class IUnit {
 	public:
+		IUnit(unsigned short rank) : rank{ rank } {}
 		virtual ~IUnit() = default;
 
 		virtual void move() = 0;
