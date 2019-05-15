@@ -56,6 +56,9 @@
     <Filter Include="DataComponents\Units\Source">
       <UniqueIdentifier>{b29b326f-5ba5-49eb-8b5c-ada50c15e885}</UniqueIdentifier>
     </Filter>
+    <Filter Include="DataComponents\ShipComponents">
+      <UniqueIdentifier>{91d4ddc0-76b9-4af6-8bfa-3cdc84991d05}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -153,9 +156,6 @@
     </ClCompile>
     <ClCompile Include="GUIComponents\UnitButton.cpp">
       <Filter>GUIComponents\Source</Filter>
-    </ClCompile>
-    <ClCompile Include="DataComponents\Units\Marine.cpp">
-      <Filter>DataComponents\Units\Source</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -291,7 +291,10 @@
     <ClInclude Include="DataComponents\Units\IUnit.h">
       <Filter>DataComponents\Units\Header</Filter>
     </ClInclude>
-    <ClInclude Include="DataComponents\Units\Marine.h">
+    <ClInclude Include="DataComponents\Units\ITroop.h">
+      <Filter>DataComponents\Units\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="DataComponents\Units\IShip.h">
       <Filter>DataComponents\Units\Header</Filter>
     </ClInclude>
   </ItemGroup>
