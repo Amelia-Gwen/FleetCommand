@@ -1,17 +1,19 @@
 #pragma once
 
+#include <string>
 #include <vector>
 
 namespace fleet {
 
 	class IUnit {
 	public:
-		IUnit(unsigned short rank) : rank{ rank } {}
+		IUnit(const std::string& type, unsigned short rank) : unitType{ type }, rank { rank } {}
 		virtual ~IUnit() = default;
 
-		virtual void move() = 0;
-		virtual void fire() = 0;
+		virtual void move();
+		virtual void fire();
 	protected:
+		std::string unitType;
 		unsigned short rank;
 		unsigned hitPoints;
 		unsigned short movePoints;

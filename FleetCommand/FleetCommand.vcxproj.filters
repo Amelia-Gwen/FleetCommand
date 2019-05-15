@@ -154,6 +154,9 @@
     <ClCompile Include="GUIComponents\UnitButton.cpp">
       <Filter>GUIComponents\Source</Filter>
     </ClCompile>
+    <ClCompile Include="DataComponents\Units\Marine.cpp">
+      <Filter>DataComponents\Units\Source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FleetCommand.h">
@@ -286,6 +289,9 @@
       <Filter>GameServices\Header</Filter>
     </ClInclude>
     <ClInclude Include="DataComponents\Units\IUnit.h">
+      <Filter>DataComponents\Units\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="DataComponents\Units\Marine.h">
       <Filter>DataComponents\Units\Header</Filter>
     </ClInclude>
   </ItemGroup>
