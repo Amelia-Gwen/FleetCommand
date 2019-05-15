@@ -59,6 +59,12 @@
     <Filter Include="DataComponents\ShipComponents">
       <UniqueIdentifier>{91d4ddc0-76b9-4af6-8bfa-3cdc84991d05}</UniqueIdentifier>
     </Filter>
+    <Filter Include="DataComponents\ShipComponents\Header">
+      <UniqueIdentifier>{2248b194-6861-4c0b-ae92-f36c3021d631}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataComponents\ShipComponents\Source">
+      <UniqueIdentifier>{033f78a0-5e82-4933-8c87-1be8818c398b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -296,6 +302,9 @@
     </ClInclude>
     <ClInclude Include="DataComponents\Units\IShip.h">
       <Filter>DataComponents\Units\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="DataComponents\ShipComponents\IComponent.h">
+      <Filter>DataComponents\ShipComponents\Header</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

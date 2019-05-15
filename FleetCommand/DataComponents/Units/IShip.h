@@ -2,7 +2,7 @@
 
 #include "IUnit.h"
 
-#include "Component.h"
+#include "IComponent.h"
 
 #include <vector>
 
@@ -13,6 +13,6 @@ namespace fleet {
 		virtual ~IShip() = default;
 	protected:
 		unsigned componentCapacity;
-		std::vector<Component*> components;
+		std::vector<IComponent*> components;
 	};
 }
