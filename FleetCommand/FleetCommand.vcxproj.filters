@@ -65,6 +65,33 @@
     <Filter Include="DataComponents\ShipComponents\Source">
       <UniqueIdentifier>{033f78a0-5e82-4933-8c87-1be8818c398b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="DataComponents\ShipComponents\Weapons">
+      <UniqueIdentifier>{762ba65c-f7c4-4274-bfc8-4308c1cb5a64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataComponents\ShipComponents\Weapons\Source">
+      <UniqueIdentifier>{6abde100-15b4-4c3f-895e-5b7f1be2cb4d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataComponents\ShipComponents\Weapons\Header">
+      <UniqueIdentifier>{ccad2755-affc-420e-a2d6-fb38f7d796b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataComponents\ShipComponents\Accessories">
+      <UniqueIdentifier>{ef9efecb-088e-47de-9a72-b5b278bfd1a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataComponents\ShipComponents\Accessories\Header">
+      <UniqueIdentifier>{4ddcb1fc-a1c1-4a76-aaf5-eb2f91984f29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataComponents\ShipComponents\Accessories\Source">
+      <UniqueIdentifier>{e7201af5-e2d0-4f67-a3c3-44779f61f93d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataComponents\Units\Ships">
+      <UniqueIdentifier>{1c6be17a-fb58-432b-ac4d-d28a65b1a452}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataComponents\Units\Ships\Header">
+      <UniqueIdentifier>{1d7ee701-e789-4f4b-a7fe-7380a937d6b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataComponents\Units\Ships\Source">
+      <UniqueIdentifier>{f01801c6-0200-48e2-8cd5-f7f86394ab7b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -162,6 +189,75 @@
     </ClCompile>
     <ClCompile Include="GUIComponents\UnitButton.cpp">
       <Filter>GUIComponents\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="DataComponents\ShipComponents\Engine.cpp">
+      <Filter>DataComponents\ShipComponents\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="DataComponents\ShipComponents\Bridge.cpp">
+      <Filter>DataComponents\ShipComponents\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="DataComponents\ShipComponents\Hull.cpp">
+      <Filter>DataComponents\ShipComponents\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="DataComponents\ShipComponents\Accessories\Sonar.cpp">
+      <Filter>DataComponents\ShipComponents\Accessories\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="DataComponents\ShipComponents\Propeller.cpp">
+      <Filter>DataComponents\ShipComponents\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="DataComponents\Units\Marine.cpp">
+      <Filter>DataComponents\Units\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="DataComponents\ShipComponents\CargoHold.cpp">
+      <Filter>DataComponents\ShipComponents\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="DataComponents\ShipComponents\FuelStorage.cpp">
+      <Filter>DataComponents\ShipComponents\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="DataComponents\ShipComponents\Quarters.cpp">
+      <Filter>DataComponents\ShipComponents\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="DataComponents\Units\Ships\PatrolBoat.cpp">
+      <Filter>DataComponents\Units\Ships\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="DataComponents\Units\Ships\Corvette.cpp">
+      <Filter>DataComponents\Units\Ships\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="DataComponents\Units\Ships\Frigate.cpp">
+      <Filter>DataComponents\Units\Ships\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="DataComponents\Units\Ships\Submarine.cpp">
+      <Filter>DataComponents\Units\Ships\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="DataComponents\Units\Ships\Destroyer.cpp">
+      <Filter>DataComponents\Units\Ships\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="DataComponents\Units\Ships\Cruiser.cpp">
+      <Filter>DataComponents\Units\Ships\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="DataComponents\Units\Ships\Carrier.cpp">
+      <Filter>DataComponents\Units\Ships\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="DataComponents\Units\Ships\Tanker.cpp">
+      <Filter>DataComponents\Units\Ships\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="DataComponents\Units\Ships\CargoShip.cpp">
+      <Filter>DataComponents\Units\Ships\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="DataComponents\Units\Ships\TroopTransport.cpp">
+      <Filter>DataComponents\Units\Ships\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="DataComponents\Units\Ships\MissileShip.cpp">
+      <Filter>DataComponents\Units\Ships\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="DataComponents\Units\Ships\Fighter.cpp">
+      <Filter>DataComponents\Units\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="DataComponents\Units\Ships\Bomber.cpp">
+      <Filter>DataComponents\Units\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="DataComponents\ShipComponents\Accessories\Radar.cpp">
+      <Filter>DataComponents\ShipComponents\Accessories\Source</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -297,14 +393,89 @@
     <ClInclude Include="DataComponents\Units\IUnit.h">
       <Filter>DataComponents\Units\Header</Filter>
     </ClInclude>
-    <ClInclude Include="DataComponents\Units\ITroop.h">
-      <Filter>DataComponents\Units\Header</Filter>
-    </ClInclude>
     <ClInclude Include="DataComponents\Units\IShip.h">
       <Filter>DataComponents\Units\Header</Filter>
     </ClInclude>
     <ClInclude Include="DataComponents\ShipComponents\IComponent.h">
       <Filter>DataComponents\ShipComponents\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="DataComponents\ShipComponents\Engine.h">
+      <Filter>DataComponents\ShipComponents\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="DataComponents\ShipComponents\IWeapon.h">
+      <Filter>DataComponents\ShipComponents\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="DataComponents\ShipComponents\Bridge.h">
+      <Filter>DataComponents\ShipComponents\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="DataComponents\ShipComponents\IAccesory.h">
+      <Filter>DataComponents\ShipComponents\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="DataComponents\ShipComponents\Hull.h">
+      <Filter>DataComponents\ShipComponents\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="DataComponents\ShipComponents\Accessories\Sonar.h">
+      <Filter>DataComponents\ShipComponents\Accessories\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="DataComponents\ShipComponents\Propeller.h">
+      <Filter>DataComponents\ShipComponents\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="DataComponents\Units\Marine.h">
+      <Filter>DataComponents\Units\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="DataComponents\ShipComponents\CargoHold.h">
+      <Filter>DataComponents\ShipComponents\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="DataComponents\ShipComponents\FuelStorage.h">
+      <Filter>DataComponents\ShipComponents\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="DataComponents\ShipComponents\Quarters.h">
+      <Filter>DataComponents\ShipComponents\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="DataComponents\Units\Ships\PatrolBoat.h">
+      <Filter>DataComponents\Units\Ships\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="DataComponents\Units\Ships\Corvette.h">
+      <Filter>DataComponents\Units\Ships\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="DataComponents\Units\Ships\Frigate.h">
+      <Filter>DataComponents\Units\Ships\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="DataComponents\Units\Ships\Submarine.h">
+      <Filter>DataComponents\Units\Ships\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="DataComponents\Units\Ships\Destroyer.h">
+      <Filter>DataComponents\Units\Ships\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="DataComponents\Units\Ships\Cruiser.h">
+      <Filter>DataComponents\Units\Ships\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="DataComponents\Units\Ships\Carrier.h">
+      <Filter>DataComponents\Units\Ships\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="DataComponents\Units\Ships\Tanker.h">
+      <Filter>DataComponents\Units\Ships\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="DataComponents\Units\Ships\CargoShip.h">
+      <Filter>DataComponents\Units\Ships\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="DataComponents\Units\Ships\TroopTransport.h">
+      <Filter>DataComponents\Units\Ships\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="DataComponents\Units\Ships\MissileShip.h">
+      <Filter>DataComponents\Units\Ships\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="DataComponents\Units\Ships\IAircraft.h">
+      <Filter>DataComponents\Units\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="DataComponents\Units\Ships\Fighter.h">
+      <Filter>DataComponents\Units\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="DataComponents\Units\Ships\Bomber.h">
+      <Filter>DataComponents\Units\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="DataComponents\ShipComponents\Accessories\Radar.h">
+      <Filter>DataComponents\ShipComponents\Accessories\Header</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
