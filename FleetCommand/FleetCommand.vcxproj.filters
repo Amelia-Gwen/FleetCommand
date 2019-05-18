@@ -408,9 +408,6 @@
     <ClInclude Include="DataComponents\ShipComponents\Bridge.h">
       <Filter>DataComponents\ShipComponents\Header</Filter>
     </ClInclude>
-    <ClInclude Include="DataComponents\ShipComponents\IAccesory.h">
-      <Filter>DataComponents\ShipComponents\Header</Filter>
-    </ClInclude>
     <ClInclude Include="DataComponents\ShipComponents\Hull.h">
       <Filter>DataComponents\ShipComponents\Header</Filter>
     </ClInclude>
@@ -476,6 +473,9 @@
     </ClInclude>
     <ClInclude Include="DataComponents\ShipComponents\Accessories\Radar.h">
       <Filter>DataComponents\ShipComponents\Accessories\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="DataComponents\ShipComponents\IAccessory.h">
+      <Filter>DataComponents\ShipComponents\Header</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -34,7 +34,7 @@
     <ClInclude Include="DataComponents\ShipComponents\Engine.h" />
     <ClInclude Include="DataComponents\ShipComponents\FuelStorage.h" />
     <ClInclude Include="DataComponents\ShipComponents\Hull.h" />
-    <ClInclude Include="DataComponents\ShipComponents\IAccesory.h" />
+    <ClInclude Include="DataComponents\ShipComponents\IAccessory.h" />
     <ClInclude Include="DataComponents\ShipComponents\IComponent.h" />
     <ClInclude Include="DataComponents\ShipComponents\IWeapon.h" />
     <ClInclude Include="DataComponents\ShipComponents\Propeller.h" />
