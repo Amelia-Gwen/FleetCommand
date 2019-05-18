@@ -21,16 +21,16 @@ namespace fleet {
 		worldMapButton.setPosition(game_button_4_x, game_button_y);
 		worldMapButton.setCharacterSize(text_character_size);
 
-		marines.setPosition(unit_column_one_x, unit_row_one_y);
-		patrol.setPosition(unit_column_two_x, unit_row_one_y);
-		corvette.setPosition(unit_column_three_x, unit_row_one_y);
-		frigate.setPosition(unit_column_four_x, unit_row_one_y);
+		patrol.setPosition(unit_column_one_x, unit_row_one_y);
+		corvette.setPosition(unit_column_two_x, unit_row_one_y);
+		submarine.setPosition(unit_column_three_x, unit_row_one_y);
+		destroyer.setPosition(unit_column_four_x, unit_row_one_y);
 
-		submarine.setPosition(unit_column_one_x, unit_row_two_y);
-		destroyer.setPosition(unit_column_two_x, unit_row_two_y);
-		cruiser.setPosition(unit_column_three_x, unit_row_two_y);
-		carrier.setPosition(unit_column_four_x, unit_row_two_y);
-
+		cruiser.setPosition(unit_column_one_x, unit_row_two_y);
+		battleship.setPosition(unit_column_two_x, unit_row_two_y);
+		carrier.setPosition(unit_column_three_x, unit_row_two_y);
+		dreadnought.setPosition(unit_column_four_x, unit_row_two_y);
+		
 		tanker.setPosition(unit_column_one_x, unit_row_three_y);
 		transport.setPosition(unit_column_two_x, unit_row_three_y);
 		cargo.setPosition(unit_column_three_x, unit_row_three_y);
@@ -64,10 +64,6 @@ namespace fleet {
 		if (worldMapButton.input(mousePos)) {
 			return GameEvent::GoToWorldMap;
 		}
-		if (marines.input(mousePos, model.player()->currentCash())) {
-			// prompt user
-			return GameEvent::ActionComplete;
-		}
 		if (patrol.input(mousePos, model.player()->currentCash())) {
 			// prompt user
 			return GameEvent::ActionComplete;
@@ -92,7 +88,15 @@ namespace fleet {
 			// prompt user
 			return GameEvent::ActionComplete;
 		}
+		if (battleship.input(mousePos, model.player()->currentCash())) {
+			// prompt user
+			return GameEvent::ActionComplete;
+		}
 		if (carrier.input(mousePos, model.player()->currentCash())) {
+			// prompt user
+			return GameEvent::ActionComplete;
+		}
+		if (dreadnought.input(mousePos, model.player()->currentCash())) {
 			// prompt user
 			return GameEvent::ActionComplete;
 		}
@@ -125,14 +129,15 @@ namespace fleet {
 		fleetButton.update(mousePos);
 		worldMapButton.update(mousePos);
 
-		marines.update(mousePos, model.player()->currentCash());
 		patrol.update(mousePos, model.player()->currentCash());
 		corvette.update(mousePos, model.player()->currentCash());
 		frigate.update(mousePos, model.player()->currentCash());
 		submarine.update(mousePos, model.player()->currentCash());
 		destroyer.update(mousePos, model.player()->currentCash());
 		cruiser.update(mousePos, model.player()->currentCash());
+		battleship.update(mousePos, model.player()->currentCash());
 		carrier.update(mousePos, model.player()->currentCash());
+		dreadnought.update(mousePos, model.player()->currentCash());
 		tanker.update(mousePos, model.player()->currentCash());
 		transport.update(mousePos, model.player()->currentCash());
 		cargo.update(mousePos, model.player()->currentCash());
@@ -145,14 +150,15 @@ namespace fleet {
 		window.draw(fleetButton);
 		window.draw(worldMapButton);
 
-		window.draw(marines);
 		window.draw(patrol);
 		window.draw(corvette);
 		window.draw(frigate);
 		window.draw(submarine);
 		window.draw(destroyer);
 		window.draw(cruiser);
+		window.draw(battleship);
 		window.draw(carrier);
+		window.draw(dreadnought);
 		window.draw(tanker);
 		window.draw(transport);
 		window.draw(cargo);

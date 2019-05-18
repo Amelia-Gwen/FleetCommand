@@ -24,14 +24,15 @@ namespace fleet {
 		GUIButton fleetButton{ sf::Vector2f(game_button_width, game_button_height), "Fleet", font };
 		GUIButton worldMapButton{ sf::Vector2f(game_button_width, game_button_height), "World Map", font };
 
-		UnitButton marines{ "Marines", font, UnitBaseCosts::marines };
 		UnitButton patrol{ "Patrol Ship", font, UnitBaseCosts::patrol };
 		UnitButton corvette{ "Corvette", font, UnitBaseCosts::corvette };
 		UnitButton frigate{ "Frigate", font, UnitBaseCosts::frigate };
 		UnitButton submarine{ "Submarine", font, UnitBaseCosts::submarine };
 		UnitButton destroyer{ "Destroyer", font, UnitBaseCosts::destroyer };
 		UnitButton cruiser{ "Cruiser", font, UnitBaseCosts::cruiser };
+		UnitButton battleship{ "Battleship", font, UnitBaseCosts::battleship };
 		UnitButton carrier{ "Carrier", font, UnitBaseCosts::carrier };
+		UnitButton dreadnought{ "Dreadnought", font, UnitBaseCosts::dreadnought };
 		UnitButton tanker{ "Tanker", font, UnitBaseCosts::tanker };
 		UnitButton transport{ "Transport", font, UnitBaseCosts::transport };
 		UnitButton cargo{ "Cargo", font, UnitBaseCosts::cargo };
