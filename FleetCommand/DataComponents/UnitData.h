@@ -4,9 +4,10 @@ namespace fleet {
 	struct UnitBaseCosts {
 		// Basic ship classes
 		static const unsigned patrol{ 900 };
-		static const unsigned corvette{ 1500 };
+		static const unsigned corvette{ 1100 };
+		static const unsigned frigate{ 1300 };
 		static const unsigned submarine{ 1900 };
-		static const unsigned destroyer{ 1400 };
+		static const unsigned destroyer{ 1500 };
 		static const unsigned cruiser{ 1800 };
 		static const unsigned battleship{ 2200 };
 		static const unsigned carrier{ 2800 };
