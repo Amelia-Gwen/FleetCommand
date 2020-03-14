@@ -3,12 +3,6 @@
 #include "Screens.h"
 
 namespace fleet {
-	Controller::Controller(Model& model, View& view) :
-		model{ model },
-		view{ view }
-	{
-	}
-
 	/*
 	Game loop level function to generate and process all user input.
 	*/

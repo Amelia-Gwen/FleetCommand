@@ -44,9 +44,6 @@
     <Filter Include="DataComponents\Header">
       <UniqueIdentifier>{cf7e6a2a-ba5b-41d4-be56-659498585037}</UniqueIdentifier>
     </Filter>
-    <Filter Include="DataComponents\Source">
-      <UniqueIdentifier>{698d8255-e4e0-4d41-b308-8015d9a7b5f0}</UniqueIdentifier>
-    </Filter>
     <Filter Include="DataComponents\Units">
       <UniqueIdentifier>{bc4115f9-f9cc-4219-ba67-f6b4e0547033}</UniqueIdentifier>
     </Filter>
@@ -91,6 +88,9 @@
     </Filter>
     <Filter Include="DataComponents\Units\Ships\Source">
       <UniqueIdentifier>{f01801c6-0200-48e2-8cd5-f7f86394ab7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataComponents\Source">
+      <UniqueIdentifier>{698d8255-e4e0-4d41-b308-8015d9a7b5f0}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

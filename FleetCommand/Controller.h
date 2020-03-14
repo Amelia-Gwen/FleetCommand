@@ -10,7 +10,7 @@ namespace fleet {
 	*/
 	class Controller {
 	public:
-		explicit Controller(Model& model, View& view);
+		explicit Controller(Model& model, View& view) : model{ model }, view{ view } {}
 
 		void input();
 	private:
