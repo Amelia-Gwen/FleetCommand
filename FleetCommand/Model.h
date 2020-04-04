@@ -20,17 +20,17 @@ namespace fleet {
 		{"Dragonopolis", Coordinate{32, 8}}, // Done
 		{"Everen", Coordinate{50, 50}},
 		{"Flagynn", Coordinate{166, 90}}, // Done, Capital
-		{"Galdor", Coordinate{50, 50}},
+		{"Galdor", Coordinate{62, 103}}, // Done
 		{"Hearth", Coordinate{50, 50}},
 		{"Iln", Coordinate{215, 44}}, // Done, Capital
 		{"Jelna", Coordinate{50, 50}},
 		{"Kali", Coordinate{50, 50}},
-		{"Lumin", Coordinate{24, 28}}, // Done
-		{"Luna", Coordinate{50, 50}},
+		{"Lumin", Coordinate{24, 27}}, // Done
+		{"Luna", Coordinate{46, 42}}, // Done
 		{"Markapp", Coordinate{50, 50}},
 		{"Morn", Coordinate{50, 50}},
 		{"Northrent", Coordinate{86, 6}}, // Done, Capital
-		{"Orion", Coordinate{50, 50}},
+		{"Orion", Coordinate{26, 75}}, // Done
 		{"Orphan", Coordinate{50, 50}},
 		{"Popadieu", Coordinate{225, 7}}, // Done, Capital
 		{"Princess", Coordinate{50, 50}},
