@@ -25,7 +25,7 @@ namespace fleet {
 	{
 		cityName = model.cityList()[index].cityName();
 		cityDashboardButton.setLabel(cityName);
-		// set city layout
+		cityMap.setCity(cityName);
 	}
 
 	GameEvent CityMapScreen::input()

@@ -129,6 +129,8 @@ namespace fleet {
 	constexpr float world_map_city_height = 10.F;
 
 	// City Map
+	constexpr float tile_outline = 5.f;
+	constexpr float tile_height = (map_height / 20.f) - (tile_outline * 2.f);
 
 	// Button Offsets
 	constexpr float back_x_offset = 20.F;

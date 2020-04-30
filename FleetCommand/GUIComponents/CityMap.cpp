@@ -1,13 +1,22 @@
 #include "CityMap.h"
 
-namespace fleet {
-	CityMap::CityMap()
-	{
-	}
+#include <fstream>
 
+namespace fleet {
 	void CityMap::setCity(const std::string& name)
 	{
 		cityName = name;
+		std::string filename = "Assets/CityMaps/" + citySize + "map.txt"; //TODO: make unique for each city
+		std::ifstream reader;
+		reader.open(filename);
+
+		tileMap.clear();
+		int token;
+		while (reader >> token) {
+			tileValues.push_back(token);
+		}
+
+		createTileMap();
 	}
 	GameEvent CityMap::input(const sf::Vector2f& mousePos)
 	{
@@ -40,15 +49,71 @@ namespace fleet {
 		moveMap(mousePos);
 	}
 
+	void CityMap::createTileMap()
+	{
+		float tileWidth;
+		if (citySize == "small") {
+			tileWidth = (map_width / 20.f) - (tile_outline * 2.f);
+		}
+		else {
+			tileWidth = (map_width / 40.f) - (tile_outline * 2.f);
+		}
+
+		for (unsigned i = 0; i < tileValues.size(); ++i) {
+			tileMap.emplace_back(sf::RectangleShape(sf::Vector2f(tileWidth, tile_height)));
+			tileMap[i].setOutlineThickness(tile_outline);
+			tileMap[i].setOutlineColor(sf::Color::White);
+			setTileColor(tileMap[i], tileValues[i]);
+			setTilePosition(tileMap[i], i, tileWidth);
+		}
+	}
+
+	void CityMap::setTileColor(sf::RectangleShape& tile, unsigned value)
+	{
+		switch (value) {
+		case 0:
+			tile.setFillColor(sf::Color::Blue);
+			break;
+		case 1:
+			tile.setFillColor(sf::Color::Green);
+			break;
+		case 2:
+			tile.setFillColor(sf::Color::Yellow);
+			break;
+		case 3:
+			tile.setFillColor(sf::Color::Black);
+			break;
+		case 4:
+			tile.setFillColor(sf::Color::Red);
+			break;
+		case 5:
+			tile.setFillColor(sf::Color::Cyan);
+			break;
+		default:
+			break;
+		}
+	}
+
+	void CityMap::setTilePosition(sf::RectangleShape& tile, unsigned index, float tileWidth)
+	{
+		int tileNum;
+		if (citySize == "small") {
+			tileNum = 20;
+		}
+		else {
+			tileNum = 40;
+		}
+		float x = origin.x + (index % tileNum) * tileWidth + (tile_outline * 2) * (index % tileNum);
+		float y = origin.y + (index / tileNum) * tile_height + (tile_outline * 2) * (index / tileNum);
+
+		tile.setPosition(x, y);
+	}
+
 	void CityMap::draw(sf::RenderTarget& target, sf::RenderStates states) const
 	{
-		target.draw(map, states); // TODO: Remove. Only for testing
-		for (auto& row : cityMap)
+		for (auto& tile : tileMap)
 		{
-			for (auto& cell : row)
-			{
-				target.draw(cell, states);
-			}
+			target.draw(tile, states);
 		}
 		target.draw(zoomIn, states);
 		target.draw(zoomOut, states);

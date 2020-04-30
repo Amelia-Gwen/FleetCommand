@@ -22,7 +22,7 @@ namespace fleet {
 	void CityDashboard::setCity(unsigned index, bool owned)
 	{
 		cityIndex = index;
-		cityMapButton.setActive(owned);
+		//cityMapButton.setActive(owned);
 		cityUpgradeButton.setActive(owned);
 	}
 
