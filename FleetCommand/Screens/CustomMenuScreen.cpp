@@ -97,6 +97,7 @@ namespace fleet {
 		researchBox.setPosition(column_two_x, row_three_y);
 		researchBox.setFont(font);
 
+		computersBox.addElement("0", font);
 		for (unsigned i = 1; i <= max_players; ++i) {
 			playersBox.addElement(std::to_string(i), font);
 			computersBox.addElement(std::to_string(i), font);
