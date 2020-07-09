@@ -44,7 +44,6 @@ namespace fleet {
 		IScreen* currentScreen;
 		GameValues gameValues;
 
-
 		void checkEvent(GameEvent& gameEvent);
 	};
 }

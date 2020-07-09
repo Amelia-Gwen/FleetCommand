@@ -15,7 +15,7 @@ namespace fleet {
 	{
 		label.setPosition(x, y);
 		for (unsigned i = 0; i < elements.size(); ++i) {
-			unsigned position = i - selectedIndex;
+			int position = i - selectedIndex;
 			float yOffset = box_default_height * position;
 			elements[i].second.setPosition(x + xOffset, y + yOffset);
 			elements[i].first.setPosition(x + xOffset + box_text_offset, y + yOffset + box_text_offset);

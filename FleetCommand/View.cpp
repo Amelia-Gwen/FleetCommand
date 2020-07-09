@@ -97,7 +97,7 @@ namespace fleet {
 			currentScreen = screens["World Map Screen"].get();
 			break;
 		case GameEvent::StartGame:
-			gameValues = dynamic_cast<CustomMenuScreen*>(screens["Custom Menu Screen"].get())->startValues();
+			gameValues = dynamic_cast<CustomMenuScreen*>(currentScreen)->startValues();
 			currentScreen = screens["World Map Screen"].get();
 			break;
 		case GameEvent::GoToDashboard:

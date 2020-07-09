@@ -88,8 +88,8 @@ namespace fleet {
 	// Custom Menu Screen
 	constexpr float column_one_x = 300.F;
 	constexpr float column_two_x = 700.F;
-	constexpr float row_one_y = 50.F;
-	constexpr float row_two_y = 275.F;
+	constexpr float row_one_y = 100.F;
+	constexpr float row_two_y = 300.F;
 	constexpr float row_three_y = 500.F;
 	constexpr float start_button_width = 300.F;
 	constexpr float start_button_height = 75.F;

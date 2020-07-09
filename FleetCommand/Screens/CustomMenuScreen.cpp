@@ -125,7 +125,7 @@ namespace fleet {
 	}
 	void CustomMenuScreen::setValues()
 	{
-		gameValues ={
+		gameValues = {
 			std::stoi(playersBox.getValue()),
 			std::stoi(computersBox.getValue()),
 			string_to_difficulty_enum[difficultyBox.getValue()],
