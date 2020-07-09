@@ -5,13 +5,6 @@ VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FleetCommand", "FleetCommand\FleetCommand.vcxproj", "{DE40598F-D762-49EC-87E8-453D5CE12F6D}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FleetCommandUnitTest", "FleetCommandUnitTest\FleetCommandUnitTest.vcxproj", "{6523BC2B-E12E-44EF-9CFB-D66FB0A7BE23}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{51A8E5C2-7968-470A-90C1-CBAF240C6AB1}"
-	ProjectSection(SolutionItems) = preProject
-		CodeCoverage.runsettings = CodeCoverage.runsettings
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -28,14 +21,6 @@ Global
 		{DE40598F-D762-49EC-87E8-453D5CE12F6D}.Release|x64.Build.0 = Release|x64
 		{DE40598F-D762-49EC-87E8-453D5CE12F6D}.Release|x86.ActiveCfg = Release|Win32
 		{DE40598F-D762-49EC-87E8-453D5CE12F6D}.Release|x86.Build.0 = Release|Win32
-		{6523BC2B-E12E-44EF-9CFB-D66FB0A7BE23}.Debug|x64.ActiveCfg = Debug|x64
-		{6523BC2B-E12E-44EF-9CFB-D66FB0A7BE23}.Debug|x64.Build.0 = Debug|x64
-		{6523BC2B-E12E-44EF-9CFB-D66FB0A7BE23}.Debug|x86.ActiveCfg = Debug|Win32
-		{6523BC2B-E12E-44EF-9CFB-D66FB0A7BE23}.Debug|x86.Build.0 = Debug|Win32
-		{6523BC2B-E12E-44EF-9CFB-D66FB0A7BE23}.Release|x64.ActiveCfg = Release|x64
-		{6523BC2B-E12E-44EF-9CFB-D66FB0A7BE23}.Release|x64.Build.0 = Release|x64
-		{6523BC2B-E12E-44EF-9CFB-D66FB0A7BE23}.Release|x86.ActiveCfg = Release|Win32
-		{6523BC2B-E12E-44EF-9CFB-D66FB0A7BE23}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
