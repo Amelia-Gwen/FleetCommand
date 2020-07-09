@@ -477,5 +477,8 @@
     <ClInclude Include="DataComponents\ShipComponents\IAccessory.h">
       <Filter>DataComponents\ShipComponents\Header</Filter>
     </ClInclude>
+    <ClInclude Include="DataComponents\Units\Fleet.h">
+      <Filter>DataComponents\Units\Header</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

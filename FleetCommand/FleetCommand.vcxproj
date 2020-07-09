@@ -40,6 +40,7 @@
     <ClInclude Include="DataComponents\ShipComponents\Propeller.h" />
     <ClInclude Include="DataComponents\ShipComponents\Quarters.h" />
     <ClInclude Include="DataComponents\UnitData.h" />
+    <ClInclude Include="DataComponents\Units\Fleet.h" />
     <ClInclude Include="DataComponents\Units\IShip.h" />
     <ClInclude Include="DataComponents\Units\IUnit.h" />
     <ClInclude Include="DataComponents\Units\Marine.h" />

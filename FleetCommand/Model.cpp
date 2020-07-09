@@ -11,7 +11,6 @@ namespace fleet {
 	void Model::startGame(const GameValues& gameValues)
 	{
 		players.clear();
-		// TODO: add capital cities from list
 		for (int i = 0; i < gameValues.players; ++i) {
 			players.emplace_back(Player("", gameValues.oil, gameValues.cash, gameValues.research));
 		}
@@ -20,6 +19,9 @@ namespace fleet {
 			newPlayer.setAI(gameValues.difficulty);
 			players.emplace_back(std::move(newPlayer));
 		}
+
+		// TODO: Set capital city.
+		// Be sure to add capital and complimentary city to players city index.
 
 		currentPlayer = &players[0];
 	}
