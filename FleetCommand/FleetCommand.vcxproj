@@ -20,19 +20,134 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Controller.h" />
+    <ClInclude Include="DataComponents\City.h" />
+    <ClInclude Include="DataComponents\EasyAI.h" />
+    <ClInclude Include="DataComponents\HardAI.h" />
+    <ClInclude Include="DataComponents\IAI.h" />
+    <ClInclude Include="DataComponents\MediumAI.h" />
+    <ClInclude Include="DataComponents\Player.h" />
+    <ClInclude Include="DataComponents\ResearchData.h" />
+    <ClInclude Include="DataComponents\ShipComponents\Accessories\Radar.h" />
+    <ClInclude Include="DataComponents\ShipComponents\Accessories\Sonar.h" />
+    <ClInclude Include="DataComponents\ShipComponents\Bridge.h" />
+    <ClInclude Include="DataComponents\ShipComponents\CargoHold.h" />
+    <ClInclude Include="DataComponents\ShipComponents\Engine.h" />
+    <ClInclude Include="DataComponents\ShipComponents\FuelStorage.h" />
+    <ClInclude Include="DataComponents\ShipComponents\Hull.h" />
+    <ClInclude Include="DataComponents\ShipComponents\IAccessory.h" />
+    <ClInclude Include="DataComponents\ShipComponents\IComponent.h" />
+    <ClInclude Include="DataComponents\ShipComponents\IWeapon.h" />
+    <ClInclude Include="DataComponents\ShipComponents\Propeller.h" />
+    <ClInclude Include="DataComponents\ShipComponents\Quarters.h" />
+    <ClInclude Include="DataComponents\UnitData.h" />
+    <ClInclude Include="DataComponents\Units\Fleet.h" />
+    <ClInclude Include="DataComponents\Units\IShip.h" />
+    <ClInclude Include="DataComponents\Units\IUnit.h" />
+    <ClInclude Include="DataComponents\Units\Marine.h" />
+    <ClInclude Include="DataComponents\Units\Ships\Bomber.h" />
+    <ClInclude Include="DataComponents\Units\Ships\CargoShip.h" />
+    <ClInclude Include="DataComponents\Units\Ships\Carrier.h" />
+    <ClInclude Include="DataComponents\Units\Ships\Corvette.h" />
+    <ClInclude Include="DataComponents\Units\Ships\Cruiser.h" />
+    <ClInclude Include="DataComponents\Units\Ships\Destroyer.h" />
+    <ClInclude Include="DataComponents\Units\Ships\Fighter.h" />
+    <ClInclude Include="DataComponents\Units\Ships\Frigate.h" />
+    <ClInclude Include="DataComponents\Units\Ships\IAircraft.h" />
+    <ClInclude Include="DataComponents\Units\Ships\MissileShip.h" />
+    <ClInclude Include="DataComponents\Units\Ships\PatrolBoat.h" />
+    <ClInclude Include="DataComponents\Units\Ships\Submarine.h" />
+    <ClInclude Include="DataComponents\Units\Ships\Tanker.h" />
+    <ClInclude Include="DataComponents\Units\Ships\TroopTransport.h" />
     <ClInclude Include="FleetCommand.h" />
+    <ClInclude Include="GameServices\Coordinate.h" />
+    <ClInclude Include="GameServices\Difficulty.h" />
+    <ClInclude Include="GameServices\Evaluations.h" />
+    <ClInclude Include="GameServices\Exceptions.h" />
     <ClInclude Include="GameServices\Expressions.h" />
     <ClInclude Include="GameServices\GameEvent.h" />
+    <ClInclude Include="GameServices\GameValues.h" />
+    <ClInclude Include="GameServices\LoadFile.h" />
+    <ClInclude Include="GUIComponents\CityMap.h" />
+    <ClInclude Include="GUIComponents\DisplayPanel.h" />
+    <ClInclude Include="GUIComponents\DropBox.h" />
+    <ClInclude Include="GUIComponents\DropDownMenu.h" />
+    <ClInclude Include="GUIComponents\GUIButton.h" />
+    <ClInclude Include="GUIComponents\IMap.h" />
+    <ClInclude Include="GUIComponents\UnitButton.h" />
+    <ClInclude Include="GUIComponents\UpgradeButton.h" />
+    <ClInclude Include="GUIComponents\WorldMap.h" />
     <ClInclude Include="Model.h" />
+    <ClInclude Include="Screens\CityDashboard.h" />
+    <ClInclude Include="Screens\CityMapScreen.h" />
+    <ClInclude Include="Screens\CityUpgradeScreen.h" />
+    <ClInclude Include="Screens\CustomMenuScreen.h" />
+    <ClInclude Include="Screens\Dashboard.h" />
+    <ClInclude Include="Screens\FleetScreen.h" />
     <ClInclude Include="Screens\IScreen.h" />
+    <ClInclude Include="Screens\LoadGameScreen.h" />
+    <ClInclude Include="Screens\MainMenuScreen.h" />
+    <ClInclude Include="Screens\NewGameMenuScreen.h" />
+    <ClInclude Include="Screens\ResearchScreen.h" />
+    <ClInclude Include="Screens\Screens.h" />
+    <ClInclude Include="Screens\UnitScreen.h" />
+    <ClInclude Include="Screens\WorldMapScreen.h" />
     <ClInclude Include="View.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Controller.cpp" />
+    <ClCompile Include="DataComponents\City.cpp" />
+    <ClCompile Include="DataComponents\EasyAI.cpp" />
+    <ClCompile Include="DataComponents\HardAI.cpp" />
+    <ClCompile Include="DataComponents\MediumAI.cpp" />
+    <ClCompile Include="DataComponents\Player.cpp" />
+    <ClCompile Include="DataComponents\ResearchData.cpp" />
+    <ClCompile Include="DataComponents\ShipComponents\Accessories\Radar.cpp" />
+    <ClCompile Include="DataComponents\ShipComponents\Accessories\Sonar.cpp" />
+    <ClCompile Include="DataComponents\ShipComponents\Bridge.cpp" />
+    <ClCompile Include="DataComponents\ShipComponents\CargoHold.cpp" />
+    <ClCompile Include="DataComponents\ShipComponents\Engine.cpp" />
+    <ClCompile Include="DataComponents\ShipComponents\FuelStorage.cpp" />
+    <ClCompile Include="DataComponents\ShipComponents\Hull.cpp" />
+    <ClCompile Include="DataComponents\ShipComponents\Propeller.cpp" />
+    <ClCompile Include="DataComponents\ShipComponents\Quarters.cpp" />
+    <ClCompile Include="DataComponents\Units\Marine.cpp" />
+    <ClCompile Include="DataComponents\Units\Ships\Bomber.cpp" />
+    <ClCompile Include="DataComponents\Units\Ships\CargoShip.cpp" />
+    <ClCompile Include="DataComponents\Units\Ships\Carrier.cpp" />
+    <ClCompile Include="DataComponents\Units\Ships\Corvette.cpp" />
+    <ClCompile Include="DataComponents\Units\Ships\Cruiser.cpp" />
+    <ClCompile Include="DataComponents\Units\Ships\Destroyer.cpp" />
+    <ClCompile Include="DataComponents\Units\Ships\Fighter.cpp" />
+    <ClCompile Include="DataComponents\Units\Ships\Frigate.cpp" />
+    <ClCompile Include="DataComponents\Units\Ships\MissileShip.cpp" />
+    <ClCompile Include="DataComponents\Units\Ships\PatrolBoat.cpp" />
+    <ClCompile Include="DataComponents\Units\Ships\Submarine.cpp" />
+    <ClCompile Include="DataComponents\Units\Ships\Tanker.cpp" />
+    <ClCompile Include="DataComponents\Units\Ships\TroopTransport.cpp" />
     <ClCompile Include="FleetCommand.cpp" />
+    <ClCompile Include="GUIComponents\GUIButton.cpp" />
+    <ClCompile Include="GUIComponents\IMap.cpp" />
+    <ClCompile Include="GUIComponents\CityMap.cpp" />
+    <ClCompile Include="GUIComponents\DisplayPanel.cpp" />
+    <ClCompile Include="GUIComponents\DropBox.cpp" />
+    <ClCompile Include="GUIComponents\DropDownMenu.cpp" />
+    <ClCompile Include="GUIComponents\UnitButton.cpp" />
+    <ClCompile Include="GUIComponents\UpgradeButton.cpp" />
+    <ClCompile Include="GUIComponents\WorldMap.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Model.cpp" />
-    <ClCompile Include="Screens\IScreen.cpp" />
+    <ClCompile Include="Screens\CityDashboard.cpp" />
+    <ClCompile Include="Screens\CityMapScreen.cpp" />
+    <ClCompile Include="Screens\CityUpgradeScreen.cpp" />
+    <ClCompile Include="Screens\CustomMenuScreen.cpp" />
+    <ClCompile Include="Screens\Dashboard.cpp" />
+    <ClCompile Include="Screens\FleetScreen.cpp" />
+    <ClCompile Include="Screens\LoadGameScreen.cpp" />
+    <ClCompile Include="Screens\MainMenuScreen.cpp" />
+    <ClCompile Include="Screens\NewGameMenuScreen.cpp" />
+    <ClCompile Include="Screens\ResearchScreen.cpp" />
+    <ClCompile Include="Screens\UnitScreen.cpp" />
+    <ClCompile Include="Screens\WorldMapScreen.cpp" />
     <ClCompile Include="View.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -90,10 +205,14 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>$(IncludePath)</IncludePath>
+    <CodeAnalysisRuleSet>NativeRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>$(IncludePath)</IncludePath>
+    <CodeAnalysisRuleSet>NativeRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -110,15 +229,14 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>SFML_STATIC;SFML_STATIC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)SFML_STATIC</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\ameli\source\repos\Amelia-Gwen\FleetCommand\FleetCommand\GameServices;C:\Users\ameli\source\repos\Amelia-Gwen\FleetCommand\FleetCommand\Screens;C:\Development\SFML-3.0.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SFML\include;C:\Developer\Projects\FleetCommand\FleetCommand\Screens;C:\Developer\Projects\FleetCommand\FleetCommand\GameServices;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <TreatWarningAsError>true</TreatWarningAsError>
-      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
-      <AdditionalLibraryDirectories>C:\Development\SFML-3.0.2\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opengl32.lib;winmm.lib;gdi32.lib;freetype.lib;flac.lib;vorbisenc.lib;vorbisfile.lib;vorbis.lib;ogg.lib;ws2_32.lib;sfml-audio-s-d.lib;sfml-graphics-s-d.lib;sfml-network-s-d.lib;sfml-system-s-d.lib;sfml-window-s-d.lib;sfml-main-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Developer\Projects\FleetCommand\FleetCommand\Screens;C:\SFML\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-audio-s-d.lib;sfml-graphics-s-d.lib;sfml-network-s-d.lib;sfml-system-s-d.lib;sfml-window-s-d.lib;sfml-main-d.lib;opengl32.lib;winmm.lib;gdi32.lib;freetype.lib;jpeg.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -129,14 +247,13 @@
       <PreprocessorDefinitions>SFML_STATIC;SFML_STATIC;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <TreatWarningAsError>true</TreatWarningAsError>
-      <AdditionalIncludeDirectories>C:\Users\ameli\source\repos\Amelia-Gwen\FleetCommand\FleetCommand\GameServices;C:\Users\ameli\source\repos\Amelia-Gwen\FleetCommand\FleetCommand\Screens;C:\Development\SFML-3.0.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>C:\SFML\include;C:\Developer\Projects\FleetCommand\FleetCommand\Screens;C:\Developer\Projects\FleetCommand\FleetCommand\GameServices;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
-      <AdditionalLibraryDirectories>C:\Development\SFML-3.0.2\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opengl32.lib;winmm.lib;gdi32.lib;freetype.lib;flac.lib;vorbisenc.lib;vorbisfile.lib;vorbis.lib;ogg.lib;ws2_32.lib;sfml-audio-s-d.lib;sfml-graphics-s-d.lib;sfml-network-s-d.lib;sfml-system-s-d.lib;sfml-window-s-d.lib;sfml-main-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Developer\Projects\FleetCommand\FleetCommand\Screens;C:\SFML\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-audio-s-d.lib;sfml-graphics-s-d.lib;sfml-network-s-d.lib;sfml-system-s-d.lib;sfml-window-s-d.lib;sfml-main-d.lib;opengl32.lib;winmm.lib;gdi32.lib;freetype.lib;jpeg.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -148,17 +265,16 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>SFML_STATIC;SFML_STATIC;WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)SFML_STATIC</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\ameli\source\repos\Amelia-Gwen\FleetCommand\FleetCommand\GameServices;C:\Users\ameli\source\repos\Amelia-Gwen\FleetCommand\FleetCommand\Screens;C:\Development\SFML-3.0.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\SFML\include;C:\Developer\Projects\FleetCommand\FleetCommand\Screens;C:\Developer\Projects\FleetCommand\FleetCommand\GameServices;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <TreatWarningAsError>true</TreatWarningAsError>
-      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
-      <AdditionalLibraryDirectories>C:\Development\SFML-3.0.2\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opengl32.lib;winmm.lib;gdi32.lib;freetype.lib;flac.lib;vorbisenc.lib;vorbisfile.lib;vorbis.lib;ogg.lib;ws2_32.lib;sfml-audio-s.lib;sfml-graphics-s.lib;sfml-network-s.lib;sfml-system-s.lib;sfml-window-s.lib;sfml-main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Developer\Projects\FleetCommand\FleetCommand\Screens;C:\SFML\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-audio-s.lib;sfml-graphics-s.lib;sfml-network-s.lib;sfml-system-s.lib;sfml-window-s.lib;sfml-main.lib;opengl32.lib;winmm.lib;gdi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -171,16 +287,15 @@
       <PreprocessorDefinitions>SFML_STATIC;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)SFML_STATIC</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <TreatWarningAsError>true</TreatWarningAsError>
-      <AdditionalIncludeDirectories>C:\Users\ameli\source\repos\Amelia-Gwen\FleetCommand\FleetCommand\GameServices;C:\Users\ameli\source\repos\Amelia-Gwen\FleetCommand\FleetCommand\Screens;C:\Development\SFML-3.0.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>C:\SFML\include;C:\Developer\Projects\FleetCommand\FleetCommand\Screens;C:\Developer\Projects\FleetCommand\FleetCommand\GameServices;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
-      <AdditionalDependencies>opengl32.lib;winmm.lib;gdi32.lib;freetype.lib;flac.lib;vorbisenc.lib;vorbisfile.lib;vorbis.lib;ogg.lib;ws2_32.lib;sfml-audio-s.lib;sfml-graphics-s.lib;sfml-network-s.lib;sfml-system-s.lib;sfml-window-s.lib;sfml-main.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Development\SFML-3.0.2\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-audio-s.lib;sfml-graphics-s.lib;sfml-network-s.lib;sfml-system-s.lib;sfml-window-s.lib;sfml-main.lib;opengl32.lib;winmm.lib;gdi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Developer\Projects\FleetCommand\FleetCommand\Screens;C:\SFML\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

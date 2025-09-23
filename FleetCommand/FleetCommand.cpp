@@ -1,6 +1,9 @@
 #include "FleetCommand.h"
 
 namespace fleet {
+	/*
+	Game loop function.
+	*/
 	void FleetCommand::run() {
 		while (view.isOpen()) {
 			controller.input();

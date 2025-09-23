@@ -1,4 +1,4 @@
-#include "IScreen.h"
+#include "EasyAI.h"
 
 namespace fleet {
 
