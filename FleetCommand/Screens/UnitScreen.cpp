@@ -36,11 +36,11 @@ namespace fleet {
 		cargo.setPosition(unit_column_three_x, unit_row_three_y);
 		missile.setPosition(unit_column_four_x, unit_row_three_y);
 
-		textDisplay.setPosition(unit_text_box_x, unit_text_box_y);
+		textDisplay.setPosition(sf::Vector2f(unit_text_box_x, unit_text_box_y));
 		textDisplay.setFillColor(sf::Color::Yellow);
 		textDisplay.setOutlineThickness(text_box_outline);
-		description.setPosition(unit_text_box_x + description_text_offset,
-			unit_text_box_y + description_text_offset);
+		description.setPosition(sf::Vector2f(unit_text_box_x + description_text_offset,
+			unit_text_box_y + description_text_offset));
 		description.setFillColor(sf::Color::Black);
 		description.setCharacterSize(description_character_size);
 	}

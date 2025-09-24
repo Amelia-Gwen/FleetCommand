@@ -3,17 +3,20 @@
 namespace fleet {
 	IMap::IMap()
 	{
-		worldMap.loadFromFile("Assets/WorldMap.png");
+		if (!worldMap.loadFromFile("Assets/WorldMap.png")) {
+			// throw exception?
+
+		}
 		map.setTexture(&worldMap);
-		zoomIn.setPosition(zoom_in_x, map_button_y);
-		zoomOut.setPosition(zoom_out_x, map_button_y);
+		zoomIn.setPosition(sf::Vector2f(zoom_in_x, map_button_y));
+		zoomOut.setPosition(sf::Vector2f(zoom_out_x, map_button_y));
 	}
 
 	void IMap::setPosition(float x, float y)
 	{
 		mapX = x;
 		mapY = y;
-		map.setPosition(x, y);
+		map.setPosition(sf::Vector2f(x, y));
 	}
 
 	void IMap::grab(const sf::Vector2f& mousePos)
@@ -28,11 +31,11 @@ namespace fleet {
 		float map_y_offset = ((map.getSize().y * map.getScale().y) - (map_height * scale)) / 2.F;
 		float x = map.getPosition().x + map_x_offset;
 		float y = map.getPosition().y + map_y_offset;
-		map.setScale(scale, scale);
+		map.setScale(sf::Vector2f(scale, scale));
 
 		constrainMapCoordinates(x, y);
 
-		map.setPosition(x, y);
+		map.setPosition(sf::Vector2f(x, y));
 	}
 	void IMap::moveMap(const sf::Vector2f& newPos)
 	{
@@ -43,7 +46,7 @@ namespace fleet {
 
 			constrainMapCoordinates(x, y);
 
-			map.setPosition(x, y);
+			map.setPosition(sf::Vector2f(x, y));
 			mouseWasAt = newPos;
 		}
 	}

@@ -10,7 +10,6 @@ namespace fleet {
 		explicit GUIButton(const sf::Vector2f& size, const std::string& label, const sf::Font& font);
 
 		void setPosition(float x, float y);
-		void setPosition(const sf::Vector2f& position);
 		void setLabelOffset(const sf::Vector2f& offset);
 		void setCharacterSize(unsigned newSize);
 		void setLabel(const std::string& newLabel);

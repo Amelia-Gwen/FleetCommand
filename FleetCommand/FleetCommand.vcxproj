@@ -229,14 +229,15 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>SFML_STATIC;SFML_STATIC;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)SFML_STATIC</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\SFML\include;C:\Developer\Projects\FleetCommand\FleetCommand\Screens;C:\Developer\Projects\FleetCommand\FleetCommand\GameServices;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Development\SFML-3.0.2\include\SFML;C:\Users\ameli\source\repos\Amelia-Gwen\FleetCommand\FleetCommand\DataComponents;C:\Users\ameli\source\repos\Amelia-Gwen\FleetCommand\FleetCommand\GameServices;C:\Users\ameli\source\repos\Amelia-Gwen\FleetCommand\FleetCommand\GUIComponents;C:\Users\ameli\source\repos\Amelia-Gwen\FleetCommand\FleetCommand\Screens;C:\Development\SFML-3.0.2\include;C:\Users\ameli\source\repos\Amelia-Gwen\FleetCommand\FleetCommand;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <TreatWarningAsError>true</TreatWarningAsError>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
-      <AdditionalLibraryDirectories>C:\Developer\Projects\FleetCommand\FleetCommand\Screens;C:\SFML\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>sfml-audio-s-d.lib;sfml-graphics-s-d.lib;sfml-network-s-d.lib;sfml-system-s-d.lib;sfml-window-s-d.lib;sfml-main-d.lib;opengl32.lib;winmm.lib;gdi32.lib;freetype.lib;jpeg.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Development\SFML-3.0.2\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-audio-s-d.lib;sfml-graphics-s-d.lib;sfml-network-s-d.lib;sfml-system-s-d.lib;sfml-window-s-d.lib;sfml-main-d.lib;opengl32.lib;winmm.lib;gdi32.lib;freetype.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -247,13 +248,14 @@
       <PreprocessorDefinitions>SFML_STATIC;SFML_STATIC;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <TreatWarningAsError>true</TreatWarningAsError>
-      <AdditionalIncludeDirectories>C:\SFML\include;C:\Developer\Projects\FleetCommand\FleetCommand\Screens;C:\Developer\Projects\FleetCommand\FleetCommand\GameServices;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Development\SFML-3.0.2\include\SFML;C:\Users\ameli\source\repos\Amelia-Gwen\FleetCommand\FleetCommand\DataComponents;C:\Users\ameli\source\repos\Amelia-Gwen\FleetCommand\FleetCommand\GameServices;C:\Users\ameli\source\repos\Amelia-Gwen\FleetCommand\FleetCommand\GUIComponents;C:\Users\ameli\source\repos\Amelia-Gwen\FleetCommand\FleetCommand\Screens;C:\Development\SFML-3.0.2\include;C:\Users\ameli\source\repos\Amelia-Gwen\FleetCommand\FleetCommand;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
-      <AdditionalLibraryDirectories>C:\Developer\Projects\FleetCommand\FleetCommand\Screens;C:\SFML\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>sfml-audio-s-d.lib;sfml-graphics-s-d.lib;sfml-network-s-d.lib;sfml-system-s-d.lib;sfml-window-s-d.lib;sfml-main-d.lib;opengl32.lib;winmm.lib;gdi32.lib;freetype.lib;jpeg.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Development\SFML-3.0.2\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-audio-s-d.lib;sfml-graphics-s-d.lib;sfml-network-s-d.lib;sfml-system-s-d.lib;sfml-window-s-d.lib;sfml-main-d.lib;opengl32.lib;winmm.lib;gdi32.lib;freetype.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -265,7 +267,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>SFML_STATIC;SFML_STATIC;WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)SFML_STATIC</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\SFML\include;C:\Developer\Projects\FleetCommand\FleetCommand\Screens;C:\Developer\Projects\FleetCommand\FleetCommand\GameServices;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Development\SFML-3.0.2\include;C:\Users\ameli\source\repos\Amelia-Gwen\FleetCommand\FleetCommand\DataComponents;C:\Users\ameli\source\repos\Amelia-Gwen\FleetCommand\FleetCommand\GameServices;C:\Users\ameli\source\repos\Amelia-Gwen\FleetCommand\FleetCommand\GUIComponents;C:\Users\ameli\source\repos\Amelia-Gwen\FleetCommand\FleetCommand\Screens;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <TreatWarningAsError>true</TreatWarningAsError>
     </ClCompile>
     <Link>
@@ -273,7 +275,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
-      <AdditionalLibraryDirectories>C:\Developer\Projects\FleetCommand\FleetCommand\Screens;C:\SFML\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Development\SFML-3.0.2\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-audio-s.lib;sfml-graphics-s.lib;sfml-network-s.lib;sfml-system-s.lib;sfml-window-s.lib;sfml-main.lib;opengl32.lib;winmm.lib;gdi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -287,7 +289,7 @@
       <PreprocessorDefinitions>SFML_STATIC;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)SFML_STATIC</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <TreatWarningAsError>true</TreatWarningAsError>
-      <AdditionalIncludeDirectories>C:\SFML\include;C:\Developer\Projects\FleetCommand\FleetCommand\Screens;C:\Developer\Projects\FleetCommand\FleetCommand\GameServices;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Development\SFML-3.0.2\include;C:\Users\ameli\source\repos\Amelia-Gwen\FleetCommand\FleetCommand\DataComponents;C:\Users\ameli\source\repos\Amelia-Gwen\FleetCommand\FleetCommand\GameServices;C:\Users\ameli\source\repos\Amelia-Gwen\FleetCommand\FleetCommand\GUIComponents;C:\Users\ameli\source\repos\Amelia-Gwen\FleetCommand\FleetCommand\Screens;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -295,7 +297,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
       <AdditionalDependencies>sfml-audio-s.lib;sfml-graphics-s.lib;sfml-network-s.lib;sfml-system-s.lib;sfml-window-s.lib;sfml-main.lib;opengl32.lib;winmm.lib;gdi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Developer\Projects\FleetCommand\FleetCommand\Screens;C:\SFML\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Development\SFML-3.0.2\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -5,7 +5,8 @@ namespace fleet {
 	Default initialization includes. 0, 0 as origin point. White as default background color.
 	Default thickness of 1. The default number of elements is zero. The user must explicitly create each element.
 	*/
-	DropBox::DropBox(const std::string& newLabel)
+	DropBox::DropBox(const std::string& newLabel, const sf::Font& font) :
+		font { font }
 	{
 		setPosition(0, 0);
 		label.setString(newLabel);
@@ -13,12 +14,12 @@ namespace fleet {
 
 	void DropBox::setPosition(float x, float y)
 	{
-		label.setPosition(x, y);
+		label.setPosition(sf::Vector2f(x, y));
 		for (unsigned i = 0; i < elements.size(); ++i) {
 			int position = i - selectedIndex;
 			float yOffset = box_default_height * position;
-			elements[i].second.setPosition(x + xOffset, y + yOffset);
-			elements[i].first.setPosition(x + xOffset + box_text_offset, y + yOffset + box_text_offset);
+			elements[i].second.setPosition(sf::Vector2f(x + xOffset, y + yOffset));
+			elements[i].first.setPosition(sf::Vector2f(x + xOffset + box_text_offset, y + yOffset + box_text_offset));
 		}
 	}
 	void DropBox::setPosition(const sf::Vector2f& position)
@@ -49,13 +50,6 @@ namespace fleet {
 		}
 	}
 
-	void DropBox::setFont(const sf::Font& font)
-	{
-		label.setFont(font);
-		for (auto& element : elements) {
-			element.first.setFont(font);
-		}
-	}
 	void DropBox::setLabelString(const std::string& string)
 	{
 		label.setString(string);
@@ -87,16 +81,16 @@ namespace fleet {
 		}
 	}
 
-	void DropBox::addElement(const std::string& string, const sf::Font& font)
+	void DropBox::addElement(const std::string& string)
 	{
 		elements.emplace_back(std::make_pair<sf::Text, sf::RectangleShape>(
-			sf::Text(string, font), sf::RectangleShape(sf::Vector2f(box_default_width, box_default_height))
+			sf::Text(font, string), sf::RectangleShape(sf::Vector2f(box_default_width, box_default_height))
 			));
 		int distance = size - selectedIndex;
 		float x = label.getPosition().x + xOffset;
 		float y = label.getPosition().y + (distance * box_default_height);
-		elements[size].second.setPosition(x, y);
-		elements[size].first.setPosition(x + box_text_offset, y + box_text_offset);
+		elements[size].second.setPosition(sf::Vector2f(x, y));
+		elements[size].first.setPosition(sf::Vector2f(x + box_text_offset, y + box_text_offset));
 		elements[size].first.setFillColor(sf::Color::Black);
 		++size;
 	}

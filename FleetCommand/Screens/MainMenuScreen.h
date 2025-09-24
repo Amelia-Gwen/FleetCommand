@@ -20,7 +20,7 @@ namespace fleet {
 	private:
 		bool expanded{ false };
 		sf::RectangleShape logo{ sf::Vector2f(logo_width, logo_height) };
-		sf::Text logoText{ "Fleet\n\tCommand", font };
+		sf::Text logoText{ font, "Fleet\n\tCommand" };
 		GUIButton playButton{ sf::Vector2f(main_menu_button_width, main_menu_button_height), "Play", font };
 		GUIButton newGameButton{ sf::Vector2f(main_menu_button_width, main_menu_button_height), "New Game", font };
 		GUIButton loadGameButton{ sf::Vector2f(main_menu_button_width, main_menu_button_height), "Load Game", font };

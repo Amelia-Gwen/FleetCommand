@@ -18,12 +18,12 @@ namespace fleet {
 		void draw() override;
 	private:
 		GUIButton backButton{ sf::Vector2f(menu_back_button_width, menu_back_button_height), "Back", font };
-		DropBox playersBox{ "Players:" };
-		DropBox computersBox{ "Computer:" };
-		DropBox difficultyBox{ "Difficulty:" };
-		DropBox oilBox{ "Oil:" };
-		DropBox cashBox{ "Cash:" };
-		DropBox researchBox{ "Research:" };
+		DropBox playersBox{ "Players:", font };
+		DropBox computersBox{ "Computer:", font };
+		DropBox difficultyBox{ "Difficulty:", font };
+		DropBox oilBox{ "Oil:", font };
+		DropBox cashBox{ "Cash:", font };
+		DropBox researchBox{ "Research:", font };
 		GUIButton startButton{ sf::Vector2f(start_button_width, start_button_height), "Start Game", font };
 		GameValues gameValues;
 

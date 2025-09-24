@@ -23,7 +23,7 @@ namespace fleet {
 
 		bool isOpen() const { return window.isOpen(); }
 		const GameValues& startValues() const { return gameValues; }
-		bool pollEvent(sf::Event& event) { return window.pollEvent(event); }
+		std::optional<sf::Event> pollEvent() { return window.pollEvent(); }
 		void close() { window.close(); }
 		void releaseGrip();
 
@@ -34,7 +34,7 @@ namespace fleet {
 		void display();
 	private:
 		const Model& model;
-		sf::RenderWindow window{ sf::VideoMode(view_width, view_height), "Fleet Command" };
+		sf::RenderWindow window{ sf::VideoMode(sf::Vector2u(view_width, view_height)), "Fleet Command" };
 		sf::Texture background;
 		sf::Sprite backgroundSprite{ background };
 		DisplayPanel displayPanel{ model, font };

@@ -12,15 +12,14 @@ namespace fleet {
 
 		GameEvent input(const sf::Vector2f& mousePos);
 		void update(const sf::Vector2f& mousePos);
-		void draw(sf::RenderWindow& window);
 	private:
 		const sf::Font& font;
 		sf::RectangleShape menuButton{ sf::Vector2f(drop_button_width, drop_button_height) };
-		sf::Text menu{ "Menu", font };
+		sf::Text menu{ font, "Menu" };
 		sf::RectangleShape saveButton{ sf::Vector2f(drop_button_width, drop_button_height) };
-		sf::Text save{ "Save", font };
+		sf::Text save{ font, "Save" };
 		sf::RectangleShape exitButton{ sf::Vector2f(drop_button_width, drop_button_height) };
-		sf::Text exit{ "Exit", font };
+		sf::Text exit{ font, "Exit" };
 		bool menuOpen{ false };
 
 		void mouseOverButtons(const sf::Vector2f& mousePos);

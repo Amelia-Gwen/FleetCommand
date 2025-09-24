@@ -85,44 +85,38 @@ namespace fleet {
 	void CustomMenuScreen::initializeBoxes()
 	{
 		playersBox.setPosition(column_one_x, row_one_y);
-		playersBox.setFont(font);
 		computersBox.setPosition(column_two_x, row_one_y);
-		computersBox.setFont(font);
 		difficultyBox.setPosition(column_one_x, row_two_y);
-		difficultyBox.setFont(font);
 		oilBox.setPosition(column_two_x, row_two_y);
-		oilBox.setFont(font);
 		cashBox.setPosition(column_one_x, row_three_y);
-		cashBox.setFont(font);
 		researchBox.setPosition(column_two_x, row_three_y);
-		researchBox.setFont(font);
 
-		computersBox.addElement("0", font);
+		computersBox.addElement("0");
 		for (unsigned i = 1; i <= max_players; ++i) {
-			playersBox.addElement(std::to_string(i), font);
-			computersBox.addElement(std::to_string(i), font);
+			playersBox.addElement(std::to_string(i));
+			computersBox.addElement(std::to_string(i));
 		}
-		difficultyBox.addElement("Easy", font);
-		difficultyBox.addElement("Medium", font);
-		difficultyBox.addElement("Hard", font);
-		oilBox.addElement("10000", font);
-		oilBox.addElement("20000", font);
-		oilBox.addElement("30000", font);
-		oilBox.addElement("40000", font);
-		oilBox.addElement("50000", font);
-		oilBox.addElement("100000", font);
-		cashBox.addElement("1000", font);
-		cashBox.addElement("2000", font);
-		cashBox.addElement("3000", font);
-		cashBox.addElement("4000", font);
-		cashBox.addElement("5000", font);
-		cashBox.addElement("10000", font);
-		researchBox.addElement("10", font);
-		researchBox.addElement("20", font);
-		researchBox.addElement("30", font);
-		researchBox.addElement("40", font);
-		researchBox.addElement("50", font);
-		researchBox.addElement("100", font);
+		difficultyBox.addElement("Easy");
+		difficultyBox.addElement("Medium");
+		difficultyBox.addElement("Hard");
+		oilBox.addElement("10000");
+		oilBox.addElement("20000");
+		oilBox.addElement("30000");
+		oilBox.addElement("40000");
+		oilBox.addElement("50000");
+		oilBox.addElement("100000");
+		cashBox.addElement("1000");
+		cashBox.addElement("2000");
+		cashBox.addElement("3000");
+		cashBox.addElement("4000");
+		cashBox.addElement("5000");
+		cashBox.addElement("10000");
+		researchBox.addElement("10");
+		researchBox.addElement("20");
+		researchBox.addElement("30");
+		researchBox.addElement("40");
+		researchBox.addElement("50");
+		researchBox.addElement("100");
 	}
 	void CustomMenuScreen::setValues()
 	{

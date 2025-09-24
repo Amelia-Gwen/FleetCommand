@@ -19,13 +19,13 @@ namespace fleet {
 		DropDownMenu dropDownMenu{ font };
 
 		sf::RectangleShape nameBox{ sf::Vector2f{panel_box_width, panel_box_height} };
-		sf::Text name{ "un-initialized", font };
+		sf::Text name{ font, "un-initialized" };
 		sf::RectangleShape cashBox{ sf::Vector2f{panel_box_width, panel_box_height} };
-		sf::Text cash{ "un-initialized", font };
+		sf::Text cash{ font, "un-initialized" };
 		sf::RectangleShape oilBox{ sf::Vector2f{panel_box_width, panel_box_height} };
-		sf::Text oil{ "un-initialized", font };
+		sf::Text oil{ font, "un-initialized" };
 		sf::RectangleShape researchBox{ sf::Vector2f{panel_box_width, panel_box_height} };
-		sf::Text research{ "un-initialized", font };
+		sf::Text research{ font, "un-initialized" };
 
 		virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
 	};

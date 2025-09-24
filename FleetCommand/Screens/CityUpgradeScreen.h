@@ -43,7 +43,7 @@ namespace fleet {
 		UpgradeButton researchProduction{ "Research Production", font, ResearchMaximums::productionMax };
 
 		sf::RectangleShape textDisplay{ sf::Vector2f(city_upgrade_text_box_width, city_upgrade_text_box_height) };
-		sf::Text description{ "Invalid test string", font };
+		sf::Text description{ font, "Invalid test string" };
 
 		bool canAfford(unsigned cost, unsigned resource);
 	};

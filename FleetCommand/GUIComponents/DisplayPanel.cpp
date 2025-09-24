@@ -7,24 +7,24 @@ namespace fleet {
 		model{ model },
 		font{ font }
 	{		
-		nameBox.setPosition(panel_1_x, panel_y);
+		nameBox.setPosition(sf::Vector2f(panel_1_x, panel_y));
 		nameBox.setFillColor(sf::Color::Cyan);
-		name.setPosition(name_x, panel_text_y);
+		name.setPosition(sf::Vector2f(name_x, panel_text_y));
 		name.setCharacterSize(text_character_size);
 		name.setFillColor(sf::Color::Black);
-		oilBox.setPosition(panel_2_x, panel_y);
+		oilBox.setPosition(sf::Vector2f(panel_2_x, panel_y));
 		oilBox.setFillColor(sf::Color::Cyan);
-		oil.setPosition(oil_x, panel_text_y);
+		oil.setPosition(sf::Vector2f(oil_x, panel_text_y));
 		oil.setCharacterSize(text_character_size);
 		oil.setFillColor(sf::Color::Black);
-		cashBox.setPosition(panel_3_x, panel_y);
+		cashBox.setPosition(sf::Vector2f(panel_3_x, panel_y));
 		cashBox.setFillColor(sf::Color::Cyan);
-		cash.setPosition(cash_x, panel_text_y);
+		cash.setPosition(sf::Vector2f(cash_x, panel_text_y));
 		cash.setCharacterSize(text_character_size);
 		cash.setFillColor(sf::Color::Black);
-		researchBox.setPosition(panel_4_x, panel_y);
+		researchBox.setPosition(sf::Vector2f(panel_4_x, panel_y));
 		researchBox.setFillColor(sf::Color::Cyan);
-		research.setPosition(research_x, panel_text_y);
+		research.setPosition(sf::Vector2f(research_x, panel_text_y));
 		research.setCharacterSize(text_character_size);
 		research.setFillColor(sf::Color::Black);
 	}

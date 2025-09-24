@@ -8,22 +8,23 @@ namespace fleet {
 	*/
 	void Controller::input()
 	{
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
+		/*if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
 			view.close();
-		}
+		}*/
 
-		sf::Event event;
 		GameEvent gameEvent = GameEvent::None;
-		while (view.pollEvent(event)) {
-			if (event.type == sf::Event::Closed) {
+		while (const std::optional event = view.pollEvent()) {
+			if (event->is<sf::Event::Closed>()) {
 				view.close();
 			}
 
-			if (event.type == sf::Event::MouseButtonPressed) {
+			if (event->is<sf::Event::MouseButtonPressed>())
+			{
 				gameEvent = view.input();
 			}
 
-			if (event.type == sf::Event::MouseButtonReleased) {
+			if (event->is<sf::Event::MouseButtonReleased>())
+			{
 				view.releaseGrip();
 			}
 		}

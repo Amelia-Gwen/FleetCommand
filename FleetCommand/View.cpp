@@ -16,8 +16,12 @@ namespace fleet {
 		window{ sf::VideoMode({2200, 1200}), "FleetCommand" }
 	{
 		window.setFramerateLimit(60);
-		//background.loadFromFile("Assets/background.png");
-		font.loadFromFile("Assets/a-song-for-jennifer/a-song-for-jennifer.ttf");
+		if (!background.loadFromFile("Assets/background.png")) {
+			// throw exception?
+		}
+		if (!font.openFromFile("Assets/a-song-for-jennifer/a-song-for-jennifer.ttf")) {
+			// throw exception?
+		}
 
 		screens.emplace(std::make_pair("Main Menu Screen", std::make_unique<MainMenuScreen>(window, font)));
 		screens.emplace(std::make_pair("New Game Screen", std::make_unique<NewGameMenuScreen>(window, font)));

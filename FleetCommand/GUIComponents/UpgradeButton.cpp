@@ -4,7 +4,7 @@
 
 namespace fleet {
 	UpgradeButton::UpgradeButton(const std::string& newLabel, const sf::Font& font, unsigned short numUpgrades) :
-		label{ newLabel, font }
+		label{ font, newLabel }
 	{
 		if (numUpgrades == 0) {
 			throw DivideByZeroException("Attempted to divide by zero in the constructor of UpgradeButton");
@@ -26,15 +26,15 @@ namespace fleet {
 	// in their proper position. Failure to do so will leave them all positioned at 0, 0;
 	void UpgradeButton::setPosition(float x, float y)
 	{
-		button.setPosition(x, y);
+		button.setPosition(sf::Vector2f(x, y));
 		float indicatorX = x;
 		float indicatorY = y + (default_upgrade_height - default_indicator_height);
 		for (auto& indicator : indicators) {
-			indicator.setPosition(indicatorX, indicatorY);
+			indicator.setPosition(sf::Vector2f(indicatorX, indicatorY));
 			indicatorX += indicator.getSize().x;
 		}
 		float labelY = y + default_upgrade_height + upgrade_label_y_offset;
-		label.setPosition(x, labelY);
+		label.setPosition(sf::Vector2f(x, labelY));
 	}
 	void UpgradeButton::setPosition(const sf::Vector2f& position)
 	{

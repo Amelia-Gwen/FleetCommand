@@ -6,16 +6,16 @@ namespace fleet {
 	DropDownMenu::DropDownMenu(const sf::Font& font) :
 		font{ font }
 	{
-		menuButton.setPosition(drop_menu_x, drop_menu_y);
-		menu.setPosition(drop_menu_text_x, menu_text_y);
+		menuButton.setPosition(sf::Vector2f(drop_menu_x, drop_menu_y));
+		menu.setPosition(sf::Vector2f(drop_menu_text_x, menu_text_y));
 		menu.setCharacterSize(text_character_size);
 		menu.setFillColor(sf::Color::Black);
-		saveButton.setPosition(drop_menu_x, save_y);
-		save.setPosition(drop_menu_text_x, save_text_y);
+		saveButton.setPosition(sf::Vector2f(drop_menu_x, save_y));
+		save.setPosition(sf::Vector2f(drop_menu_text_x, save_text_y));
 		save.setCharacterSize(text_character_size);
 		save.setFillColor(sf::Color::Black);
-		exitButton.setPosition(drop_menu_x, exit_y);
-		exit.setPosition(drop_menu_text_x, exit_text_y);
+		exitButton.setPosition(sf::Vector2f(drop_menu_x, exit_y));
+		exit.setPosition(sf::Vector2f(drop_menu_text_x, exit_text_y));
 		exit.setCharacterSize(text_character_size);
 		exit.setFillColor(sf::Color::Black);
 	}

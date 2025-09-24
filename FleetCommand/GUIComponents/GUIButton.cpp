@@ -5,7 +5,7 @@
 namespace fleet {
 	GUIButton::GUIButton(const sf::Vector2f& size, const std::string& newLabel, const sf::Font& font) :
 		button{ size },
-		label{ newLabel, font }
+		label{ font, newLabel }
 	{
 		button.setFillColor(sf::Color::Cyan);
 		label.setFillColor(sf::Color::Black);
@@ -13,17 +13,13 @@ namespace fleet {
 
 	void GUIButton::setPosition(float x, float y)
 	{
-		button.setPosition(x, y);
-		label.setPosition(x + labelOffset.x, y + labelOffset.y);
-	}
-	void GUIButton::setPosition(const sf::Vector2f& position)
-	{
-		setPosition(position.x, position.y);
+		button.setPosition(sf::Vector2f(x, y));
+		label.setPosition(sf::Vector2f(x + labelOffset.x, y + labelOffset.y));
 	}
 	void GUIButton::setLabelOffset(const sf::Vector2f& offset)
 	{
 		labelOffset = offset;
-		label.setPosition(button.getPosition().x + labelOffset.x, button.getPosition().y + labelOffset.y);
+		label.setPosition(sf::Vector2f(button.getPosition().x + labelOffset.x, button.getPosition().y + labelOffset.y));
 	}
 	void GUIButton::setCharacterSize(unsigned newSize)
 	{

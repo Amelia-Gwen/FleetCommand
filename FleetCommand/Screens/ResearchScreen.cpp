@@ -33,11 +33,11 @@ namespace fleet {
 		cashProduction.setPosition(research_column_two_x, research_row_three_y);
 		researchProduction.setPosition(research_column_three_x, research_row_three_y);
 
-		textDisplay.setPosition(research_text_box_x, research_text_box_y);
+		textDisplay.setPosition(sf::Vector2f(research_text_box_x, research_text_box_y));
 		textDisplay.setFillColor(sf::Color::Yellow);
 		textDisplay.setOutlineThickness(text_box_outline);
-		description.setPosition(research_text_box_x + description_text_offset,
-			research_text_box_y + description_text_offset);
+		description.setPosition(sf::Vector2f(research_text_box_x + description_text_offset,
+			research_text_box_y + description_text_offset));
 		description.setFillColor(sf::Color::Black);
 		description.setCharacterSize(description_character_size);
 	}

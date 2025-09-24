@@ -26,11 +26,11 @@ namespace fleet {
 		cashProduction.setPosition(city_upgrade_column_two_x, city_upgrade_row_two_y);
 		researchProduction.setPosition(city_upgrade_column_three_x, city_upgrade_row_two_y);
 
-		textDisplay.setPosition(city_upgrade_text_box_x, city_upgrade_text_box_y);
+		textDisplay.setPosition(sf::Vector2f(city_upgrade_text_box_x, city_upgrade_text_box_y));
 		textDisplay.setFillColor(sf::Color::Yellow);
 		textDisplay.setOutlineThickness(text_box_outline);
-		description.setPosition(city_upgrade_text_box_x + description_text_offset,
-			city_upgrade_text_box_y + description_text_offset);
+		description.setPosition(sf::Vector2f(city_upgrade_text_box_x + description_text_offset,
+			city_upgrade_text_box_y + description_text_offset));
 		description.setFillColor(sf::Color::Black);
 		description.setCharacterSize(description_character_size);
 	}

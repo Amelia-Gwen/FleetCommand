@@ -45,6 +45,6 @@ namespace fleet {
 		UpgradeButton researchProduction{ "Research Production", font, ResearchMaximums::productionMax };
 
 		sf::RectangleShape textDisplay{ sf::Vector2f(research_text_box_width, research_text_box_height) };
-		sf::Text description{ "Invalid test string", font };
+		sf::Text description{ font, "Invalid test string" };
 	};
 }

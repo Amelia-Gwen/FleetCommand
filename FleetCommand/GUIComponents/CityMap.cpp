@@ -106,7 +106,7 @@ namespace fleet {
 		float x = origin.x + (index % tileNum) * tileWidth + (tile_outline * 2) * (index % tileNum);
 		float y = origin.y + (index / tileNum) * tile_height + (tile_outline * 2) * (index / tileNum);
 
-		tile.setPosition(x, y);
+		tile.setPosition(sf::Vector2f(x, y));
 	}
 
 	void CityMap::draw(sf::RenderTarget& target, sf::RenderStates states) const

@@ -9,9 +9,9 @@ namespace fleet {
 	MainMenuScreen::MainMenuScreen(sf::RenderWindow& window, const sf::Font& font) :
 		IScreen{ window, font }
 	{
-		logo.setPosition(logo_x, logo_y);
+		logo.setPosition(sf::Vector2f(logo_x, logo_y));
 		logo.setFillColor(sf::Color::Cyan);
-		logoText.setPosition(logo_text_x, logo_text_y);
+		logoText.setPosition(sf::Vector2f(logo_text_x, logo_text_y));
 		logoText.setCharacterSize(logo_text_character_size);
 		logoText.setFillColor(sf::Color::Black);
 		playButton.setLabelOffset(sf::Vector2f(play_button_x_offset, menu_text_y_offset));

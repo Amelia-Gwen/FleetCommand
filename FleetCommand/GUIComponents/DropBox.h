@@ -14,7 +14,7 @@ namespace fleet {
 	*/
 	class DropBox : public sf::Drawable {
 	public:
-		explicit DropBox(const std::string& newLabel);
+		explicit DropBox(const std::string& newLabel, const sf::Font& font);
 
 		/*
 		Position will define the x,y coordinate of the upper left corner of the label.
@@ -29,14 +29,13 @@ namespace fleet {
 		void setOutlineColor(const sf::Color& color);
 		void setOutlineThickness(float thickness);
 
-		void setFont(const sf::Font& font);
 		void setLabelString(const std::string& string);
 		void setCharacterSize(unsigned newSize);
 		void setTextFillColor(const sf::Color& color);
 		void setTextOutlineColor(const sf::Color& color);
 		void setTextOutlineThickness(float thickness);
 
-		void addElement(const std::string& string, const sf::Font& font);
+		void addElement(const std::string& string);
 		void setElement(const std::string& string, unsigned index);
 		void setDefaultElement(unsigned index);
 
@@ -45,7 +44,8 @@ namespace fleet {
 		void input(const sf::Vector2f& mousePos);
 		void update(const sf::Vector2f& mousePos);
 	private:
-		sf::Text label;
+		const sf::Font& font;
+		sf::Text label{ font, "uninitialized text" };
 		std::vector<std::pair<sf::Text, sf::RectangleShape>> elements;
 		float xOffset{ dropbox_default_x_offset };
 		bool open{ false };

@@ -7,14 +7,14 @@ namespace fleet {
 		unsigned counter = 0;
 		for (const auto& city : model.cityList()) {
 			cities.emplace_back(std::make_pair(
-				sf::RectangleShape(sf::Vector2f(world_map_city_width, world_map_city_height)), sf::Text(city.cityName(), font)
+				sf::RectangleShape(sf::Vector2f(world_map_city_width, world_map_city_height)), sf::Text(font, city.cityName())
 			));
 			float position_x = mapX + (city_position_multiplier_x * city.location().x);
 			float position_y = mapY + (city_position_multiplier_y * city.location().y);
-			cities[counter].first.setPosition(position_x, position_y);
+			cities[counter].first.setPosition(sf::Vector2f(position_x, position_y));
 			cities[counter].second.setCharacterSize(city_name_text_size);
 			cities[counter].second.setFillColor(sf::Color::Black);
-			cities[counter].second.setPosition(position_x + city_text_offset_x, position_y + city_text_offset_y);
+			cities[counter].second.setPosition(sf::Vector2f(position_x + city_text_offset_x, position_y + city_text_offset_y));
 			++counter;
 		}
 	}
@@ -77,9 +77,9 @@ namespace fleet {
 			position_y *= scale.y;
 			position_x += map.getPosition().x;
 			position_y += map.getPosition().y;
-			cities[index].first.setPosition(position_x, position_y);
+			cities[index].first.setPosition(sf::Vector2f(position_x, position_y));
 			cities[index].first.setScale(scale);
-			cities[index].second.setPosition(position_x + city_text_offset_x, position_y + city_text_offset_y);
+			cities[index].second.setPosition(sf::Vector2f(position_x + city_text_offset_x, position_y + city_text_offset_y));
 			++index;
 		}
 	}
